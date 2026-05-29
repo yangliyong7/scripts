@@ -1,0 +1,22 @@
+[
+  {"unit": 1, "label": "情绪·负面等（2类）", "count": 200, "id_range": "23–3902", "ready": true},
+  {"unit": 2, "label": "情绪·正面等（2类）", "count": 200, "id_range": "51–3906", "ready": false},
+  {"unit": 3, "label": "情绪·紧张等（5类）", "count": 200, "id_range": "1–3901", "ready": false},
+  {"unit": 4, "label": "身体·健康", "count": 200, "id_range": "114–2889", "ready": false},
+  {"unit": 5, "label": "身体·健康等（2类）", "count": 200, "id_range": "25–3919", "ready": false},
+  {"unit": 6, "label": "自然·植物等（3类）", "count": 200, "id_range": "9–3908", "ready": false},
+  {"unit": 7, "label": "动作·移动等（2类）", "count": 200, "id_range": "35–3885", "ready": false},
+  {"unit": 8, "label": "言语·沟通等（3类）", "count": 200, "id_range": "11–3911", "ready": false},
+  {"unit": 9, "label": "死亡·丧葬等（2类）", "count": 200, "id_range": "7–3802", "ready": false},
+  {"unit": 10, "label": "法律·秩序等（5类）", "count": 200, "id_range": "2–3915", "ready": false},
+  {"unit": 11, "label": "外观·品质等（3类）", "count": 200, "id_range": "6–3859", "ready": false},
+  {"unit": 12, "label": "杂项·场景收纳", "count": 200, "id_range": "128–497", "ready": false},
+  {"unit": 13, "label": "杂项·场景收纳", "count": 200, "id_range": "498–920", "ready": false},
+  {"unit": 14, "label": "杂项·场景收纳", "count": 200, "id_range": "921–1321", "ready": false},
+  {"unit": 15, "label": "杂项·场景收纳", "count": 200, "id_range": "1325–1763", "ready": false},
+  {"unit": 16, "label": "杂项·场景收纳", "count": 200, "id_range": "1764–2174", "ready": false},
+  {"unit": 17, "label": "杂项·场景收纳", "count": 200, "id_range": "2179–2613", "ready": false},
+  {"unit": 18, "label": "杂项·场景收纳", "count": 200, "id_range": "2615–3105", "ready": false},
+  {"unit": 19, "label": "杂项·场景收纳", "count": 200, "id_range": "3110–3595", "ready": false},
+  {"unit": 20, "label": "杂项·场景收纳", "count": 120, "id_range": "3598–3920", "ready": false}
+]

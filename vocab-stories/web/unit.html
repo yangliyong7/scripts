@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a2332" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>词库故事 · 单元</title>
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+</head>
+<body>
+  <header class="top">
+    <button type="button" class="btn" id="btnBack" aria-label="返回">←</button>
+    <h1 id="pageTitle">Unit</h1>
+    <button type="button" class="btn" id="btnWords">词表</button>
+  </header>
+  <main>
+    <section class="card">
+      <p class="muted" id="unitLabel"></p>
+      <h2>中文梗概</h2>
+      <div class="summary-zh" id="summaryZh">加载中…</div>
+    </section>
+    <div id="storyBody"></div>
+  </main>
+
+  <div class="toolbar" role="toolbar" aria-label="听读控制">
+    <span class="badge neural" id="audioModeBadge">美音</span>
+    <button type="button" class="btn btn-primary" id="btnPlay">朗读本段</button>
+    <button type="button" class="btn hidden" id="btnStop">停止</button>
+    <button type="button" class="btn" id="btnPlayAll">全文</button>
+    <button type="button" class="btn" id="btnFont">字号</button>
+  </div>
+  <div class="voice-bar">
+    <label for="voiceSelect" class="muted">无 MP3 时备用音色</label>
+    <select id="voiceSelect" class="voice-select" aria-label="浏览器朗读音色"></select>
+  </div>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-backdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div>
+          <strong id="drawerWord">—</strong>
+          <span class="muted" id="drawerId"></span>
+        </div>
+        <button type="button" class="btn" id="btnCloseDrawer">关闭</button>
+      </div>
+      <div class="drawer-body">
+        <div id="drawerGloss" class="summary-zh"></div>
+      </div>
+      <div class="drawer-body" id="wordListBody" style="border-top:1px solid var(--border); flex:1"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
