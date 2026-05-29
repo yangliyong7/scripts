@@ -24,6 +24,15 @@
     <div id="storyBody"></div>
   </main>
 
+  <div class="player-panel hidden" id="playerPanel" aria-label="全文朗读进度">
+    <div class="player-meta">
+      <span id="progressLabel">未开始</span>
+      <button type="button" class="btn btn-sm" id="btnRestart" title="从 Part A 重新播放">从头</button>
+    </div>
+    <input type="range" id="progressSeek" min="0" max="1000" value="0" step="1" aria-label="拖动调整朗读位置" />
+    <div class="part-jumps" id="partJumps" role="group" aria-label="跳转到分段"></div>
+  </div>
+
   <div class="toolbar" role="toolbar" aria-label="听读控制">
     <span class="badge neural" id="audioModeBadge">美音</span>
     <button type="button" class="btn btn-primary" id="btnPlay">朗读本段</button>

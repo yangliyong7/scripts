@@ -24,9 +24,17 @@
   let audioManifest = null;
   let audioBase = "";
   let htmlAudio = null;
-  let playAllQueue = null;
   let fontScale = 0;
   let selectedVoiceURI = localStorage.getItem("vocab_tts_voice") || "";
+  let trackMeta = null;
+  let trackMetaPromise = null;
+  let playback = {
+    mode: null,
+    partIndex: 0,
+    wasPlaying: false,
+    aborted: false,
+    userSeeking: false,
+  };
 
   const synth = window.speechSynthesis;
   const canSpeak = !!synth;
@@ -64,27 +72,196 @@
     return d.textContent || "";
   }
 
-  function stopSpeech() {
-    if (synth.speaking) synth.cancel();
-    if (htmlAudio) {
-      htmlAudio.pause();
-      htmlAudio.currentTime = 0;
-      htmlAudio = null;
-    }
-    playAllQueue = null;
-    $("#btnPlay")?.classList.remove("hidden");
-    $("#btnStop")?.classList.add("hidden");
-    $$(".btn-play-part.playing").forEach((b) => b.classList.remove("playing"));
+  function formatTime(sec) {
+    if (!isFinite(sec) || sec < 0) sec = 0;
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return m + ":" + String(s).padStart(2, "0");
   }
 
-  function showPlaying() {
-    $("#btnPlay")?.classList.add("hidden");
-    $("#btnStop")?.classList.remove("hidden");
+  function audioUrl(partId) {
+    return `${audioBase}part-${partId}.mp3`;
+  }
+
+  function showPlayerPanel() {
+    const panel = $("#playerPanel");
+    if (!panel) return;
+    panel.classList.remove("hidden");
+    document.body.classList.add("has-player");
+  }
+
+  function hidePlayerPanel() {
+    $("#playerPanel")?.classList.add("hidden");
+    document.body.classList.remove("has-player");
+  }
+
+  async function ensureTrackMeta() {
+    if (trackMeta) return trackMeta;
+    if (trackMetaPromise) return trackMetaPromise;
+    if (!hasNeuralAudio()) return null;
+
+    trackMetaPromise = (async () => {
+      const tracks = [];
+      let start = 0;
+      for (const p of audioManifest.parts) {
+        const url = audioUrl(p.id);
+        const duration = await new Promise((resolve, reject) => {
+          const a = new Audio(url);
+          a.preload = "metadata";
+          a.addEventListener("loadedmetadata", () => resolve(a.duration || 0));
+          a.addEventListener("error", () => reject(new Error(url)));
+        });
+        tracks.push({ id: p.id, url, duration, start });
+        start += duration;
+      }
+      trackMeta = { tracks, totalDuration: start };
+      buildPartJumps();
+      return trackMeta;
+    })();
+
+    try {
+      return await trackMetaPromise;
+    } catch (e) {
+      trackMetaPromise = null;
+      throw e;
+    }
+  }
+
+  function buildPartJumps() {
+    const box = $("#partJumps");
+    if (!box || !trackMeta) return;
+    box.innerHTML = trackMeta.tracks
+      .map(
+        (t, i) =>
+          `<button type="button" class="jump-part" data-index="${i}" data-part="${t.id}">${t.id}</button>`
+      )
+      .join("");
+    $$(".jump-part", box).forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const idx = parseInt(btn.dataset.index, 10);
+        seekToPart(idx, 0, true);
+      });
+    });
+  }
+
+  function getGlobalTime(partIndex, localTime) {
+    if (!trackMeta) return 0;
+    const t = trackMeta.tracks[partIndex];
+    return (t ? t.start : 0) + (localTime || 0);
+  }
+
+  function findAtGlobalTime(globalTime) {
+    if (!trackMeta) return { index: 0, offset: 0 };
+    const tracks = trackMeta.tracks;
+    for (let i = tracks.length - 1; i >= 0; i--) {
+      if (globalTime >= tracks[i].start - 0.01) {
+        return {
+          index: i,
+          offset: Math.min(
+            Math.max(0, globalTime - tracks[i].start),
+            tracks[i].duration
+          ),
+        };
+      }
+    }
+    return { index: 0, offset: 0 };
+  }
+
+  function setSeekSliderRatio(ratio) {
+    const seek = $("#progressSeek");
+    if (seek) seek.value = String(Math.round(Math.max(0, Math.min(1, ratio)) * 1000));
+  }
+
+  function updateProgressUI(globalTime, playingPartIndex) {
+    if (!trackMeta) return;
+    const total = trackMeta.totalDuration || 1;
+    const ratio = Math.min(1, globalTime / total);
+    if (!playback.userSeeking) setSeekSliderRatio(ratio);
+
+    const { index } = findAtGlobalTime(globalTime);
+    const partId = trackMeta.tracks[index]?.id || "?";
+    const label = $("#progressLabel");
+    if (label) {
+      label.textContent =
+        "Part " +
+        partId +
+        " · " +
+        formatTime(globalTime) +
+        " / " +
+        formatTime(total);
+    }
+
+    const activeIdx =
+      playingPartIndex !== undefined ? playingPartIndex : index;
+    $$(".jump-part").forEach((btn) => {
+      const i = parseInt(btn.dataset.index, 10);
+      btn.classList.toggle("active", i === activeIdx);
+      btn.classList.toggle("done", i < activeIdx);
+    });
+
+    highlightPart(trackMeta.tracks[activeIdx]?.id);
+  }
+
+  function highlightPart(partId) {
+    if (!partId) return;
+    $$(".story-part").forEach((el) => {
+      el.classList.toggle("reading", el.dataset.part === partId);
+    });
+  }
+
+  function scrollToPart(partId) {
+    const el = $(`.story-part[data-part="${partId}"]`);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function clearReadingHighlight() {
+    $$(".story-part.reading").forEach((el) => el.classList.remove("reading"));
+  }
+
+  function setPlayingButtons(playing) {
+    if (playing) {
+      $("#btnPlay")?.classList.add("hidden");
+      $("#btnStop")?.classList.remove("hidden");
+    } else {
+      $("#btnPlay")?.classList.remove("hidden");
+      $("#btnStop")?.classList.add("hidden");
+    }
+  }
+
+  function onAudioTimeUpdate() {
+    if (!htmlAudio || playback.mode !== "all" || !trackMeta) return;
+    if (playback.userSeeking) return;
+    const global = getGlobalTime(playback.partIndex, htmlAudio.currentTime);
+    updateProgressUI(global, playback.partIndex);
+  }
+
+  function detachAudio() {
+    if (!htmlAudio) return;
+    htmlAudio.removeEventListener("timeupdate", onAudioTimeUpdate);
+    htmlAudio.pause();
+    htmlAudio = null;
+  }
+
+  function stopSpeech() {
+    playback.aborted = true;
+    playback.mode = null;
+    playback.wasPlaying = false;
+    if (synth.speaking) synth.cancel();
+    detachAudio();
+    setPlayingButtons(false);
+    $$(".btn-play-part.playing").forEach((b) => b.classList.remove("playing"));
+    clearReadingHighlight();
+  }
+
+  function stopAndHidePlayer() {
+    stopSpeech();
+    hidePlayerPanel();
   }
 
   function speakTextBrowser(text, onEnd) {
     if (!canSpeak || !text.trim()) return false;
     stopSpeech();
+    playback.mode = "tts";
     const u = new SpeechSynthesisUtterance(text);
     const voice = pickVoice();
     if (voice) {
@@ -94,57 +271,169 @@
       u.lang = "en-US";
     }
     u.rate = 0.9;
-    u.pitch = 1;
+    playback.aborted = false;
     u.onend = () => {
-      $("#btnPlay")?.classList.remove("hidden");
-      $("#btnStop")?.classList.add("hidden");
+      if (!playback.aborted) setPlayingButtons(false);
       if (onEnd) onEnd();
     };
-    u.onerror = () => {
-      stopSpeech();
-    };
-    showPlaying();
+    u.onerror = () => stopSpeech();
+    setPlayingButtons(true);
     synth.speak(u);
     return true;
   }
 
-  function audioUrl(partId) {
-    return `${audioBase}part-${partId}.mp3`;
-  }
-
-  function playAudioFile(url, onEnd) {
+  function playCurrentAudio(offset) {
     return new Promise((resolve, reject) => {
-      stopSpeech();
-      htmlAudio = new Audio(url);
-      showPlaying();
-      htmlAudio.addEventListener("ended", () => {
-        htmlAudio = null;
-        if (onEnd) onEnd();
+      if (!htmlAudio || playback.aborted) {
+        reject(new Error("aborted"));
+        return;
+      }
+      if (offset > 0) htmlAudio.currentTime = offset;
+      htmlAudio.addEventListener("timeupdate", onAudioTimeUpdate);
+      const onEnd = () => {
+        htmlAudio?.removeEventListener("ended", onEnd);
+        htmlAudio?.removeEventListener("error", onErr);
         resolve();
-      });
-      htmlAudio.addEventListener("error", () => {
-        htmlAudio = null;
-        reject(new Error("audio load failed: " + url));
-      });
+      };
+      const onErr = () => {
+        htmlAudio?.removeEventListener("ended", onEnd);
+        htmlAudio?.removeEventListener("error", onErr);
+        reject(new Error("play error"));
+      };
+      htmlAudio.addEventListener("ended", onEnd);
+      htmlAudio.addEventListener("error", onErr);
       htmlAudio.play().catch(reject);
     });
   }
 
-  async function playPart(partId) {
-    const url = audioUrl(partId);
-    if (hasNeuralAudio() && audioManifest.parts.some((p) => p.id === partId)) {
+  async function playPartAtIndex(index, offsetSec) {
+    if (!trackMeta || playback.aborted) return;
+    const track = trackMeta.tracks[index];
+    if (!track) return;
+
+    detachAudio();
+    playback.partIndex = index;
+    htmlAudio = new Audio(track.url);
+
+    $$(".btn-play-part.playing").forEach((b) => b.classList.remove("playing"));
+    $(`.btn-play-part[data-part="${track.id}"]`)?.classList.add("playing");
+
+    scrollToPart(track.id);
+    updateProgressUI(getGlobalTime(index, offsetSec), index);
+
+    await playCurrentAudio(offsetSec || 0);
+    detachAudio();
+    $(`.btn-play-part[data-part="${track.id}"]`)?.classList.remove("playing");
+  }
+
+  async function playAllParts(startIndex, offsetInPart) {
+    if (!hasNeuralAudio()) return;
+    try {
+      await ensureTrackMeta();
+    } catch {
+      alert("无法加载音频时长，请检查网络后重试。");
+      return;
+    }
+
+    stopSpeech();
+    playback.mode = "all";
+    playback.aborted = false;
+    playback.wasPlaying = true;
+    showPlayerPanel();
+    setPlayingButtons(true);
+
+    let i = startIndex || 0;
+    const offset = offsetInPart || 0;
+
+    while (i < trackMeta.tracks.length && !playback.aborted) {
       try {
-        $$(".btn-play-part.playing").forEach((b) => b.classList.remove("playing"));
-        const btn = $(`.btn-play-part[data-part="${partId}"]`);
-        btn?.classList.add("playing");
-        await playAudioFile(url, () => {
-          btn?.classList.remove("playing");
-          $("#btnPlay")?.classList.remove("hidden");
-          $("#btnStop")?.classList.add("hidden");
-        });
-        return;
+        await playPartAtIndex(i, i === startIndex ? offset : 0);
+      } catch {
+        break;
+      }
+      i++;
+    }
+
+    if (!playback.aborted) {
+      updateProgressUI(trackMeta.totalDuration, trackMeta.tracks.length - 1);
+      setSeekSliderRatio(1);
+    }
+    playback.mode = null;
+    playback.wasPlaying = false;
+    setPlayingButtons(false);
+    clearReadingHighlight();
+    $$(".btn-play-part.playing").forEach((b) => b.classList.remove("playing"));
+  }
+
+  function seekToPart(index, offsetSec, autoPlay) {
+    if (!trackMeta) return;
+    index = Math.max(0, Math.min(index, trackMeta.tracks.length - 1));
+    const global = getGlobalTime(index, offsetSec);
+    updateProgressUI(global, index);
+    setSeekSliderRatio(global / trackMeta.totalDuration);
+    scrollToPart(trackMeta.tracks[index].id);
+
+    if (autoPlay) {
+      stopSpeech();
+      playback.mode = "all";
+      playback.aborted = false;
+      playback.wasPlaying = true;
+      showPlayerPanel();
+      setPlayingButtons(true);
+      (async () => {
+        let i = index;
+        const off = offsetSec || 0;
+        while (i < trackMeta.tracks.length && !playback.aborted) {
+          try {
+            await playPartAtIndex(i, i === index ? off : 0);
+          } catch {
+            break;
+          }
+          i++;
+        }
+        if (!playback.aborted && trackMeta) {
+          updateProgressUI(trackMeta.totalDuration, trackMeta.tracks.length - 1);
+          setSeekSliderRatio(1);
+        }
+        playback.mode = null;
+        playback.wasPlaying = false;
+        setPlayingButtons(false);
+        clearReadingHighlight();
+      })();
+    }
+  }
+
+  function seekToRatio(ratio, autoPlay) {
+    if (!trackMeta) return;
+    const global = ratio * trackMeta.totalDuration;
+    const { index, offset } = findAtGlobalTime(global);
+    seekToPart(index, offset, autoPlay);
+  }
+
+  async function playPart(partId) {
+    if (hasNeuralAudio()) {
+      try {
+        await ensureTrackMeta();
+        const idx = trackMeta.tracks.findIndex((t) => t.id === partId);
+        if (idx >= 0) {
+          stopSpeech();
+          playback.mode = "part";
+          playback.aborted = false;
+          showPlayerPanel();
+          setPlayingButtons(true);
+          updateProgressUI(getGlobalTime(idx, 0), idx);
+          setSeekSliderRatio(trackMeta.tracks[idx].start / trackMeta.totalDuration);
+          try {
+            await playPartAtIndex(idx, 0);
+          } catch (e) {
+            console.warn(e);
+          }
+          playback.mode = null;
+          setPlayingButtons(false);
+          return;
+        }
       } catch (e) {
-        console.warn("Neural audio failed, fallback to browser TTS", e);
+        console.warn("Neural audio failed", e);
       }
     }
     const partEl = $(`.story-part[data-part="${partId}"]`);
@@ -160,30 +449,6 @@
       }
     }
     return $(".story-part")?.dataset.part || "A";
-  }
-
-  async function playAllParts() {
-    if (hasNeuralAudio()) {
-      stopSpeech();
-      showPlaying();
-      playAllQueue = [...audioManifest.parts];
-      for (const p of playAllQueue) {
-        if (!playAllQueue) break;
-        try {
-          await playAudioFile(audioUrl(p.id));
-        } catch {
-          break;
-        }
-      }
-      playAllQueue = null;
-      stopSpeech();
-      return;
-    }
-    const all = $$(".story-part")
-      .map((el) => stripHtml(el.querySelector(".story")?.innerHTML || ""))
-      .filter(Boolean)
-      .join("\n\n");
-    speakTextBrowser(all);
   }
 
   function renderMarkdownWords(html) {
@@ -290,7 +555,10 @@
         )
         .join("");
     if (selectedVoiceURI) sel.value = selectedVoiceURI;
-    sel.classList.toggle("hidden", hasNeuralAudio());
+    const bar = $(".voice-bar");
+    const useBrowserVoice = !hasNeuralAudio();
+    bar?.classList.toggle("hidden", !useBrowserVoice);
+    document.body.classList.toggle("has-voice-bar", useBrowserVoice);
   }
 
   function renderUnit() {
@@ -300,6 +568,9 @@
     $("#unitLabel").textContent = title;
     updateAudioModeBadge();
     populateVoiceSelect();
+
+    trackMeta = null;
+    trackMetaPromise = null;
 
     if (!currentStory) {
       $("#storyBody").innerHTML =
@@ -355,6 +626,12 @@
     $$(".btn-play-part").forEach((btn) => {
       btn.addEventListener("click", () => playPart(btn.dataset.part));
     });
+
+    if (neural) {
+      ensureTrackMeta()
+        .then(() => updateProgressUI(0, 0))
+        .catch(() => {});
+    }
   }
 
   function bindUnitPage() {
@@ -366,30 +643,78 @@
     $(".drawer-backdrop")?.addEventListener("click", closeDrawer);
 
     $("#btnPlay")?.addEventListener("click", () => {
-      const partId = getVisiblePartId();
-      if (hasNeuralAudio()) {
-        playPart(partId);
-        return;
-      }
-      if (!canSpeak) {
-        alert("暂无神经美音文件，且当前浏览器不支持朗读。请用 Chrome / Edge / Safari。");
-        return;
-      }
-      const ensureVoices = () => {
-        const partEl = $(`.story-part[data-part="${partId}"]`);
-        const text = stripHtml(partEl?.querySelector(".story")?.innerHTML || "");
-        speakTextBrowser(text);
-      };
-      if (getEnVoices().length === 0) {
-        synth.onvoiceschanged = ensureVoices;
-      } else {
-        ensureVoices();
-      }
+      playPart(getVisiblePartId());
     });
 
-    $("#btnStop")?.addEventListener("click", stopSpeech);
+    $("#btnStop")?.addEventListener("click", stopAndHidePlayer);
 
-    $("#btnPlayAll")?.addEventListener("click", () => playAllParts());
+    $("#btnPlayAll")?.addEventListener("click", async () => {
+      if (hasNeuralAudio()) {
+        if (playback.mode === "all" && playback.wasPlaying) {
+          stopAndHidePlayer();
+          return;
+        }
+        const seek = $("#progressSeek");
+        const ratio = seek ? parseInt(seek.value, 10) / 1000 : 0;
+        if (ratio > 0 && ratio < 1 && trackMeta) {
+          const { index, offset } = findAtGlobalTime(ratio * trackMeta.totalDuration);
+          await playAllParts(index, offset);
+        } else {
+          await playAllParts(0, 0);
+        }
+        return;
+      }
+      showPlayerPanel();
+      $("#progressLabel").textContent = "浏览器朗读（无精细进度）";
+      const all = $$(".story-part")
+        .map((el) => stripHtml(el.querySelector(".story")?.innerHTML || ""))
+        .filter(Boolean)
+        .join("\n\n");
+      speakTextBrowser(all);
+    });
+
+    $("#btnRestart")?.addEventListener("click", () => {
+      stopSpeech();
+      setSeekSliderRatio(0);
+      updateProgressUI(0, 0);
+      scrollToPart(trackMeta?.tracks[0]?.id || "A");
+      playAllParts(0, 0);
+    });
+
+    const seek = $("#progressSeek");
+    if (seek) {
+      seek.addEventListener("input", () => {
+        playback.userSeeking = true;
+        if (!trackMeta) return;
+        const ratio = parseInt(seek.value, 10) / 1000;
+        const global = ratio * trackMeta.totalDuration;
+        const { index } = findAtGlobalTime(global);
+        const label = $("#progressLabel");
+        if (label) {
+          label.textContent =
+            "拖动中 · Part " +
+            (trackMeta.tracks[index]?.id || "?") +
+            " · " +
+            formatTime(global) +
+            " / " +
+            formatTime(trackMeta.totalDuration);
+        }
+        setSeekSliderRatio(ratio);
+      });
+
+      seek.addEventListener("change", () => {
+        playback.userSeeking = false;
+        if (!trackMeta) return;
+        const ratio = parseInt(seek.value, 10) / 1000;
+        const wasAll = playback.mode === "all";
+        stopSpeech();
+        seekToRatio(ratio, wasAll);
+        if (!wasAll) {
+          const { index, offset } = findAtGlobalTime(ratio * trackMeta.totalDuration);
+          updateProgressUI(getGlobalTime(index, offset), index);
+        }
+      });
+    }
 
     $("#btnFont")?.addEventListener("click", () => {
       fontScale = (fontScale + 1) % 3;

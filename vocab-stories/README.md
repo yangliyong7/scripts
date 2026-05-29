@@ -40,12 +40,15 @@ py -3 "$env:TEMP\vc_200fix.py"
 
 ## 网页版（推荐手机使用）
 
-```powershell
-cd vocab-stories\web
-py -3 -m http.server 8080
+**Linux 本地预览：**
+
+```bash
+cd vocab-stories/web
+chmod +x start-server.sh
+./start-server.sh
 ```
 
-浏览器打开 `http://localhost:8080`。部署说明见 `web/DEPLOY.md`。
+**生产部署：** 将 `web/` 用 Nginx 托管，见 `web/DEPLOY.md`（不要用 `.ps1`，那是 Windows 专用）。
 
 - **unit-001** 已含完整故事（10 Part）+ TTS 朗读 + 词表抽屉  
 - unit-002～020：词表可用，故事待补充（`manifest.json` 中 `ready: false`）
