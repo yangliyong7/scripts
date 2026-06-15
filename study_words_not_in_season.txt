@@ -21,12 +21,10 @@ adrift
 adverse
 advocate
 aerial
-aerobic
 aerodynamic
 aesthetic
 affinity
 afterlife
-agenda
 aggravation
 aggregate
 aging
@@ -99,8 +97,6 @@ banish
 barf
 barnacle
 barricade
-barrier
-basin
 bathyal
 batten
 bauble
@@ -1185,7 +1181,6 @@ sleuth
 slingshot
 slipper
 slither
-slope
 sloth
 slowpoke
 sluggish
@@ -1205,7 +1200,6 @@ snorkelling
 snuff
 sodomy
 softie
-soil
 soiree
 solely
 solidarity
@@ -1247,7 +1241,6 @@ stash
 stationery
 stereotype
 sterilized
-stiff
 stilt
 stockpile
 stowaway
