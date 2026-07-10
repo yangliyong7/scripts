@@ -19,22 +19,16 @@
   - *Example*: Okay, **watch, learn, and don't eat my cookie.**
 - **Tip the scales**: 使天平倾向某方、改变局势（让竞争结果对自己有利）。
   - *Example*: I sent him a little bribe to **tip the scales** in my direction.
-- **Don't give away the farm**: 别一下子全露出来（保留筹码，不要过早暴露全部）。
-  - *Example*: Oh now, **don't give away the farm!** Phoebe 阻止 Rachel 再解她一颗扣子。
 - **Bluffing**: 虚张声势、在唬人（扑克术语，指假装有牌其实没有）。
   - *Example*: **She's bluffing!** Monica 坚信 Phoebe 只是在吓唬 Chandler。
 - **Back down**: 退缩、认输（在对抗中先让步）。
   - *Example*: Oh yeah, they're totally gonna **back down**! / Look, she's not **backing down**!
 
 ## 3. 社交与关系
-- **Doing it / Phone doing it**: 那个 / 电话里也在那个（Friends 经典双关，把日常借口解读为偷情）。
-  - *Example*: Uh-huh, **doing it. Doing it. Phone doing it.** 指 Monica 和 Chandler 的各种借口。
+- **Doing it**: 那个（Friends 经典委婉指发生性关系）。
+  - *Example*: **NO! THEY'RE DOING IT!!!** / Uh-huh, **doing it. Doing it.**
 - **Sad Linda from camp**: 夏令营里伤心的 Linda（Monica 用来掩饰和 Chandler 打电话的借口）。
   - *Example*: All that time Monica spent on the phone with **sad Linda from camp**!
-- **They don't know that we know they know we know**: 他们不知道我们知道他们知道我们知道（本集最著名的层层套娃台词）。
-  - *Example*: **They don't know that we know they know we know!**
-- **The messers become the messies**: 整人的人变成被整的人（Chandler 对 Monica 计划的俏皮总结）。
-  - *Example*: Ahh yes, **the messers become the messies!**
 - **I'm in love with Monica**: 我爱 Monica（Chandler 在对峙中终于坦白真情）。
   - *Example*: **Because I'm in love with Monica!!** / Love her! That's right, I…LOVE…HER!!!
 - **Quite a competitor**: 真是个劲敌（Chandler 向 Phoebe 致敬，承认她很难对付）。
@@ -55,18 +49,48 @@
   - *Example*: Ohh, I'm gonna miss that **big old squishy butt**.
 
 ## 5. 实用短句
-- **From the looks of it**: 从样子来看（根据眼前情况判断）。
+- **From the looks of it**: 从样子来看→根据眼前情况判断。
   - *Example*: **From the looks of it**; our naked buddy is moving.
-- **Strike up a conversation**: 搭话、开启话题（主动开始聊天）。
-  - *Example*: You should find out what his hobbies are and then use that to **strike up a conversation** about say umm, sandwiches.
-- **Get back to you on that**: 之后再答复你（暂时无法决定，需要再考虑）。
+- **Strike up a conversation**: 搭话、开启话题→主动开始聊天。
+  - *Example*: Use that to **strike up a conversation** about say umm, sandwiches.
+- **Get back to you on that**: 之后再答复你→暂时无法决定，需要再考虑。
   - *Example*: **I'll have to get back to you on that.** Okay, bye!
-- **Hats off to sb.**: 向某人致敬、佩服某人（表示认可对方的本事）。
+- **Hats off to sb.**: 向某人致敬→佩服对方本事（Chandler 对 Phoebe）。
   - *Example*: And **hats off to Phoebe**. Quite a competitor.
-- **GET OFF MY SISTER**: 离我妹妹远点！（Ross 经典怒吼，本集片尾彩蛋）。
+- **GET OFF MY SISTER**: 离我妹妹远点！→Ross 经典怒吼（片尾彩蛋）。
   - *Example*: **GET OFF MY SISTER!!!!!!!!!!!!!**
-- **Your work makes me sad**: 你的工作让我很难过（Chandler 对 Ross 办公室 muffin 故事的毒舌吐槽）。
+- **Your work makes me sad**: 你的工作让我很难过→Chandler 毒舌吐槽 Ross 办公室 muffin 文化。
   - *Example*: **Your work makes me sad.**
+- **Phone doing it**: 电话里也在那个→把 Monica 打电话掩饰解读成偷情（本集双关梗）。
+  - *Example*: Uh-huh, doing it. Doing it. **Phone doing it**.
+- **enough of us know**: 知道的人够多了→可以直接摊牌（Joey 主张）。
+  - *Example*: Now, **enough of us know** that we can just tell them that we know!
+- **the actual telephone thing**: 真打电话→吐槽 Joey 罐头绳电话梗（Chandler）。
+  - *Example*: Or we can do **the actual telephone thing**.
+- **don't give away the farm**: 别一下子全露了→保留筹码，别过早暴露（Phoebe 拦 Rachel 解扣子）。
+  - *Example*: Oh now, **don't give away the farm**!
+- **the messers become the messies**: 整人的人变成被整的→Chandler 俏皮总结局势反转。
+  - *Example*: Ahh yes, **the messers become the messies**!
+- **they don't know that we know they know we know**: 他们不知道我们知道他们知道我们知道→本集层层套娃名台词。
+  - *Example*: **They don't know that we know they know we know**!
+- **afraid of bras / Can't work 'em**: 怕胸罩/不会弄→Joey 教 Phoebe 亮胸罩吓 Chandler。
+  - *Example*: Show him your bra! He's **afraid of bras**! **Can't work 'em**!
+- **it's not my first time**: 不是第一次→Joey 撕 Phoebe 衣服没扯掉扣子（撕衣服经验）。
+  - *Example*: Wow, you didn't rip off any buttons. — **It's not my first time**.
+- **not without you, lover**: 没有你可不行，情郎→Phoebe 对 Chandler 反撩。
+  - *Example*: Umm, **not without you, lover**.
+- **I'm very bendy**: 我很柔软→Phoebe 色诱对峙时的自夸。
+  - *Example*: You should be. **I'm very bendy**.
+- **bond with him**: 跟他套近乎→Rachel 劝 Ross 用爱好拉近与 Ugly Naked Guy 关系。
+  - *Example*: Find out what his hobbies are and use that to **bond with him**.
+- **bum him out**: 让他难过/扫兴→别提死猫会让他不爽（Phoebe 对 Ross）。
+  - *Example*: I wouldn't bring that up, it would probably just **bum him out**.
+- **the sooner Phoebe breaks Chandler the sooner**: 越早…越好→Joey 催对峙早点结束（…this is all over and out in the open）。
+  - *Example*: **The sooner Phoebe breaks Chandler the sooner** this is all over and out in the open.
+- **might I say**: 容我说一句→礼貌插入（Chandler：你胸还露着呢）。
+  - *Example*: And **might I say** your breasts are still showing.
+- **have I said too much?**: 我是不是说太多了？→撩完假装收手（Phoebe 对 Chandler）。
+  - *Example*: Oh no, **have I said too much**? Well it's just something to think about.
 
 ## 6. 剧情词汇
 - **Ugly Naked Guy**: 丑裸男（对面公寓里常年裸体的邻居，本集要搬走）

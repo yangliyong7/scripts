@@ -41,16 +41,30 @@
   - *Example*: They really **overcharge** you for drinks in the hotel.
 
 ## 5. 实用短句
-- **What the hell took you so long?**: 你到底怎么花了这么久？（带点抱怨）
-  - *Example*: **What the hell took you so long?** We've been waiting for an hour.
-- **Check me out**: 看我/瞧瞧我（引起别人注意）。
-  - *Example*: **Check me out**, I'm walking around naked!
-- **It's all on me**: 我请客/费用全算我的。
-  - *Example*: Don't worry about the bill, **it's all on me**.
-- **Worth a shot**: 值得一试。
-  - *Example*: Asking him for money was a long shot, but it was **worth a shot**.
-- **Take it as a sign**: 把它当作一个征兆/暗示。
-  - *Example*: If we roll an eight, let's **take it as a sign** and get married.
+- **What the hell took you so long?**: 什么鬼花你这么久→你到底怎么花了这么久？（带点抱怨）
+  - *Example*: It's okay. **What the hell took you so long?**
+- **totally over it**: 完全跨过它了→早就翻篇了（嘴上说释怀）。
+  - *Example*: Well, I'm **totally over it** Chandler. Friends forever!
+- **fake out**: 假出去→唬人佯装、恶作剧式骗局。
+  - *Example*: I love the "I forgot the present" **fake out**!
+- **talking out of the side of his mouth**: 从嘴角说话→心口不一、敷衍着说。
+  - *Example*: *(talking out of the side of his mouth)* I'm not mad.
+- **no big deal**: 不是大事→没什么大不了的（强装不在意）。
+  - *Example*: You grabbed a bite! It's **no big deal**.
+- **raise the question of "Us"**: 提出「我们」的问题→要不要定义咱俩关系。
+  - *Example*: …if it's going to **raise the question of "Us."**
+- **settle the question of "us"**: 解决「我们」的问题→把咱俩关系说清楚、给个定论。
+  - *Example*: …do-do we still need to uh **settle the question of "us?"**
+- **It meant nothing!**: 它意味着无→没什么、不代表什么。
+  - *Example*: **It meant nothing!** Okay?
+- **Fine with me**: 我这边好→随便你/我无所谓（赌气）。
+  - *Example*: **Fine with me**!
+- **I just work here**: 我只在这工作→别问我/不关我事（经典甩锅）。
+  - *Example*: Hey-hey don't look at me! **I just work here**!
+- **identical hand twin**: 一模一样的手双胞胎→Joey 胡扯的「撞手」梗。
+  - *Example*: I found my **identical hand twin**!
+- **gold mine**: 金矿→摇钱树、财源。
+  - *Example*: This thing is a **gold mine**!
 
 ## 6. 剧情词汇
 - **Gladiator**: 角斗士

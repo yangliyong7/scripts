@@ -43,20 +43,36 @@
   - *Example*: He's dating a 20-year-old? What a **cradle-robbing perv**!
 
 ## 5. 实用短句
-- **What's up bro?**: 兄弟怎么了？（轻松的打招呼方式）。
-  - *Example*: Hey Ross, **what's up bro**? Why are you running?
-- **My bad**: 我的错、抱歉（非正式道歉）。
-  - *Example*: Yeah, okay, **my bad**. I shouldn't have done that.
-- **Get back down to business**: 继续做正事。
-  - *Example*: Let's clear out and let these two **get back down to business**.
-- **A few steps ahead of us**: 比我们提前了很多步（指讨论得太远）。
+- **What's up bro?**: 兄弟怎么了→轻松的打招呼（问对方状况）。
+  - *Example*: Hey Ross, **what's up bro**?
+- **My bad**: 我的坏→我的错、抱歉（非正式）。
+  - *Example*: Yeah, okay, **my bad**.
+- **Get back down to business**: 回去做业务→继续做正事（常调侃情侣亲热）。
+  - *Example*: Let these two lovebirds **get back down to business**.
+- **A few steps ahead of us**: 比我们超前几步→讨论得太远、想太多。
   - *Example*: Guys, you're **a few steps ahead of us**. We just started dating!
-- **Don't judge sb. before you get to know them**: 在了解之前不要评判某人。
-  - *Example*: **Don't judge Ross before you get to know him** all right?
-- **I cannot look at it!**: 我看不下去了！（表示尴尬或震惊）。
-  - *Example*: Ohhhh, **I cannot look at it**! This is so awkward!
-- **That's not funny at all!**: 这一点都不好笑！
-  - *Example*: **That's not funny at all!** Don't joke about marriage.
+- **Don't judge sb. before you get to know them**: 了解前别评判→在了解之前不要评判某人。
+  - *Example*: **Don't judge Ross before you get to know him**, all right?
+- **I cannot look at it!**: 我不能看它→我看不下去了（尴尬/震惊）。
+  - *Example*: Ohhhh, **I cannot look at it**!
+- **That's not funny at all!**: 一点都不好笑→严肃场合的抗议。
+  - *Example*: **That's not funny at all!**
+- **I call Godfather!**: 我宣布教父→抢先认领当教父。
+  - *Example*: **I call Godfather!**
+- **clear out of here**: 从这里清空→大家都撤、让开。
+  - *Example*: What do you say we all **clear out of here** and let these two lovebirds get back down to business?
+- **messing around**: 到处乱搞→玩玩而已、不认真的交往。
+  - *Example*: Look, we're not just **messing around**! I love her.
+- **turn down the heat on this pressure cooker**: 给高压锅降温→给恋情/压力降温、别逼太紧。
+  - *Example*: Why don't we **turn down the heat on this pressure cooker**?!
+- **Have you lost your mind?**: 你丢脑子了？→你疯了吗？
+  - *Example*: **Have you lost your mind?** Chandler, this isn't about me!
+- **Things are looking up**: 事情在抬头→形势好转了。
+  - *Example*: Oh, okay, see? **Things are looking up** already!
+- **cheap shot**: 便宜的一击→刻薄话、阴招。
+  - *Example*: Yeah, but still, **cheap shot**!
+- **What's that supposed to mean?**: 那应该是什么意思→你那话什么意思？（含挑衅）。
+  - *Example*: Yeah, so, **what's that supposed to mean**?!
 
 ## 6. 剧情词汇
 - **House warming gifts**: 乔迁礼物（Phoebe送给Ross的盐、面包和香薰蜡烛）

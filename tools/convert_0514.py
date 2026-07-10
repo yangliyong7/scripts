@@ -1,8 +1,9 @@
 import re
 from pathlib import Path
 
-HTML = Path(__file__).resolve().parent.parent / "season" / "0514.html"
-OUT = Path(__file__).resolve().parent.parent / "docs" / "Friends_S05E14_The_One_Where_Everyone_Finds_Out.md"
+FRIENDS = Path(__file__).resolve().parent.parent / "friends"
+HTML = FRIENDS / "html" / "0514.html"
+OUT = FRIENDS / "docs" / "Friends_S05E14_The_One_Where_Everyone_Finds_Out.md"
 
 html = HTML.read_text(encoding="windows-1252", errors="replace")
 

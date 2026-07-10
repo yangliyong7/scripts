@@ -33,12 +33,26 @@
   - *Example*: She lives in some kind of **hot girl parallel universe**, it's impossible to find her apartment.
 
 ## 5. 实用短句
-- **What are you talking about?**: 你在说什么？
-  - *Example*: **What are you talking about**? I don't understand what you mean.
-- **That's not the point**: 这不是重点。
+- **What are you talking about?**: 你在说什么→表示不理解/否认。
+  - *Example*: **What are you talking about?**
+- **That's not the point**: 那不是重点→转移话题时的反驳。
   - *Example*: Sure, it's a nice gift, but **that's not the point**.
-- **Get all your facts**: 弄清楚所有事实。
+- **Get all your facts**: 得到你所有事实→弄清楚所有事实再开口。
   - *Example*: Why don't you just **get all your facts** before you run around telling everybody?
+- **I'm down with that**: 我和它一起向下→没问题/我愿意。
+  - *Example*: Yeah, I-I-I'm **down with that**.
+- **Tell me about it**: 告诉我关于它→可不是嘛/太对了（表强烈同感）。
+  - *Example*: **Tell me about it**, huh?
+- **mix it up**: 混合→调情接招、你来我往。
+  - *Example*: Get in there man! Flirt back, **mix it up**!
+- **I woke the beast**: 我唤醒了野兽→惹到"猛兽"了（指 Monica）。
+  - *Example*: *(Under her breath)* God, **I woke the beast**. Sorry.
+- **Good day, sir**: 祝您愉快，先生→告辞（冷淡、生气离场）。
+  - *Example*: I do not want this job that bad. **Good day, sir.**
+- **buying this**: 买这个→信这一套/上当。
+  - *Example*: I cannot believe Ross is **buying this**!
+- **Nevermind!**: 永远不要介意→算了！（赶紧收场）。
+  - *Example*: **Nevermind!** *(Goes back to his mailbox.)*
 
 ## 6. 剧情词汇
 - **Inadvertant kiss**: 无意之吻（剧集标题）

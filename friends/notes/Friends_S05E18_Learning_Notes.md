@@ -41,16 +41,30 @@
   - *Example*: What happened to the **intimate dinner party** we planned?
 
 ## 5. 实用短句
-- **What's up?**: 怎么了？有什么事？
-  - *Example*: Hey Ross, **what's up**? You look upset.
-- **That's it?**: 就这样？（表示不满或惊讶）
-  - *Example*: **That's it?** You're just gonna let me do this?
-- **Come on!**: 拜托！得了吧！
-  - *Example*: **Come on!** Have you seen what my kid can do?!
-- **Eh, what are you gonna do?**: 唉，你能怎么办呢？（无奈接受）
-  - *Example*: He didn't get the part. **Eh, what are you gonna do?**
-- **You lost me**: 我没听懂、你把我搞糊涂了。
-  - *Example*: Wait, **you lost me**. Can you explain that again?
+- **What's up?**: 什么在上面→怎么了？有什么事？
+  - *Example*: Hey Ross, **what's up**?
+- **That's it?**: 就这样？→表示不满或惊讶。
+  - *Example*: **That's it?**
+- **Come on!**: 来吧→拜托！得了吧！
+  - *Example*: **Come on!**
+- **Eh, what are you gonna do?**: 唉你要做什么→唉，你能怎么办呢？（无奈接受）
+  - *Example*: **Eh, what are you gonna do?**
+- **You lost me**: 你丢了我→我没听懂/你把我搞糊涂了。
+  - *Example*: Wait, **you lost me**.
+- **Way to go**: 去的路→干得好！（可真诚可讽刺）。
+  - *Example*: "…no one offered me an audition." — "**Way to go** Ben!"
+- **busted**: busted→被抓包了。
+  - *Example*: Uh-oh, **busted**!
+- **blow it**: 吹它→搞砸、前功尽弃。
+  - *Example*: I'm not gonna let you **blow it**.
+- **Drag me down**: 拖我下去→拉我下水一起堕落。
+  - *Example*: Oh wait, no-no-no! **Drag me down**. Drag-drag me down.
+- **push past this**: 推过这个→挺过这段就好了。
+  - *Example*: Okay, but you gotta **push past this** because it is about to get so good!
+- **steered clear of her**: 方向盘避开她→刻意绕开她。
+  - *Example*: …one of the casting ladies has actually seen me in a play, so I **steered clear of her**…
+- **eating ketchup right out of the bottle**: 直接从瓶里吃番茄酱→落魄到拿番茄酱充饥（形容演员低谷）。
+  - *Example*: …one day you're Dr. Drake Remoray, the next day you're **eating ketchup right out of the bottle**.
 
 ## 6. 剧情词汇
 - **Commercial casting director**: 商业广告选角导演

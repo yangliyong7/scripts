@@ -14,12 +14,16 @@ description: >-
 
 ## 工作流程
 
-1. 找到对应 `docs/Friends_S{season}E{ep}_*.md` 剧本，通读台词。
-2. 提取本集值得学的口语表达、俚语、固定搭配。
+1. 找到对应 `friends/docs/Friends_S{season}E{ep}_*.md` 剧本，通读台词。（原始 HTML 在 `friends/html/`。）
+2. 提取本集值得学的口语表达、俚语、固定搭配；**重点：直译看不懂的**（见用户偏好）。
 3. 按下方 **6 个分类** 归类（禁止按剧情线分节）。
-4. 写入 `notes/Friends_S{season}E{ep}_{Title_Slug}_Learning_Notes.md`。
+4. 写入 `friends/notes/Friends_S{season}E{ep}_Learning_Notes.md`（双集如 `Friends_S05E23-24_Learning_Notes.md`）。
 
-`Title_Slug` 与 `docs/` 中同名文件一致（如 `The_One_With_Ross_Sandwich`）。
+`docs/` 剧本文件名格式：`Friends_S{season}E{ep}_{Title_Slug}.md`（双集如 `Friends_S05E23-24_The_One_In_Vegas.md`）。
+
+`Title_Slug` 规则（参照 `Friends_S05E15_The_One_With_The_Girl_Who_Hits_Joey.md`）：
+- 集标题转下划线，主要词首字母大写（含 `With` / `Where` / `The`）
+- 所有格去掉撇号：`Joey's` → `Joeys`，`Ross's` → `Rosss`
 
 ## 文件标题
 
@@ -83,13 +87,20 @@ description: >-
 - [ ] 恰好 6 个小节，标题与顺序完全一致
 - [ ] 每节至少 1 条（第 6 节 3–10 个剧情词为宜）
 - [ ] 无剧情主题小节名
-- [ ] 文件名与 `docs/` 季集号一致
+- [ ] 直译难懂的习语/固定搭配已尽量收录（§5 为主）
+- [ ] 文件名为 `Friends_S{season}E{ep}_Learning_Notes.md`，季集号与 `friends/docs/` 一致
 
 ## 参考样例
 
-完整范例：`notes/Friends_S05E12_Learning_Notes.md`
+完整范例：`friends/notes/Friends_S05E12_Learning_Notes.md`
 
 ## 用户偏好
 
 - 解释简短，避免长篇大论。
 - 用户问台词含义时，同样保持简短回答。
+- **二语习得、无英语环境**：凡 **中文直译看不懂** 的表达必须收录，包括：
+  - 习语、俚语、固定搭配（如 *out of your hair*、*take a rain check*）
+  - 字面义与实际义差距大的词（如 *pass*、*bubble*、*shot*）
+  - 常用口语骨架（*Way to…*、*What's your point?*、*Keep talking.*）
+- 优先放进 **§5 实用短句**；有情绪色彩放 §1，有社交含义放 §3。
+- 每条解释建议点明：**字面像什么 → 实际什么意思**（一句即可）。

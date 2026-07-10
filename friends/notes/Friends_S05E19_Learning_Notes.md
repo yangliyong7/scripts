@@ -43,16 +43,30 @@
   - *Example*: That's **pathetic**! Guys think every woman who flirts wants to sleep with them.
 
 ## 5. 实用短句
-- **What the hell was that?**: 这到底是怎么回事？
-  - *Example*: **What the hell was that**? The flirting between Chandler and the delivery girl!
-- **For shame!**: 真丢脸！太不应该了！
-  - *Example*: And on your anniversary, **for shame**! How could you flirt with someone else?
-- **No big deal**: 没什么大不了的。
-  - *Example*: It's **no big deal**, I do it all the time. Just casual flirting.
-- **Clear that up**: 澄清、弄清楚。
-  - *Example*: I'm so glad we **cleared that up**. Now I understand the situation.
-- **Go on**: 继续说、说吧。
+- **What the hell was that?**: 那是什么鬼→这到底是怎么回事？
+  - *Example*: **What the hell was that**?
+- **For shame!**: 为了羞耻→真丢脸！太不应该了！
+  - *Example*: And on your anniversary, **for shame**!
+- **No big deal**: 不是大事→没什么大不了的。
+  - *Example*: It's **no big deal**, I do it all the time.
+- **Clear that up**: 清理那个→澄清、弄清楚。
+  - *Example*: I'm so glad we **cleared that up**.
+- **Go on**: 继续→继续说、说吧。
   - *Example*: **Go on**, teach me something about men and women.
+- **I'm good**: 我很好→不用了/算了（婉拒）。
+  - *Example*: *(backing away)* **I'm good**.
+- **Don't get me started on that**: 别让我开始说那个→别提了，一说就来气。
+  - *Example*: **Don't get me started on that**.
+- **let me get this straight**: 让我弄直→让我确认一下/说白了。
+  - *Example*: Okay, **let me get this straight**, it's okay for you to flirt, but not for me.
+- **True story!**: 真实故事→没错/千真万确（表赞同）。
+  - *Example*: **True story!** *(Goes and sits down.)*
+- **this one is on me**: 这个在我身上→我请客/算我的。
+  - *Example*: this one is **on me**!
+- **wanna die**: 想死→尴尬到想钻地缝。
+  - *Example*: …that part, that where it just feels like you **wanna die**…
+- **Oh, the humanity**: 哦，人性→天哪太惨了！（夸张哀叹）。
+  - *Example*: **Oh the humanity**.
 
 ## 6. 剧情词汇
 - **Ten-month anniversary**: 十个月纪念日

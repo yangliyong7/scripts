@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#b8c8f8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>词画记忆</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="mesh-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="mesh-noise"></div>
+  </div>
+
+  <div class="app" id="app">
+    <header class="topbar glass-bar">
+      <div class="brand">
+        <span class="brand-gem" aria-hidden="true"><i>词</i></span>
+        <div>
+          <h1>词画记忆</h1>
+          <p class="brand-sub">Crystal · 看图识词</p>
+        </div>
+      </div>
+      <div class="streak glass-chip" id="streakBadge" title="连续学习">✦ 0</div>
+    </header>
+
+    <section class="view active" id="view-home" data-view="home">
+      <div class="hero-card glass-panel">
+        <div class="glass-shine"></div>
+        <p class="hero-label">今日学习进度</p>
+        <div class="ring-wrap">
+          <svg class="ring" viewBox="0 0 120 120">
+            <defs>
+              <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#a8c8ff"/>
+                <stop offset="50%" stop-color="#c4a8ff"/>
+                <stop offset="100%" stop-color="#88e0d8"/>
+              </linearGradient>
+            </defs>
+            <circle class="ring-bg" cx="60" cy="60" r="52" />
+            <circle class="ring-fg" id="progressRing" cx="60" cy="60" r="52" />
+          </svg>
+          <div class="ring-text">
+            <strong id="todayCount">0</strong>
+            <span>/ <em id="todayGoal">20</em></span>
+          </div>
+        </div>
+        <p class="hero-tip" id="heroTip">从已配图词汇开始，每天学一点</p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card glass-panel">
+          <span class="stat-num" id="statTotal">0</span>
+          <span class="stat-label">词库</span>
+        </div>
+        <div class="stat-card glass-panel">
+          <span class="stat-num" id="statLearned">0</span>
+          <span class="stat-label">已学</span>
+        </div>
+        <div class="stat-card glass-panel">
+          <span class="stat-num" id="statMastered">0</span>
+          <span class="stat-label">掌握</span>
+        </div>
+      </div>
+
+      <button class="cta-glass" data-go="learn">开始学习</button>
+
+      <p class="section-label">训练模块</p>
+      <div class="action-list">
+        <button class="action-card glass-panel" data-go="learn">
+          <span class="action-gem blue">图</span>
+          <div>
+            <strong>闪卡识词</strong>
+            <p>看图回忆 · 轻触翻面</p>
+          </div>
+          <span class="chev">›</span>
+        </button>
+        <button class="action-card glass-panel" data-go="quiz">
+          <span class="action-gem violet">测</span>
+          <div>
+            <strong>看图选题</strong>
+            <p>四选一 · 即时反馈</p>
+          </div>
+          <span class="chev">›</span>
+        </button>
+        <button class="action-card glass-panel" data-go="library">
+          <span class="action-gem mint">库</span>
+          <div>
+            <strong>我的词库</strong>
+            <p>搜索复习全部单词</p>
+          </div>
+          <span class="chev">›</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="view" id="view-learn" data-view="learn">
+      <div class="view-head">
+        <button class="icon-btn glass-chip" data-back aria-label="返回">‹</button>
+        <h2>闪卡识词</h2>
+        <span class="badge glass-chip" id="learnProgress">0/0</span>
+      </div>
+      <div class="flashcard-wrap">
+        <div class="flashcard" id="flashcard" tabindex="0">
+          <div class="flashcard-inner">
+            <div class="flashcard-face front glass-panel">
+              <div class="glass-shine"></div>
+              <img id="learnImage" alt="词汇配图" />
+              <p class="hint">轻触翻面 · 先回忆再核对</p>
+            </div>
+            <div class="flashcard-face back glass-panel">
+              <div class="glass-shine"></div>
+              <img id="learnImageBack" alt="词汇配图" />
+              <div class="word-block">
+                <h3 id="learnWord"></h3>
+                <p id="learnMeaning"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="toolbar">
+        <button class="pill glass-chip danger" id="btnAgain">不熟</button>
+        <button class="pill glass-chip" id="btnFlip">翻面</button>
+        <button class="pill glass-chip success" id="btnKnow">认识</button>
+      </div>
+    </section>
+
+    <section class="view" id="view-quiz" data-view="quiz">
+      <div class="view-head">
+        <button class="icon-btn glass-chip" data-back aria-label="返回">‹</button>
+        <h2>看图选题</h2>
+        <span class="badge glass-chip" id="quizScore">0 分</span>
+      </div>
+      <div class="quiz-card glass-panel">
+        <div class="glass-shine"></div>
+        <p class="quiz-label">选出与图片对应的单词</p>
+        <img id="quizImage" class="quiz-image" alt="测验配图" />
+        <div class="options" id="quizOptions"></div>
+      </div>
+      <button class="cta-glass outline" id="btnNextQuiz" hidden>继续下一题</button>
+    </section>
+
+    <section class="view" id="view-library" data-view="library">
+      <div class="view-head">
+        <button class="icon-btn glass-chip" data-back aria-label="返回">‹</button>
+        <h2>我的词库</h2>
+        <span class="badge glass-chip" id="libCount">0</span>
+      </div>
+      <div class="search-wrap glass-panel">
+        <input type="search" id="searchInput" placeholder="搜索单词或释义…" autocomplete="off" />
+      </div>
+      <div class="word-list" id="wordList"></div>
+    </section>
+
+    <dialog class="modal" id="wordModal">
+      <div class="modal-card glass-panel">
+        <div class="glass-shine"></div>
+        <button class="modal-close glass-chip" id="modalClose" aria-label="关闭">×</button>
+        <img id="modalImage" alt="" />
+        <h3 id="modalWord"></h3>
+        <p id="modalMeaning"></p>
+        <div class="modal-actions">
+          <button class="pill glass-chip" id="modalMarkLearned">已学</button>
+          <button class="pill glass-chip success" id="modalMarkMastered">掌握</button>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="toast glass-panel" id="toast" role="status"></div>
+
+    <nav class="tabbar glass-dock" id="tabbar">
+      <span class="tab-indicator" id="tabIndicator" aria-hidden="true"></span>
+      <button class="tab active" data-tab="home">
+        <svg viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V20a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1v-9.5z"/></svg>
+        <em>首页</em>
+      </button>
+      <button class="tab" data-tab="learn">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4V6zm0 5h10v2H4v-2zm0 5h16v2H4v-2z"/></svg>
+        <em>学习</em>
+      </button>
+      <button class="tab" data-tab="quiz">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        <em>测验</em>
+      </button>
+      <button class="tab" data-tab="library">
+        <svg viewBox="0 0 24 24"><path d="M6 4h12a2 2 0 012 2v14l-8-3-8 3V6a2 2 0 012-2z"/></svg>
+        <em>词库</em>
+      </button>
+    </nav>
+  </div>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>

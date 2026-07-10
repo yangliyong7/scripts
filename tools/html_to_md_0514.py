@@ -1,7 +1,8 @@
 import re
 from pathlib import Path
 
-html = Path(r"c:\Users\ICN00069\Downloads\scripts\season\0514.html").read_text(
+FRIENDS = Path(__file__).resolve().parents[1] / "friends"
+html = (FRIENDS / "html" / "0514.html").read_text(
     encoding="windows-1252", errors="replace"
 )
 
@@ -153,6 +154,6 @@ Phoebe 和 Rachel 在 Ugly Naked Guy 公寓窗外 **撞见 Monica 和 Chandler �
 """
 
 Path(
-    r"c:\Users\ICN00069\Downloads\scripts\docs\Friends_S05E14_The_One_Where_Everyone_Finds_Out.md"
+    FRIENDS / "docs" / "Friends_S05E14_The_One_Where_Everyone_Finds_Out.md"
 ).write_text(out + notes, encoding="utf-8")
 print(f"Done: {scene_num} scenes, {len(out + notes)} chars")

@@ -39,15 +39,28 @@
   - *Example*: We had the most **incredible night** on the ride along!
 
 ## 5. 实用短句
-- **What the hell was that?**: 这到底是怎么回事？（已在E19中出现）。
-- **I'm in**: 我参加、我加入。
-  - *Example*: Hey, do you want to join the ride along? - **I'm in**!
-- **Right back at you**: 同样的话送给你。
-  - *Example*: "You're the best!" - "No, **right back at you**!"
-- **That's the spirit**: 就是这种精神！
-  - *Example*: "Let's do this!" - **That's the spirit**!
-- **Count me in**: 算我一个。
-  - *Example*: Are you guys going to the party? - **Count me in**!
+- **everything's just falling apart**: 一切都在掉落→全乱套了。
+  - *Example*: Ugh, **everything's just falling apart**!
+- **out of the blue**: 从蓝天之外→突然、毫无预兆。
+  - *Example*: I know this is **out of the blue** but uh, I'm getting married tomorrow.
+- **lawyers up**: 律师起来→请律师、行使沉默权。
+  - *Example*: …before he **lawyers up**?
+- **It all adds up**: 全加起来了→这么说就讲得通了。
+  - *Example*: You're mad at me! **It all adds up**!
+- **That's the bottom line**: 那是底线→归根结底。
+  - *Example*: **That's the bottom line**.
+- **I just went for it**: 我就为它而去→凭本能冲上去做了。
+  - *Example*: Look Chandler, it was instinct! Okay? I **just went for it**!
+- **it's not a hot dog**: 不是热狗→只能咬一口表心意，不能整根拿走。
+  - *Example*: No, eh, oh-oi, easy, **it's not a hot dog**!
+- **drop in the bucket**: 桶里的一滴→九牛一毛。
+  - *Example*: This is, this is just a **drop in the bucket** mister!
+- **my number was up**: 我的号码到了→死到临头/大限将至。
+  - *Example*: I thought **my number was up**. I had an actual near death experience!
+- **close call day**: 接近呼叫日→侥幸脱险日。
+  - *Example*: Yeah. Maybe today is just, **close call day**.
+- **not street like us**: 不像我们这条街→在社会上混得不够开、不够狠。
+  - *Example*: He's **not street like us**!
 
 ## 6. 剧情词汇
 - **Ride along**: 陪同执法（跟随警察巡逻体验工作）

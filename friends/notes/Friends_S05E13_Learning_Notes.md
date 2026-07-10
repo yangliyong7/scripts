@@ -31,10 +31,6 @@
   - *Example*: This guy **abandoned** you!
 - **Past it / Rip his tiny little head off**: 放下怒火 / 想拧掉他的小脑袋（对比菲比表面平静与 Ross 的暴力幻想）。
   - *Example*: You'd **think** I'd wanna **rip his tiny little head off**. Fortunately, I'm past it.
-- **Neither here nor there**: 无关紧要、不是重点（菲比回应「你真漂亮」）。
-  - *Example*: Yes. Well, that's **neither here nor there**.
-- **That's a defense?**: 这算辩解吗？（菲比吐槽 Frank 的「烂父亲」理由）。
-  - *Example*: Well, y'know in my defense I was a lousy father. — **That's a defense?**
 - **Not yet, no**: 还不行、先别（菲比握了父亲的手又松开）。
   - *Example*: Well, I am. *(takes his hand)* … **Not yet, no.**
 
@@ -53,20 +49,36 @@
   - *Example*: Maybe they could call the award **the Monica**?
 
 ## 5. 实用短句
-- **Say good-bye to sore muscles**: 跟酸痛肌肉说再见（Monica 自夸按摩时说的）。
+- **Say good-bye to sore muscles**: 跟酸痛肌肉说再见→Monica 自夸按摩开场白。
   - *Example*: **Say good-bye to sore muscles**!
-- **Good-bye muscles!!**: 肌肉再见！（Chandler 双关：不是告别酸痛，是肌肉要没了）。
+- **Good-bye muscles!!**: 肌肉再见！→双关：不是告别酸痛，是肌肉要没了。
   - *Example*: **Good-bye muscles!!**
-- **And the bunny got away**: 兔子跑掉了（Chandler 吐槽 Joey 的魔术师高帽）。
+- **And the bunny got away**: 兔子跑掉了→吐槽魔术师高帽里没兔子（Chandler）。
   - *Example*: *(examining the hat)* **And the bunny got away.**
-- **Done.**: 搞定了（Chandler 把篮子顶头上，讽刺 Joey 的「时髦」）。
+- **Done.**: 搞定了→把篮子顶头上讽刺 Joey「时髦」（Chandler）。
   - *Example*: *(puts basket on head)* **Done.**
-- **Meet at the checkout counter**: 在收银台见面（外婆遗言；菲比相信来世还会相遇）。
+- **Meet at the checkout counter**: 在收银台见面→外婆遗言；菲比信来世还会相遇。
   - *Example*: We'll **meet at the checkout counter**. And y'know what? We **will** meet at the checkout counter.
-- **Joey comes with a bag**: 乔伊出门就得带着包（Joey 宣告身份认同）。
-  - *Example*: You guys are gonna have to get used to the fact that Joey, *(pats bag)* **comes with a bag**!
-- **They're called wallets**: 那叫钱包（Chandler 片尾吐槽「争议较少的包」）。
-  - *Example*: There are other bags that are a little less controversial. — Yeah, **they're called wallets**.
+- **Joey comes with a bag**: 乔伊出门就得带着包→身份认同宣告。
+  - *Example*: Joey, *(pats bag)* **comes with a bag**!
+- **They're called wallets**: 那叫钱包→片尾吐槽「争议较少的包」（Chandler）。
+  - *Example*: Yeah, **they're called wallets**.
+- **how are you holding up**: 撑得住吗→慰问丧事（Ross 对 Phoebe）。
+  - *Example*: Hey, **how are you holding up**?
+- **don't wanna freak him out**: 不想吓跑他→Phoebe 见生父前的顾虑。
+  - *Example*: I don't want to **freak him out**.
+- **it's not over**: 还没完→Phoebe 对小鸡说；也指父女线未了。
+  - *Example*: *(To the chick.)* **This is not over**!
+- **these babies sell themselves**: 这些宝贝自己会卖→Joey 推销肩包台词。
+  - *Example*: No-no-no, **these babies sell themselves**.
+- **enjoy your funeral**: 葬礼愉快→Ursula 刻薄送别（对 Phoebe）。
+  - *Example*: Thanks! **Enjoy your funeral**.
+- **the world is ready for you and your bag**: 世界准备好接受你和你的包了吗→Rachel 劝 Joey 放弃包。
+  - *Example*: I just don't know if **the world is ready for you and your bag**.
+- **neither here nor there**: 无关紧要→不是重点（字面：既不在这儿也不在那儿）。
+  - *Example*: Yes. Well, that's **neither here nor there**.
+- **that's a defense?**: 这算辩解吗？→反问对方理由荒谬。
+  - *Example*: Well, in my defense I was a lousy father. — **That's a defense?**
 
 ## 6. 剧情词汇
 - **Frank Buffay / Frank Sr.**: 菲比生父（葬礼上自称 Joe Hill 又改口）
@@ -78,4 +90,3 @@
 - **Anti-man**: 反英雄（Ross 调侃 Joey 试镜角色与包）
 - **Sleepy girl song**: 哄睡歌（Frank 唱，旋律同 Smelly Cat）
 - **Estelle**: Joey 的经纪人（通知试镜失败）
-- **These babies sell themselves**: 这些宝贝自己会卖（Joey 对肩包的「推销」台词）

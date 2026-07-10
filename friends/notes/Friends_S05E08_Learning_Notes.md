@@ -1,16 +1,19 @@
 # Friends S05E08 口语表达笔记
 
 ## 1. 情绪与反应
-- **Thankful for**: 感恩游戏——每人说一件感恩的事。
-- **Divorce or my eviction**: Ross 纠结感恩离婚还是被驱逐。
-  - *Example*: Am I more thankful for my divorce or my **eviction**?
-- **King of bad Thanksgivings**: Chandler 自封「最惨感恩节之王」。
-  - *Example*: **I** am the **king of bad Thanksgivings**.
-- **Bumming us out**: 让人扫兴（Joey：没 Chandler 扫兴就不算感恩节）。
+- **Thankful for**: thankful 感谢→感恩游戏，每人说一件感恩的事。
+  - *Example*: Everyone says one thing that they're **thankful for**.
+- **Bumming us out**: bum 我们→让人扫兴、泼冷水（Joey：没 Chandler 扫兴就不算感恩节）。
   - *Example*: It wouldn't be Thanksgiving without Chandler **bumming us out**!
-- **I hate this stupid day**: Chandler 赌气恨感恩节（丢脚趾后）。
+- **Divorce or my eviction**: 离婚还是被驱逐→Ross 纠结感恩离婚还是被赶出公寓。
+  - *Example*: Am I more thankful for my divorce or my **eviction**?
+- **King of bad Thanksgivings**: 惨感恩节之王→Chandler 自封「最惨感恩节之王」，不让 Ross 抢头衔。
+  - *Example*: **I** am the **king of bad Thanksgivings**.
+- **I hate this stupid day**: 我恨这蠢日子→Chandler 赌气恨感恩节（丢脚趾后）。
   - *Example*: I **hate** this stupid day! And everything about it!
-- **That's why I lost my toe?!**: 丢脚趾竟因当年叫 Monica fat。
+- **Gonna totally freak out**: totally freak out→肯定要抓狂/大发雷霆（Joey 戴火鸡，Phoebe 怕 Monica 反应）。
+  - *Example*: Monica's **gonna totally freak out**!
+- **That's why I lost my toe?!**: 所以我丢脚趾？！→丢脚趾竟因当年叫 Monica fat。
   - *Example*: **That's why I lost my toe**?! Because I called you fat?!
 - **I love you! / Stop it!**: Chandler 脱口我爱你——立刻疯狂否认。
   - *Example*: You **love me**! — No I don't! **Stop it**!
@@ -22,14 +25,14 @@
   - *Example*: I'm gonna **spread the legs** as wide as I can.
 - **Everything turns you on**: Rachel 教 Monica 装骚：看啥都性感。
   - *Example*: Just act like **everything around you turns you on**.
-- **Get him back**: 报复回来/扳回一局（Monica 减肥后仍觉得没赢）。
+- **Get him back**: 把他 get 回来→报复回来/扳回一局（Monica 减肥后仍觉得没赢）。
   - *Example*: I still don't feel like I **got him back**.
-- **Leave me alone for a while**: 让我静静（Chandler 赌气离场）。
+- **Leave me alone for a while**: 让我 alone 一会儿→让我静静（Chandler 赌气离场）。
   - *Example*: Just **leave me alone for a while**.
 
 ## 3. 社交与关系
-- **Like the parade**: 像感恩节游行——若游行出柜、搬走、抛弃全家（父母离婚梗）。
-  - *Example*: If the parade decided it was gay, moved out, and abandoned its entire family.
+- **Like the parade**: 像游行→像感恩节游行——若游行出柜、搬走、抛弃全家（父母离婚梗）。
+  - *Example*: It's a tradition, **like the parade**. If the parade decided it was gay, moved out, and abandoned its entire family.
 - **Sleep with the house-boy**: 爸宁愿跟男管家睡（Chandler 童年阴影）。
   - *Example*: He would rather **sleep with the house-boy** than me.
 - **More turkey Mr. Chandler?**: 管家暧昧递火鸡——最惨感恩节标杆。
@@ -64,24 +67,30 @@
 - **Sir Limps-A-Lot**: Chandler 瘸了一年绰号（Ross 起的）。
   - *Example*: People called me **Sir Limps-A-Lot**?!
 - **Turkey stuck on his head**: Joey 戴火鸡吓 Chandler，卡住了。
-- **Head up a dead animal**: 头塞在死动物里当然臭。
-- **I'm over here big guy**: Chandler 在门口，Joey 戴火鸡吓错方向。
-  - *Example*: **I'm over here** big guy.
 
 ## 5. 实用短句
-- **Lift it and point**: 遥控器要举起来对准电视。
+- **Lift it and point**: 举起来对准→遥控器要举起来对准电视（Phoebe 不会用遥控）。
   - *Example*: Phoebe, you have to **lift it and point**.
-- **Squatternut buash**: Ross 嘴瓢把 butternut squash 说乱。
+- **Squatternut buash**: 嘴瓢南瓜泥→Ross 把 butternut squash 说乱。
   - *Example*: It came out, "**Squatternut buash**?"
-- **Reliving past pain**: 重温旧痛——Chandler 说这才是感恩节精神。
+- **Reliving past pain**: 重温 past pain→翻旧账、重温旧痛（Chandler 说这才是感恩节精神）。
   - *Example*: **Reliving past pain** and getting depressed is what Thanksgiving is all about.
-- **Sorry doesn't bring back...**: 道歉换不回脚趾/小猪（童谣比喻）。
-  - *Example*: Sorry doesn't bring back the little piggy that cried all the way home!
-- **Nice try**: 火鸡道歉没用——直到 Monica 跳舞。
+- **Sorry doesn't bring back...**: 道歉带不回来→道歉换不回脚趾/小猪（童谣比喻，Chandler 赌气）。
+  - *Example*: **Sorry doesn't bring back** the little piggy that cried all the way home!
+- **Nice try**: 试得不错→这招没用/想得美（火鸡道歉没用——直到 Monica 跳舞）。
   - *Example*: **Nice try**.
-- **More bandages / gauze**: Phoebe 前世闪回喊要绷带/纱布。
-- **She's finally full**: 爸妈逼胖 Monica 吃派，讽刺她终于吃饱了。
+- **She's finally full**: 她终于饱了→爸妈逼胖 Monica 吃派，讽刺她终于吃饱了。
   - *Example*: She's **finally** full!
+- **Swoop in here**: 突然 swoop 进来→突然冲进来抢走（Chandler 不让 Ross 抢走「最惨感恩节」头衔）。
+  - *Example*: You can't just **swoop in here** with your bad marriage and take that away from me.
+- **For crying out loud**: 看在老天份上→真是的、我的天（Chandler 忏悔年轻时冲 Wham 演唱会舞台）。
+  - *Example*: I rushed the stage at a Wham concert **for crying out loud**!
+- **Humiliate him**: 羞辱他→Monica 想报复 Chandler，让他裸体被邻居嘲笑。
+  - *Example*: I just want to **humiliate him**. I want him to be like naked and then I'm going to point at him and laugh!
+- **I'm over here big guy**: 我在这呢大块头→人在那边呢（Chandler 在门口，Joey 戴火鸡吓错方向）。
+  - *Example*: **I'm over here** big guy.
+- **Head up a dead animal**: 头塞进死动物→头套在死火鸡里当然臭（Phoebe 吐槽 Joey）。
+  - *Example*: You have your **head up a dead animal**.
 
 ## 6. 剧情词汇
 - **S05E08 / Thanksgiving Flashbacks**: 全集闪回结构，多段 Present Day 穿插

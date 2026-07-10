@@ -43,18 +43,28 @@
   - *Example*: My vision has been **compromised** because the cat made my eyes water!
 
 ## 5. 实用短句
-- **Check it out**: 瞧瞧这个、看一下。
-  - *Example*: **Check it out**! I bought a new cat. (Or: Look at this cool gadget!)
-- **Way to go**: 干得好、做得棒。
-  - *Example*: You got the lead in a movie? **Way to go**, Joey!
-- **I give up**: 我放弃了、我认输。
-  - *Example*: **I give up**! I don't know what to do with this aggressive cat.
-- **Suck it up**: 忍着点、硬撑下去（口语）。
+- **Check it out**: 检查它→瞧瞧这个、看一下。
+  - *Example*: **Check it out!** Almost 3 hours without droppin' it!
+- **Way to go**: 去的路→干得好、做得棒。
+  - *Example*: Oh! Good for you Pheebs, **way to go**!
+- **I give up**: 我放弃→我放弃了、我认输。
+  - *Example*: **I give up** you guys, I don't know what I'm going to do with this thing!
+- **Suck it up**: 吸起来→忍着点、硬撑下去。
   - *Example*: Come on guys! **Suck it up**! We're closing in on ten hours!
-- **Look alive**: 打起精神来、活跃点。
-  - *Example*: **Look alive**, Monica! Don't drop the ball now!
-- **As long as we're here**: 既然我们都在这儿了（顺便做某事）。
-  - *Example*: Do you want to eat out? No, let's eat here **as long as we're here**.
+- **Look alive**: 看起来活着→打起精神来、活跃点。
+  - *Example*: Come on Monica! **Look alive**! Come on, look alive!
+- **As long as we're here**: 只要我们在这→既然我们都在这儿了（顺便做某事）。
+  - *Example*: Yeah! **As long as we're here**!
+- **don't want to jinx it**: 下咒→怕一说就破功。
+  - *Example*: I didn't want to say anything 'cause I didn't want to **jinx it**.
+- **Here's the thing**: 这是那件事→是这样/直说吧。
+  - *Example*: **Here's the thing**.
+- **gut-check time**: 内脏检查时间→咬牙硬撑的关键时刻。
+  - *Example*: We're closing in on ten hours! It's **gut-check time**!
+- **robbing me blind**: 抢我双眼→宰得我体无完肤、敲竹杠。
+  - *Example*: …you're **robbing me blind**! Blind!
+- **afraid of commitment**: 害怕承诺→怕同居/长期绑定。
+  - *Example*: Because you are so **afraid of commitment**!
 
 ## 6. 剧情词汇
 - **Sphinx cat**: 斯芬克斯猫（无毛猫）

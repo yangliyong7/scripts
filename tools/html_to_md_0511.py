@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Convert season/0511.html to docs markdown transcript."""
+"""Convert friends/html/0511.html to docs markdown transcript."""
 
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-html = (ROOT / "season" / "0511.html").read_text(
+FRIENDS = Path(__file__).resolve().parents[1] / "friends"
+html = (FRIENDS / "html" / "0511.html").read_text(
     encoding="windows-1252", errors="replace"
 )
 
@@ -117,7 +117,7 @@ lines.extend(["---", "", "**END**"])
 
 out = re.sub(r"\n{3,}", "\n\n", "\n".join(lines))
 
-Path(ROOT / "docs" / "Friends_S05E11_The_One_With_All_The_Resolutions.md").write_text(
+Path(FRIENDS / "docs" / "Friends_S05E11_The_One_With_All_The_Resolutions.md").write_text(
     out, encoding="utf-8"
 )
 print(f"Done: {scene_num} scenes, {len(out)} chars")

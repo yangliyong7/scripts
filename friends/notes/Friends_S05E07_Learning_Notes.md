@@ -25,7 +25,7 @@
   - *Example*: Maybe **chip in** on some new air filters?
 - **Let's go quicker**: 快走/赶紧的（躲 Ross 分摊钱）。
   - *Example*: **Let's go quicker**.
-- **Knock yourself out**: 请便/随便查（Monica 让 Larry 查厨房）。
+- **Knock yourself out**: knock 你自己出去→请便/随便查、别客气（Monica 让 Larry 查厨房）。
   - *Example*: Okay, **knock yourself out**, Larry.
 
 ## 3. 社交与关系
@@ -71,24 +71,36 @@
   - *Example*: I can be your sidekick **Vunda**.
 
 ## 5. 实用短句
-- **Make fun of your hair**: 好了就嘲笑你发型（Chandler 答应收留 Ross 的条件）。
+- **Make fun of your hair**: 取笑你头发→好了就嘲笑你发型（Chandler 答应收留 Ross 的条件）。
   - *Example*: Promise me the second you are feeling better we can **make fun of your hair**!
-- **Gonad**: Joey 把 nomad 听成睾丸梗。
+- **Gonad**: 睾丸→Joey 把 nomad（游牧者）听成 gonad 梗。
   - *Example*: He thought you said **gonad**.
-- **We will, we will, call you back**: Ross 版答录机（恶搞 Queen）。
+- **We will, we will, call you back**: 我们会我们会回电→Ross 版答录机（恶搞 Queen《We Will Rock You》）。
   - *Example*: **We will, we will, call you back**!
-- **See you ladle**: Phoebe 谐音梗（ladle ≈ later）。
+- **See you ladle**: 再见勺子→谐音梗 ladle ≈ later（Phoebe 学 Larry）。
   - *Example*: Larry would say, "**See you ladle**."
-- **At ease, soldier**: 稍息，士兵（拆穿 Tom 军事搭讪）。
+- **At ease, soldier**: 稍息士兵→别装了/放松点（Rachel 拆穿 Tom 军事搭讪）。
   - *Example*: Okay, **at ease soldier**!
-- **Lobbing them up / knocking them out of the park**: 他不断送机会，我全打掉（棒球比喻）。
+- **Lobbing them up / knocking them out of the park**: 往上抛球/打出本垒打→他不断送机会，我全打掉（棒球比喻，Rachel 拒 Danny 的 wingman）。
   - *Example*: He keeps **lobbing them up** and I keep **knocking them right out of the park**!
-- **Nonstop**: 这人好笑停不下来（Phoebe 夸 Larry）。
+- **Nonstop**: 不停→这人好笑/话多停不下来（Phoebe 夸 Larry）。
   - *Example*: You are just **nonstop**!
-- **Convenience over health**: 方便比健康重要？（Larry 怼 Gunther）。
+- **Convenience over health**: 方便胜过健康→为了省事牺牲卫生（Larry 怼 Gunther）。
   - *Example*: You'd choose **convenience over health**?!
-- **Quiet down maneuver**: Ross 标志性安静手势（Joey/Chandler 模仿吐槽）。
+- **Quiet down maneuver**: quiet 下来动作→Ross 标志性安静手势（Joey/Chandler 模仿吐槽）。
   - *Example*: What's the deal with this **quiet down** thing?
+- **Warming his house**: 暖他的房→house warming（乔迁派对）双关：我们不去帮他「暖房」（Monica 吐槽 Rachel 没被邀请）。
+  - *Example*: Well, I guess we won't be **warming his house**.
+- **Walked right into that one**: 直接走进去→自己撞枪口/正中下怀（Rachel 看穿 Danny 的邀请策略）。
+  - *Example*: **Walked right into that one** didn't he?
+- **Love what you've done with the place**: 爱你对这地方的布置→反讽「你把这儿布置得真不错」（满屋箱子）。
+  - *Example*: **Love what you've done with the place**.
+- **Get back on his feet**: 重新站起来→帮 Ross 恢复生活、渡过难关（Joey 自我安慰）。
+  - *Example*: Maybe we did a good thing, helping Ross **get back on his feet**!
+- **Lost art**: 失传的艺术→已经没人干了（Chandler 说踢踏舞是 lost art，搞黄推荐信）。
+  - *Example*: Yes, some would say that is a **lost art**.
+- **Stop talking crazy**: 别 crazy 说话→别胡说八道了（Joey 让 Chandler 泡茶）。
+  - *Example*: Dude, **stop talking crazy** and make us some tea!
 
 ## 6. 剧情词汇
 - **S05E07 / Ross Moves In**: Ross 离婚后搬进 Chandler & Joey 家

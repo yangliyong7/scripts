@@ -41,20 +41,32 @@
   - *Example*: Look, I am a **reasonable man**, I'll accept store credit.
 
 ## 5. 实用短句
-- **What's with him?**: 他怎么了？（询问某人异常行为）
-  - *Example*: **What's with him**? He's been acting strange all day.
-- **Are you kiddin'?**: 你在开玩笑吗？
-  - *Example*: You want me to carry this? **Are you kiddin'?**
-- **Something didn't quite add up**: 有些事情不太对劲/说不通。
-  - *Example*: Their story **didn't quite add up**, so I suspected they were lying.
-- **Worth the wait**: 值得等待。
+- **What's with him?**: 他怎么了→询问某人异常行为。
+  - *Example*: **What's with him**?
+- **Are you kiddin'?**: 你在开玩笑吗→表示不敢相信。
+  - *Example*: **Are you kiddin'?**
+- **Something didn't quite add up**: 没完全加起来→有些事说不通。
+  - *Example*: Their story **didn't quite add up**.
+- **Worth the wait**: 值得等待→等到的终值得（此处指感情）。
   - *Example*: Once you find true love, it's **so worth the wait**.
-- **For crying out loud**: 天哪、拜托（表示 frustration）。
+- **For crying out loud**: 为了大声哭→天哪、拜托（表恼火）。
   - *Example*: There were three of us **for crying out loud**!
-- **I didn't see that coming**: 我没想到会这样。
-  - *Example*: Wow! You're asking me out? **I didn't see that coming!**
-- **Keep up the good work**: 继续保持、干得好。
-  - *Example*: Thanks for helping. **Keep up the good work**!
+- **I didn't see that coming**: 没看见它来→没想到会这样。
+  - *Example*: Wow! **I didn't see that coming!**
+- **Keep up the good work**: 保持好工作→继续保持、干得好。
+  - *Example*: **Keep up the good work**. 10-4.
+- **drunk with power**: 醉于权力→权力上头、得意忘形。
+  - *Example*: I'm totally **drunk with power**.
+- **the next best thing**: 第二好的东西→退而求其次的选择。
+  - *Example*: Well, I brought **the next best thing**.
+- **follow my lead**: 跟着我的领导→听我指挥、跟我来。
+  - *Example*: Y'know what? Just-just **follow my lead**.
+- **You think?!**: 你想？！→这还用问？（讽刺反问）。
+  - *Example*: "I don't think it's going to pivot anymore." — "**You think?!**"
+- **make it stick**: 让它粘住→（指控）坐实罪名。
+  - *Example*: But you'll never **make it stick** and you know it!
+- **I take it**: 我拿走→成交，我接受。
+  - *Example*: "I'll give you store credit in the amount of four dollars." — *(thinks)* **I take it.**
 
 ## 6. 剧情词汇
 - **Crossword puzzle**: 填字游戏

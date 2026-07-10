@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert season/NNNN.html to docs markdown transcript.
+"""Convert friends/html/NNNN.html to docs markdown transcript.
 
 Usage:
     py tools/html_to_md.py 0507
@@ -10,7 +10,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[1] / "friends"
 
 COMMON_CHARACTERS = {
     "Phoebe", "Rachel", "Ross", "Chandler", "Monica", "Joey", "All",
@@ -74,7 +74,7 @@ def extra_section_markers(html: str) -> set[str]:
 
 def convert(ep_arg: str) -> Path:
     file_code, display_code = episode_code(ep_arg)
-    html_path = ROOT / "season" / f"{file_code}.html"
+    html_path = ROOT / "html" / f"{file_code}.html"
     if not html_path.exists():
         raise SystemExit(f"Not found: {html_path}")
 

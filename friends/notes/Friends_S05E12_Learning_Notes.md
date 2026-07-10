@@ -7,8 +7,6 @@
   - *Example*: This is a **huge deal**!
 - **Pound sth. into oblivion**: 把某物砸到稀巴烂（夸张表达发泄怒气）。
   - *Example*: He proceeds to **pound it into oblivion** while saying, “STUPID BRITISH SNACK FOOD!!!!!!!”
-- **Put me out of my misery**: 让我解脱吧/别折磨我了（求你赶紧结束）。
-  - *Example*: Put me out of my misery.
 - **Where the hell have you been?!**: 你到底跑哪儿去了？！（强烈质问）。
   - *Example*: **Where the hell have you been?!!**
 - **At a loss for words**: 一时语塞/说不出话（震惊到卡壳）。
@@ -59,18 +57,42 @@
   - *Example*: I can't take another second of you **whining**!!
 
 ## 5. 实用短句
-- **Anybody gonna eat that?**: 还有人要吃吗？（趁机捡漏/搞笑补刀）。
+- **Anybody gonna eat that?**: 还有人要吃吗？→趁机捡漏/搞笑补刀（Ross 砸烂司康后）。
   - *Example*: **Anybody gonna eat that?**
-- **Good luck with that**: 祝你好运（通常带点幸灾乐祸/“你慢慢来吧”）。
+- **Good luck with that**: 祝你好运→通常带点幸灾乐祸/「你慢慢来吧」。
   - *Example*: Okay, **good luck with that**.
-- **I can do whatever I want**: 我想干嘛就干嘛（强调独立，不想被盘问）。
+- **I can do whatever I want**: 我想干嘛就干嘛→强调独立，不想被盘问。
   - *Example*: I'm a big boy, I can do **whatever I want**!
-- **Take a moment before you judge me**: 先别急着评判我（请求理解/缓冲指责）。
+- **Take a moment before you judge me**: 先别急着评判我→请求理解/缓冲指责（Janice）。
   - *Example*: Please, **take a moment before you judge me**.
-- **Let me make sure I'm hearing this right**: 我确认一下我没听错（惊讶+反问）。
-  - *Example*: **Let me make sure I'm hearing this right**, you're ending this…?
-- **No strings attached**: 没附带条件/不求回报（强调“我没想换你什么”）。
+- **Let me make sure I'm hearing this right**: 我确认一下我没听错→惊讶+反问（Ross 被甩）。
+  - *Example*: **Let me make sure I'm hearing this right**, you're ending this with me because I'm too whiney?
+- **No strings attached**: 没附带条件/不求回报→强调「我没想换你什么」。
   - *Example*: I gave you twenty seven dollars. **No strings attached.**
+- **Put me out of my misery**: 让我解脱吧→别折磨我了（Chandler 求输网球）。
+  - *Example*: Oh yes, sir! **Put me out of my misery**.
+- **Oopsey, missed it!**: 哎呀失手了→故意装傻输球（Chandler 放水）。
+  - *Example*: **Oopsey, missed it!**
+- **Let them win one**: 让他们赢一局→放水别碾压（Chandler 对 Monica）。
+  - *Example*: I think we should **let them win the next game**.
+- **the sun has set on our day in the sun**: 好日子到头了→我们这段缘分结束了（Janice 甩 Ross）。
+  - *Example*: I believe **the sun has set on our day in the sun**.
+- **two out of three**: 三局两胜→Janice 又甩掉一个（Joey/Ross 都算）。
+  - *Example*: Well, I guess that's **two out of three**, Joey.
+- **writing yourself a little play**: 在编小话剧吧→讽刺对方瞎编（Monica 对 Rachel）。
+  - *Example*: Sounds like you're **writing yourself a little play** there Rach.
+- **I'll see you around / Not if I see you first**: 回头见/先见着算我赢→应酬式道别互怼（Work Chandler）。
+  - *Example*: "**I'll see you around**, Bing!" "**Not if I see you first**, Doug!"
+- **sniveling work weasel**: 谄媚的职场黄鼠狼→骂上班版 Chandler（Monica）。
+  - *Example*: I'd rather hang out with a **sniveling work weasel** guy…
+- **pocket money**: 零花钱→讽刺 Monica 编谎「打扫赚钱」（Rachel）。
+  - *Example*: What a great way to earn some extra **pocket money**.
+- **tough call**: 难判的裁决→比赛判罚梗（Joey 判 Nutter-Butter）。
+  - *Example*: Judge rules, Nutter-Butter. — Ohh, **tough call**.
+- **Don't put ideas in his head**: 别往他脑子里塞主意→别怂恿他（Joey 对 Phoebe 谈 Janice）。
+  - *Example*: Phoebe! **Don't put ideas in his head**!
+- **freaked out**: 吓坏了→听到秘密后挂断电话（Rachel）。
+  - *Example*: I got so **freaked out** that I hung up the phone.
 
 ## 6. 剧情词汇
 - **Scone**: 英式司康（Ross 砸烂泄愤的“British snack food”）

@@ -1,0 +1,1623 @@
+{
+  "generatedAt": "2026-07-09T07:15:48.342463+00:00",
+  "total": 231,
+  "items": [
+    {
+      "id": 1,
+      "word": "deficit",
+      "meaning": "亏损，赤字，不足额",
+      "fullMeaning": "亏损，赤字，不足额；（体育用语）失分数；缺乏，缺陷",
+      "image": "../images/deficit.png"
+    },
+    {
+      "id": 2,
+      "word": "presence",
+      "meaning": "出席，存在",
+      "fullMeaning": "出席，存在；<正式>（某人的）所在地方；<文>感觉中的存在物（如鬼魂）；驻扎部队，驻扎的警力；风度，气质；（公司在某地的）工人（或产品），势力",
+      "image": "../images/presence.png"
+    },
+    {
+      "id": 3,
+      "word": "anticipation",
+      "meaning": "预期，预料",
+      "fullMeaning": "预期，预料；期盼，期望；先现音",
+      "image": "../images/anticipation.png"
+    },
+    {
+      "id": 4,
+      "word": "presumptuous",
+      "meaning": "专横的",
+      "fullMeaning": "专横的；放肆的；冒昧的",
+      "image": "../images/presumptuous.png"
+    },
+    {
+      "id": 5,
+      "word": "alliance",
+      "meaning": "联盟，结盟",
+      "fullMeaning": "联盟，结盟；结盟团体，结盟国家；（人们间的）亲密关系，（尤指）联姻",
+      "image": "../images/alliance.png"
+    },
+    {
+      "id": 6,
+      "word": "formula",
+      "meaning": "计划，方案",
+      "fullMeaning": "计划，方案；配方，处方；公式，方程式；分子式，结构式；配方奶，代乳品；（特定场合的）惯用词语，套话；（影片、书籍等的）套路;",
+      "image": "../images/formula.png"
+    },
+    {
+      "id": 7,
+      "word": "cremate",
+      "meaning": "火葬",
+      "fullMeaning": "火葬；烧成灰",
+      "image": "../images/cremate.png"
+    },
+    {
+      "id": 8,
+      "word": "memorable",
+      "meaning": "难忘的，值得纪念的",
+      "fullMeaning": "难忘的，值得纪念的;",
+      "image": "../images/memorable.png"
+    },
+    {
+      "id": 9,
+      "word": "bustle",
+      "meaning": "奔忙，匆忙地走",
+      "fullMeaning": "奔忙，匆忙地走；繁忙，热闹；使（人沿着某个方向）匆忙地走;",
+      "image": "../images/bustle.png"
+    },
+    {
+      "id": 10,
+      "word": "perspiration",
+      "meaning": "汗水",
+      "fullMeaning": "汗水；排汗，出汗",
+      "image": "../images/perspiration.png"
+    },
+    {
+      "id": 11,
+      "word": "compartment",
+      "meaning": "隔层，分隔间",
+      "fullMeaning": "隔层，分隔间；（飞机、轮船或火车上的）车厢，舱；区划",
+      "image": "../images/compartment.png"
+    },
+    {
+      "id": 12,
+      "word": "iffy",
+      "meaning": "未确定的",
+      "fullMeaning": "未确定的；富于偶然性的；可疑的",
+      "image": "../images/iffy.png"
+    },
+    {
+      "id": 13,
+      "word": "butcher",
+      "meaning": "屠夫",
+      "fullMeaning": "屠夫；肉店；刽子手；笨蛋，莽夫；（火车或剧院的）小贩",
+      "image": "../images/butcher.png"
+    },
+    {
+      "id": 14,
+      "word": "boom",
+      "meaning": "繁荣",
+      "fullMeaning": "繁荣；流行，风靡；隆隆声；吊杆；帆桁；水栅",
+      "image": "../images/boom.png"
+    },
+    {
+      "id": 15,
+      "word": "crumb",
+      "meaning": "食物碎屑，面包（蛋糕）屑",
+      "fullMeaning": "食物碎屑，面包（蛋糕）屑；点滴，少许；面包心；<北美，非正式>讨厌的人；（常指用回收利用的汽车轮胎制成的）粒化橡胶",
+      "image": "../images/crumb.png"
+    },
+    {
+      "id": 16,
+      "word": "spiritual",
+      "meaning": "精神的，心灵的",
+      "fullMeaning": "精神的，心灵的；宗教的；（人）高尚的，不为物欲所动的",
+      "image": "../images/spiritual.png"
+    },
+    {
+      "id": 17,
+      "word": "vulgar",
+      "meaning": "粗俗的，庸俗的，不雅的",
+      "fullMeaning": "粗俗的，庸俗的，不雅的；（笑话、评论、动作等）下流的；（人）粗鲁的，无礼的；平民的，通俗语言的",
+      "image": "../images/vulgar.png"
+    },
+    {
+      "id": 18,
+      "word": "wield",
+      "meaning": "挥，操，使用（武器、工具等）",
+      "fullMeaning": "挥，操，使用（武器、工具等）；运用（权力），施加（影响）",
+      "image": "../images/wield.png"
+    },
+    {
+      "id": 19,
+      "word": "monastery",
+      "meaning": "修道院",
+      "fullMeaning": "修道院；僧侣;",
+      "image": "../images/monastery.png"
+    },
+    {
+      "id": 20,
+      "word": "exfoliate",
+      "meaning": "片状剥落",
+      "fullMeaning": "片状剥落；鳞片样脱皮",
+      "image": "../images/exfoliate.png"
+    },
+    {
+      "id": 21,
+      "word": "chimney",
+      "meaning": "烟囱，烟道",
+      "fullMeaning": "烟囱，烟道；（可容人攀登的）岩石裂缝；玻璃灯罩",
+      "image": "../images/chimney.png"
+    },
+    {
+      "id": 22,
+      "word": "conclusive",
+      "meaning": "结论性的，毫无疑问的",
+      "fullMeaning": "结论性的，毫无疑问的",
+      "image": "../images/conclusive.png"
+    },
+    {
+      "id": 23,
+      "word": "resentful",
+      "meaning": "气愤的，憎恨的",
+      "fullMeaning": "气愤的，憎恨的",
+      "image": "../images/resentful.png"
+    },
+    {
+      "id": 24,
+      "word": "assault",
+      "meaning": "（军事）袭击，攻击",
+      "fullMeaning": "（军事）袭击，攻击；人身攻击，侵犯人身（罪）；抨击；闯关，冲击（难关）;",
+      "image": "../images/assault.png"
+    },
+    {
+      "id": 25,
+      "word": "elm",
+      "meaning": "[林] 榆树",
+      "fullMeaning": "[林] 榆树；榆木;",
+      "image": "../images/elm.png"
+    },
+    {
+      "id": 26,
+      "word": "birch",
+      "meaning": "桦木",
+      "fullMeaning": "桦木；桦树；桦条;",
+      "image": "../images/birch.png"
+    },
+    {
+      "id": 27,
+      "word": "groan",
+      "meaning": "呻吟，叹息",
+      "fullMeaning": "呻吟，叹息；咕哝；抱怨，发牢骚；（树木等）发出嘎吱声；堆满（食物）；受……重压;",
+      "image": "../images/groan.png"
+    },
+    {
+      "id": 28,
+      "word": "deject",
+      "meaning": "使沮丧，使灰心",
+      "fullMeaning": "使沮丧，使灰心;",
+      "image": "../images/deject.png"
+    },
+    {
+      "id": 29,
+      "word": "unagi",
+      "meaning": "鳗鱼",
+      "fullMeaning": "鳗鱼;",
+      "image": "../images/unagi.png"
+    },
+    {
+      "id": 30,
+      "word": "sculpture",
+      "meaning": "雕像，雕塑作品",
+      "fullMeaning": "雕像，雕塑作品；雕刻艺术，雕塑艺术；（动，植）（贝壳、花粉粒、角质层或其他生物体表面凸起或凹陷的）雕饰，雕纹;",
+      "image": "../images/sculpture.png"
+    },
+    {
+      "id": 31,
+      "word": "hypnosis",
+      "meaning": "催眠",
+      "fullMeaning": "催眠；催眠状态;",
+      "image": "../images/hypnosis.png"
+    },
+    {
+      "id": 32,
+      "word": "muffled",
+      "meaning": "沉闷的",
+      "fullMeaning": "沉闷的；压抑的；听不清的；蒙住的；（穿许多厚衣服把自己的身体和脸）裹起来的，包住的;",
+      "image": "../images/muffled.png"
+    },
+    {
+      "id": 33,
+      "word": "tout",
+      "meaning": "兜售",
+      "fullMeaning": "兜售；招徕；刺探赛马情报;",
+      "image": "../images/tout.png"
+    },
+    {
+      "id": 34,
+      "word": "corral",
+      "meaning": "（北美农牧场的）畜栏",
+      "fullMeaning": "（北美农牧场的）畜栏；（营地中防御用的）车阵;",
+      "image": "../images/corral.png"
+    },
+    {
+      "id": 35,
+      "word": "utter",
+      "meaning": "完全的，彻底的",
+      "fullMeaning": "完全的，彻底的;",
+      "image": "../images/utter.png"
+    },
+    {
+      "id": 36,
+      "word": "toute",
+      "meaning": "吹捧",
+      "fullMeaning": "吹捧;",
+      "image": "../images/toute.png"
+    },
+    {
+      "id": 37,
+      "word": "grudgingly",
+      "meaning": "勉强地",
+      "fullMeaning": "勉强地；不情愿地;",
+      "image": "../images/grudgingly.png"
+    },
+    {
+      "id": 38,
+      "word": "prude",
+      "meaning": "拘守礼仪的人",
+      "fullMeaning": "拘守礼仪的人；故做正经的女人;",
+      "image": "../images/prude.png"
+    },
+    {
+      "id": 39,
+      "word": "bulge",
+      "meaning": "鼓起，凸出",
+      "fullMeaning": "鼓起，凸出；装满，充满",
+      "image": "../images/bulge.png"
+    },
+    {
+      "id": 40,
+      "word": "ethical",
+      "meaning": "道德的，伦理的",
+      "fullMeaning": "道德的，伦理的；合乎道德的；有益于人（类）的，环保的；（药品）凭处方出售的;",
+      "image": "../images/ethical.png"
+    },
+    {
+      "id": 41,
+      "word": "flex",
+      "meaning": "弯曲，曲折（四肢，关节）",
+      "fullMeaning": "弯曲，曲折（四肢，关节）；活动，绷紧（肌肉）；（材料）有弹性",
+      "image": "../images/flex.png"
+    },
+    {
+      "id": 42,
+      "word": "glacial",
+      "meaning": "冰的",
+      "fullMeaning": "冰的；冰冷的；冰河时代的;",
+      "image": "../images/glacial.png"
+    },
+    {
+      "id": 43,
+      "word": "auction",
+      "meaning": "拍卖",
+      "fullMeaning": "拍卖；（桥牌）叫牌阶段",
+      "image": "../images/auction.png"
+    },
+    {
+      "id": 44,
+      "word": "endure",
+      "meaning": "持续存在，持久",
+      "fullMeaning": "持续存在，持久；忍受，忍耐",
+      "image": "../images/endure.png"
+    },
+    {
+      "id": 45,
+      "word": "introverted",
+      "meaning": "性格内向的， 不爱交际的",
+      "fullMeaning": "性格内向的， 不爱交际的；（社团、公司或其他团体）关心内部事务为主的，内倾的，狭隘的；（器官或其他身体部位）内翻的，内弯的",
+      "image": "../images/introverted.png"
+    },
+    {
+      "id": 46,
+      "word": "inhabit",
+      "meaning": "居住于，栖居在",
+      "fullMeaning": "居住于，栖居在；存在于，占据;",
+      "image": "../images/inhabit.png"
+    },
+    {
+      "id": 47,
+      "word": "contrary",
+      "meaning": "相反的，相对的",
+      "fullMeaning": "相反的，相对的；乖戾的，好与人作对的；逆向的，逆行的;",
+      "image": "../images/contrary.png"
+    },
+    {
+      "id": 48,
+      "word": "islet",
+      "meaning": "小岛",
+      "fullMeaning": "小岛;",
+      "image": "../images/islet.png"
+    },
+    {
+      "id": 49,
+      "word": "hew",
+      "meaning": "砍",
+      "fullMeaning": "砍；劈；砍倒；砍成（某物或某种形状）；遵从，坚持",
+      "image": "../images/hew.png"
+    },
+    {
+      "id": 50,
+      "word": "brochure",
+      "meaning": "小册子，资料（或广告）手册",
+      "fullMeaning": "小册子，资料（或广告）手册",
+      "image": "../images/brochure.png"
+    },
+    {
+      "id": 52,
+      "word": "groom",
+      "meaning": "（给动物）擦洗，刷洗",
+      "fullMeaning": "（给动物）擦洗，刷洗；（动物为自己或另一动物）梳理毛发；梳妆，打扮；修饰，修整（某物）；培训，使做好准备；（尤指透过网际网路）勾引，诱奸（儿童）",
+      "image": "../images/groom.png"
+    },
+    {
+      "id": 53,
+      "word": "revolve",
+      "meaning": "（使）旋转",
+      "fullMeaning": "（使）旋转；围绕……旋转（revolve around）；以……为最重要内容，以……为中心（revolve around）；反复思考，反复斟酌；循环出现;",
+      "image": "../images/revolve.png"
+    },
+    {
+      "id": 54,
+      "word": "picket",
+      "meaning": "警戒哨",
+      "fullMeaning": "警戒哨；纠察队；[建]尖木桩;",
+      "image": "../images/picket.png"
+    },
+    {
+      "id": 55,
+      "word": "smarmy",
+      "meaning": "爱说奉承话的",
+      "fullMeaning": "爱说奉承话的；虚情假意的;",
+      "image": "../images/smarmy.png"
+    },
+    {
+      "id": 56,
+      "word": "letch",
+      "meaning": "色欲",
+      "fullMeaning": "色欲；好色者;",
+      "image": "../images/letch.png"
+    },
+    {
+      "id": 57,
+      "word": "distasteful",
+      "meaning": "令人反感的，令人生厌的",
+      "fullMeaning": "令人反感的，令人生厌的；不合口味的；低俗的，下流的;",
+      "image": "../images/distasteful.png"
+    },
+    {
+      "id": 58,
+      "word": "geologist",
+      "meaning": "地质学家，地质学者",
+      "fullMeaning": "地质学家，地质学者;",
+      "image": "../images/geologist.png"
+    },
+    {
+      "id": 59,
+      "word": "sweeping",
+      "meaning": "范围广的，影响大的",
+      "fullMeaning": "范围广的，影响大的；过于笼统的；弧线的，弯曲的；包含丰富信息的；（投票等中的）大胜;",
+      "image": "../images/sweeping.png"
+    },
+    {
+      "id": 60,
+      "word": "cult",
+      "meaning": "异教，异教组织",
+      "fullMeaning": "异教，异教组织；狂热崇拜，迷信；（特定群体的）偶像，时尚；崇拜者，信徒；宗教信仰，宗教习俗",
+      "image": "../images/cult.png"
+    },
+    {
+      "id": 61,
+      "word": "backfire",
+      "meaning": "产生事与愿违的不良（或危险）后果，适得其反",
+      "fullMeaning": "产生事与愿违的不良（或危险）后果，适得其反；（发动机或车辆）回火，逆火",
+      "image": "../images/backfire.png"
+    },
+    {
+      "id": 62,
+      "word": "gonorrhea",
+      "meaning": "[性病] 淋病",
+      "fullMeaning": "[性病] 淋病",
+      "image": "../images/gonorrhea.png"
+    },
+    {
+      "id": 63,
+      "word": "affectionately",
+      "meaning": "亲切地",
+      "fullMeaning": "亲切地；挚爱地;",
+      "image": "../images/affectionately.png"
+    },
+    {
+      "id": 64,
+      "word": "armpit",
+      "meaning": "腋窝",
+      "fullMeaning": "腋窝；<美，非正式>最差劲的地方，龌龊的地方;",
+      "image": "../images/armpit.png"
+    },
+    {
+      "id": 65,
+      "word": "puffin",
+      "meaning": "善知鸟",
+      "fullMeaning": "善知鸟；海鹦；海鸭之类",
+      "image": "../images/puffin.png"
+    },
+    {
+      "id": 66,
+      "word": "granularity",
+      "meaning": "间隔尺寸，[岩] 粒度",
+      "fullMeaning": "间隔尺寸，[岩] 粒度;",
+      "image": "../images/granularity.png"
+    },
+    {
+      "id": 67,
+      "word": "initiative",
+      "meaning": "措施，倡议",
+      "fullMeaning": "措施，倡议；主动性，积极性；主动权；（美国某些州的）公民立法提案程序;",
+      "image": "../images/initiative.png"
+    },
+    {
+      "id": 68,
+      "word": "perspicacious",
+      "meaning": "有洞察力的",
+      "fullMeaning": "有洞察力的；聪颖的；敏锐的",
+      "image": "../images/perspicacious.png"
+    },
+    {
+      "id": 69,
+      "word": "canary",
+      "meaning": "金丝雀",
+      "fullMeaning": "金丝雀；淡黄色，鲜黄色；加纳利甜酒;",
+      "image": "../images/canary.png"
+    },
+    {
+      "id": 70,
+      "word": "audit",
+      "meaning": "审计，查……的账目",
+      "fullMeaning": "审计，查……的账目；审查，审核；审计报告",
+      "image": "../images/audit.png"
+    },
+    {
+      "id": 71,
+      "word": "deprecate",
+      "meaning": "反对",
+      "fullMeaning": "反对；抨击；轻视；声明不赞成",
+      "image": "../images/deprecate.png"
+    },
+    {
+      "id": 72,
+      "word": "converge",
+      "meaning": "（使）汇聚，集中",
+      "fullMeaning": "（使）汇聚，集中；（观点、目标）趋同；（数）收敛;",
+      "image": "../images/converge.png"
+    },
+    {
+      "id": 73,
+      "word": "vice",
+      "meaning": "堕落，邪恶",
+      "fullMeaning": "堕落，邪恶；小毛病，坏习惯；（与性或毒品有关的）罪行，道德败坏行为；老虎钳（同 vise）；<非正式>代理人，任副职者；（尤指马厩里马因厌倦而出现的）劣性，恶癖;",
+      "image": "../images/vice.png"
+    },
+    {
+      "id": 74,
+      "word": "precinct",
+      "meaning": "选区",
+      "fullMeaning": "选区；管理区；管辖区;",
+      "image": "../images/precinct.png"
+    },
+    {
+      "id": 75,
+      "word": "stud",
+      "meaning": "种畜，种马，种畜场，种马场",
+      "fullMeaning": "种畜，种马，种畜场，种马场；<非正式> 乱搞的男人，风流男子；饰钉，嵌钉，大头钉；钉状首饰，耳钉，鼻钉；领扣，饰钮；（靴底、轮胎等上的）防滑钉状物，防滑钉；板墙筋，壁骨，立柱；（突出路面的）反光路标；明扑克，种马扑克；<美>（房间的）净高，净空；链档，链环销子;",
+      "image": "../images/stud.png"
+    },
+    {
+      "id": 76,
+      "word": "impersonating",
+      "meaning": "v．模仿，扮演：模仿某人的言行举止，以达到娱乐或欺骗的目的。",
+      "fullMeaning": "v．模仿，扮演：模仿某人的言行举止，以达到娱乐或欺骗的目的。",
+      "image": "../images/impersonating.png"
+    },
+    {
+      "id": 77,
+      "word": "slammer",
+      "meaning": "监狱",
+      "fullMeaning": "监狱;",
+      "image": "../images/slammer.png"
+    },
+    {
+      "id": 78,
+      "word": "disposition",
+      "meaning": "性情，性格",
+      "fullMeaning": "性情，性格；倾向，癖性；易患某病的倾向；赠与，转让；排列，布置；支配权，处置权；<古>（尤指天意的）决定",
+      "image": "../images/disposition.png"
+    },
+    {
+      "id": 79,
+      "word": "sluggish",
+      "meaning": "缓慢的，迟钝的，懒洋洋的",
+      "fullMeaning": "缓慢的，迟钝的，懒洋洋的；性能欠佳的",
+      "image": "../images/sluggish.png"
+    },
+    {
+      "id": 80,
+      "word": "canton",
+      "meaning": "（瑞士等国的）行政区，州",
+      "fullMeaning": "（瑞士等国的）行政区，州；（纹章）矛面右上角方形部位;",
+      "image": "../images/canton.png"
+    },
+    {
+      "id": 81,
+      "word": "pleasantly",
+      "meaning": "愉快地",
+      "fullMeaning": "愉快地；和蔼地，亲切地；友好地;",
+      "image": "../images/pleasantly.png"
+    },
+    {
+      "id": 82,
+      "word": "scaffold",
+      "meaning": "脚手架",
+      "fullMeaning": "脚手架；鹰架；绞刑台",
+      "image": "../images/scaffold.png"
+    },
+    {
+      "id": 83,
+      "word": "mesh",
+      "meaning": "网，网状物",
+      "fullMeaning": "网，网状物；错综复杂的局面，陷阱，圈套；网眼，网孔；网状结构，互相交织的结构；（计算机）网格，格网；（计算机）网状网络（尤指 n 维点阵）",
+      "image": "../images/mesh.png"
+    },
+    {
+      "id": 84,
+      "word": "belated",
+      "meaning": "迟来的",
+      "fullMeaning": "迟来的；误期的",
+      "image": "../images/belated.png"
+    },
+    {
+      "id": 85,
+      "word": "bowel",
+      "meaning": "肠，肠道",
+      "fullMeaning": "肠，肠道；内部，深处",
+      "image": "../images/bowel.png"
+    },
+    {
+      "id": 86,
+      "word": "nab",
+      "meaning": "捉住，逮捕",
+      "fullMeaning": "捉住，逮捕；抢夺",
+      "image": "../images/nab.png"
+    },
+    {
+      "id": 87,
+      "word": "confinement",
+      "meaning": "监禁，关押",
+      "fullMeaning": "监禁，关押；分娩，生产",
+      "image": "../images/confinement.png"
+    },
+    {
+      "id": 88,
+      "word": "sodomy",
+      "meaning": "鸡奸，兽奸",
+      "fullMeaning": "鸡奸，兽奸",
+      "image": "../images/sodomy.png"
+    },
+    {
+      "id": 89,
+      "word": "harassment",
+      "meaning": "骚扰",
+      "fullMeaning": "骚扰",
+      "image": "../images/harassment.png"
+    },
+    {
+      "id": 90,
+      "word": "district",
+      "meaning": "地区，区域",
+      "fullMeaning": "地区，区域；行政区，辖区；<英>（郡或区以下的）选区",
+      "image": "../images/district.png"
+    },
+    {
+      "id": 91,
+      "word": "cricket",
+      "meaning": "蟋蟀",
+      "fullMeaning": "蟋蟀；板球（运动）",
+      "image": "../images/cricket.png"
+    },
+    {
+      "id": 92,
+      "word": "transparent",
+      "meaning": "透明的，清澈的",
+      "fullMeaning": "透明的，清澈的；（过程、活动或组织）透明的，公开的；明显的，一目了然的；（谎言或借口）易识破的；（思想、情感、动机）易被人所知的；（计算机）（过程、界面）透明的；（物理）可穿透的，（热、电磁波）可通过的;",
+      "image": "../images/transparent.png"
+    },
+    {
+      "id": 93,
+      "word": "waterproof",
+      "meaning": "防水的，不透水的",
+      "fullMeaning": "防水的，不透水的;",
+      "image": "../images/waterproof.png"
+    },
+    {
+      "id": 94,
+      "word": "cursory",
+      "meaning": "粗略的，草率的，匆忙的",
+      "fullMeaning": "粗略的，草率的，匆忙的;",
+      "image": "../images/cursory.png"
+    },
+    {
+      "id": 95,
+      "word": "hyperventilate",
+      "meaning": "强力呼吸",
+      "fullMeaning": "强力呼吸；换气过度",
+      "image": "../images/hyperventilate.png"
+    },
+    {
+      "id": 96,
+      "word": "umbilical",
+      "meaning": "脐带的",
+      "fullMeaning": "脐带的；母系的；中央的;",
+      "image": "../images/umbilical.png"
+    },
+    {
+      "id": 97,
+      "word": "infant",
+      "meaning": "婴儿，幼儿",
+      "fullMeaning": "婴儿，幼儿；（英国学校里四至七岁的）学童；<法律>未成年人",
+      "image": "../images/infant.png"
+    },
+    {
+      "id": 98,
+      "word": "sue",
+      "meaning": "1. 起诉，控告：向法庭提起诉讼，要求对方赔偿损失或承担法律责任。",
+      "fullMeaning": "1. 起诉，控告：向法庭提起诉讼，要求对方赔偿损失或承担法律责任。",
+      "image": "../images/sue.png"
+    },
+    {
+      "id": 99,
+      "word": "litigate",
+      "meaning": "在法庭相争",
+      "fullMeaning": "在法庭相争；提出诉讼;",
+      "image": "../images/litigate.png"
+    },
+    {
+      "id": 100,
+      "word": "blotter",
+      "meaning": "记事簿，[会计] 流水帐",
+      "fullMeaning": "记事簿，[会计] 流水帐；吸墨纸;",
+      "image": "../images/blotter.png"
+    },
+    {
+      "id": 101,
+      "word": "obligate",
+      "meaning": "（使）负有法律（或道义）责任，使……有义务（做某事）",
+      "fullMeaning": "（使）负有法律（或道义）责任，使……有义务（做某事）；<美>以（资产）为担保",
+      "image": "../images/obligate.png"
+    },
+    {
+      "id": 102,
+      "word": "tenant",
+      "meaning": "房客，租户",
+      "fullMeaning": "房客，租户；<法律>业主",
+      "image": "../images/tenant.png"
+    },
+    {
+      "id": 103,
+      "word": "sleaze",
+      "meaning": "劣等品",
+      "fullMeaning": "劣等品；卑鄙的人；肮脏；不名誉的状况;",
+      "image": "../images/sleaze.png"
+    },
+    {
+      "id": 104,
+      "word": "demand",
+      "meaning": "强烈要求",
+      "fullMeaning": "强烈要求；需要，需求;",
+      "image": "../images/demand.png"
+    },
+    {
+      "id": 105,
+      "word": "fiery",
+      "meaning": "燃烧的，充满火焰的",
+      "fullMeaning": "燃烧的，充满火焰的；火红的，血红的；易怒的，暴躁的；怒气冲冲的，充满激情的；（食物或饮料）辣的;",
+      "image": "../images/fiery.png"
+    },
+    {
+      "id": 106,
+      "word": "clerk",
+      "meaning": "办事员，职员",
+      "fullMeaning": "办事员，职员；售货员，店员；（宾馆）接待员；（法庭、市政会等负责管理文书的）文书，书记员；<旧>（英国国教会的）牧师；<古>读书识字的人，学者;",
+      "image": "../images/clerk.png"
+    },
+    {
+      "id": 107,
+      "word": "visual",
+      "meaning": "视觉的，视力的",
+      "fullMeaning": "视觉的，视力的；栩栩如生的;",
+      "image": "../images/visual.png"
+    },
+    {
+      "id": 108,
+      "word": "pantomime",
+      "meaning": "哑剧",
+      "fullMeaning": "哑剧；舞剧；手势",
+      "image": "../images/pantomime.png"
+    },
+    {
+      "id": 109,
+      "word": "recreational",
+      "meaning": "娱乐的，消遣的",
+      "fullMeaning": "娱乐的，消遣的;",
+      "image": "../images/recreational.png"
+    },
+    {
+      "id": 110,
+      "word": "navigable",
+      "meaning": "可航行的",
+      "fullMeaning": "可航行的；可驾驶的；适于航行的;",
+      "image": "../images/navigable.png"
+    },
+    {
+      "id": 111,
+      "word": "kayaker",
+      "meaning": "皮船",
+      "fullMeaning": "皮船；爱斯基摩小艇（kayak 的变形）;",
+      "image": "../images/kayaker.png"
+    },
+    {
+      "id": 112,
+      "word": "rift",
+      "meaning": "（人际关系）不和，分歧",
+      "fullMeaning": "（人际关系）不和，分歧；裂缝，裂口；地堑，裂谷;",
+      "image": "../images/rift.png"
+    },
+    {
+      "id": 113,
+      "word": "fiord",
+      "meaning": "峡湾",
+      "fullMeaning": "峡湾；海湾",
+      "image": "../images/fiord.png"
+    },
+    {
+      "id": 114,
+      "word": "inlet",
+      "meaning": "小湖湾，小河湾",
+      "fullMeaning": "小湖湾，小河湾；（空气、气体或液体进入机器等的）进口，入口；（主要指成衣业及女装业）嵌片",
+      "image": "../images/inlet.png"
+    },
+    {
+      "id": 115,
+      "word": "strait",
+      "meaning": "海峡，狭窄水道",
+      "fullMeaning": "海峡，狭窄水道；（尤指财务问题导致的）窘境，困境（straits）",
+      "image": "../images/strait.png"
+    },
+    {
+      "id": 116,
+      "word": "maze",
+      "meaning": "迷宫",
+      "fullMeaning": "迷宫；走迷宫（一种儿童游戏）；错综复杂的事物；纵横交错的小街（或小道等）；迷惑，糊涂;",
+      "image": "../images/maze.png"
+    },
+    {
+      "id": 117,
+      "word": "tan",
+      "meaning": "棕褐色，棕黄色",
+      "fullMeaning": "棕褐色，棕黄色；（日晒后变成的）棕褐色皮肤；鞣料树皮；（铺路和园艺中使用的）鞣酸皮渣",
+      "image": "../images/tan.png"
+    },
+    {
+      "id": 118,
+      "word": "prevail",
+      "meaning": "流行，盛行",
+      "fullMeaning": "流行，盛行；（在比赛、竞赛或争辩中）击败，获胜；占优势，占上风；（继续）使用；说服，劝服（prevail on/upon）",
+      "image": "../images/prevail.png"
+    },
+    {
+      "id": 119,
+      "word": "projector",
+      "meaning": "放映机，投影仪",
+      "fullMeaning": "放映机，投影仪；探照灯；计划者，规划者",
+      "image": "../images/projector.png"
+    },
+    {
+      "id": 120,
+      "word": "brat",
+      "meaning": "乳臭未干的小孩",
+      "fullMeaning": "乳臭未干的小孩；顽童",
+      "image": "../images/brat.png"
+    },
+    {
+      "id": 121,
+      "word": "macho",
+      "meaning": "大男子气概的",
+      "fullMeaning": "大男子气概的",
+      "image": "../images/macho.png"
+    },
+    {
+      "id": 122,
+      "word": "drape",
+      "meaning": "用布帘覆盖",
+      "fullMeaning": "用布帘覆盖；使呈褶裥状",
+      "image": "../images/drape.png"
+    },
+    {
+      "id": 123,
+      "word": "vapor",
+      "meaning": "蒸气",
+      "fullMeaning": "蒸气；水蒸气（等于 vapour）",
+      "image": "../images/vapor.png"
+    },
+    {
+      "id": 124,
+      "word": "incest",
+      "meaning": "乱伦",
+      "fullMeaning": "乱伦；近亲通婚",
+      "image": "../images/incest.png"
+    },
+    {
+      "id": 125,
+      "word": "glare",
+      "meaning": "怒视，瞪眼",
+      "fullMeaning": "怒视，瞪眼；发出刺眼的强光，闪耀",
+      "image": "../images/glare.png"
+    },
+    {
+      "id": 126,
+      "word": "ramp",
+      "meaning": "斜坡，坡道",
+      "fullMeaning": "斜坡，坡道；（供上下飞机使用的）活动舷梯，轻便梯；<英>（路面上使车辆放慢速度的）突起减速带；<美>（大道或高速公路的）（上、下）匝道；（楼梯扶手的）弯子，弯斜段；斜坡波形，锯齿波形；<英，非正式>诈骗，敲诈（尤指涉及股价诈涨的诈骗或敲诈）",
+      "image": "../images/ramp.png"
+    },
+    {
+      "id": 127,
+      "word": "unbearable",
+      "meaning": "难以忍受的",
+      "fullMeaning": "难以忍受的；承受不住的",
+      "image": "../images/unbearable.png"
+    },
+    {
+      "id": 128,
+      "word": "exhale",
+      "meaning": "呼（气），呼出",
+      "fullMeaning": "呼（气），呼出；散发出（蒸气，烟雾）",
+      "image": "../images/exhale.png"
+    },
+    {
+      "id": 129,
+      "word": "dandruff",
+      "meaning": "头皮屑",
+      "fullMeaning": "头皮屑",
+      "image": "../images/dandruff.png"
+    },
+    {
+      "id": 130,
+      "word": "puddle",
+      "meaning": "（尤指雨水积成的）水坑，泥潭",
+      "fullMeaning": "（尤指雨水积成的）水坑，泥潭；胶土（用黏土、沙和水而成，用来助堤坝防水）；（划桨激起的）漩涡",
+      "image": "../images/puddle.png"
+    },
+    {
+      "id": 131,
+      "word": "gasket",
+      "meaning": "[机] 垫圈",
+      "fullMeaning": "[机] 垫圈；[机] 衬垫；束帆索",
+      "image": "../images/gasket.png"
+    },
+    {
+      "id": 132,
+      "word": "dispense",
+      "meaning": "发放，分配",
+      "fullMeaning": "发放，分配；提供，施予；配（药），发（药）",
+      "image": "../images/dispense.png"
+    },
+    {
+      "id": 133,
+      "word": "moderately",
+      "meaning": "有合理限度地，适中地",
+      "fullMeaning": "有合理限度地，适中地；一般地，勉强地",
+      "image": "../images/moderately.png"
+    },
+    {
+      "id": 134,
+      "word": "casual",
+      "meaning": "休闲的，便装的",
+      "fullMeaning": "休闲的，便装的；随便的，非正式的；漫不经心的，随意的；临时的，短期的；碰巧的，偶然的；不认真的，马虎的；不定期的，偶尔的；感情不深的，疏远的",
+      "image": "../images/casual.png"
+    },
+    {
+      "id": 135,
+      "word": "earring",
+      "meaning": "耳环，耳饰",
+      "fullMeaning": "耳环，耳饰",
+      "image": "../images/earring.png"
+    },
+    {
+      "id": 136,
+      "word": "pepperoni",
+      "meaning": "意大利辣香肠",
+      "fullMeaning": "意大利辣香肠",
+      "image": "../images/pepperoni.png"
+    },
+    {
+      "id": 137,
+      "word": "stabilize",
+      "meaning": "（使）稳定，稳固",
+      "fullMeaning": "（使）稳定，稳固；使不易移动；使稳定，使不易分解",
+      "image": "../images/stabilize.png"
+    },
+    {
+      "id": 138,
+      "word": "oscillation",
+      "meaning": "振荡",
+      "fullMeaning": "振荡；振动；摆动",
+      "image": "../images/oscillation.png"
+    },
+    {
+      "id": 139,
+      "word": "unrelenting",
+      "meaning": "无情的",
+      "fullMeaning": "无情的；不屈不挠的；不松懈的",
+      "image": "../images/unrelenting.png"
+    },
+    {
+      "id": 140,
+      "word": "shatter",
+      "meaning": "（使）破碎，碎裂",
+      "fullMeaning": "（使）破碎，碎裂；破坏，摧毁（抽象物）；使极为惊愕难过，给予极大打击",
+      "image": "../images/shatter.png"
+    },
+    {
+      "id": 141,
+      "word": "plankton",
+      "meaning": "浮游生物（总称）",
+      "fullMeaning": "浮游生物（总称）;",
+      "image": "../images/plankton.png"
+    },
+    {
+      "id": 142,
+      "word": "boogie",
+      "meaning": "布吉乐，布吉舞，布吉舞会",
+      "fullMeaning": "布吉乐，布吉舞，布吉舞会;",
+      "image": "../images/boogie.png"
+    },
+    {
+      "id": 143,
+      "word": "potholder",
+      "meaning": "防烫套垫（用以握持热锅的布垫子或厚布）",
+      "fullMeaning": "防烫套垫（用以握持热锅的布垫子或厚布）",
+      "image": "../images/potholder.png"
+    },
+    {
+      "id": 144,
+      "word": "sachet",
+      "meaning": "香囊",
+      "fullMeaning": "香囊；小袋",
+      "image": "../images/sachet.png"
+    },
+    {
+      "id": 145,
+      "word": "repel",
+      "meaning": "击退，驱逐",
+      "fullMeaning": "击退，驱逐；抵御，驱除；使厌恶，使反感；抵制，不愿接受；排斥，相斥",
+      "image": "../images/repel.png"
+    },
+    {
+      "id": 146,
+      "word": "moth",
+      "meaning": "飞蛾，蛾",
+      "fullMeaning": "飞蛾，蛾；<非正式>衣蛾",
+      "image": "../images/moth.png"
+    },
+    {
+      "id": 147,
+      "word": "tier",
+      "meaning": "（高度各不相同的）一层，一排",
+      "fullMeaning": "（高度各不相同的）一层，一排；（机构或系统的）层次，等级；（衣服的）一层褶裥（或荷叶边）",
+      "image": "../images/tier.png"
+    },
+    {
+      "id": 148,
+      "word": "spotless",
+      "meaning": "无可挑剔的",
+      "fullMeaning": "无可挑剔的；无瑕疵的；纯洁的",
+      "image": "../images/spotless.png"
+    },
+    {
+      "id": 149,
+      "word": "arterial",
+      "meaning": "[解剖] 动脉的",
+      "fullMeaning": "[解剖] 动脉的；干线的；像动脉的",
+      "image": "../images/arterial.png"
+    },
+    {
+      "id": 150,
+      "word": "extremity",
+      "meaning": "手足，四肢",
+      "fullMeaning": "手足，四肢；尽头，末端；极端，绝境；残酷的手段，非常手段",
+      "image": "../images/extremity.png"
+    },
+    {
+      "id": 151,
+      "word": "bilateral",
+      "meaning": "双方的，双边的",
+      "fullMeaning": "双方的，双边的；（身体部位）两侧的，（大脑）两半球的",
+      "image": "../images/bilateral.png"
+    },
+    {
+      "id": 152,
+      "word": "physician",
+      "meaning": "医生，（尤指）内科医生",
+      "fullMeaning": "医生，（尤指）内科医生；抚慰者",
+      "image": "../images/physician.png"
+    },
+    {
+      "id": 153,
+      "word": "swell",
+      "meaning": "（身体部位）肿胀，膨胀， 使（某物）膨胀，使肿胀",
+      "fullMeaning": "（身体部位）肿胀，膨胀， 使（某物）膨胀，使肿胀；（使）鼓起，（使）隆起；（使）增长，增加，扩大；（声音）逐渐增强，变响亮；（情绪）高涨，充满；波涛汹涌",
+      "image": "../images/swell.png"
+    },
+    {
+      "id": 154,
+      "word": "speculate",
+      "meaning": "猜测，推测",
+      "fullMeaning": "猜测，推测；投机",
+      "image": "../images/speculate.png"
+    },
+    {
+      "id": 155,
+      "word": "shutter",
+      "meaning": "百叶窗，活动护窗",
+      "fullMeaning": "百叶窗，活动护窗；（照相机的）快门；（风琴的）开闭器",
+      "image": "../images/shutter.png"
+    },
+    {
+      "id": 156,
+      "word": "contingency",
+      "meaning": "可能发生的事，不测事件",
+      "fullMeaning": "可能发生的事，不测事件；应急措施，应急储备；应急开支；可能性，意外",
+      "image": "../images/contingency.png"
+    },
+    {
+      "id": 157,
+      "word": "juggle",
+      "meaning": "玩杂耍（连续向空中抛接多个物体）",
+      "fullMeaning": "玩杂耍（连续向空中抛接多个物体）；力图使平衡，尽力应付；歪曲，篡改；有效地组织，有效利用（信息、数字、开支等）;",
+      "image": "../images/juggle.png"
+    },
+    {
+      "id": 158,
+      "word": "dejectedly",
+      "meaning": "沮丧地",
+      "fullMeaning": "沮丧地；灰心地;",
+      "image": "../images/dejectedly.png"
+    },
+    {
+      "id": 159,
+      "word": "hiss",
+      "meaning": "发出嘘声",
+      "fullMeaning": "发出嘘声；发嘘声",
+      "image": "../images/hiss.png"
+    },
+    {
+      "id": 160,
+      "word": "amphibian",
+      "meaning": "两栖动物",
+      "fullMeaning": "两栖动物；水陆两用车，水陆两用飞机;",
+      "image": "../images/amphibian.png"
+    },
+    {
+      "id": 161,
+      "word": "extravagant",
+      "meaning": "奢侈的，挥霍的",
+      "fullMeaning": "奢侈的，挥霍的；不切实际的，放肆的；豪华的，精美的;",
+      "image": "../images/extravagant.png"
+    },
+    {
+      "id": 162,
+      "word": "sphinx",
+      "meaning": "（古埃及）狮身人面像",
+      "fullMeaning": "（古埃及）狮身人面像；难于理解的人；天蛾;",
+      "image": "../images/sphinx.png"
+    },
+    {
+      "id": 163,
+      "word": "jinx",
+      "meaning": "厄运",
+      "fullMeaning": "厄运；不祥的人或事物;",
+      "image": "../images/jinx.png"
+    },
+    {
+      "id": 164,
+      "word": "bulletin",
+      "meaning": "（广播或电视中的）新闻简报",
+      "fullMeaning": "（广播或电视中的）新闻简报；公告，布告；（机构或社团的）通讯，刊物",
+      "image": "../images/bulletin.png"
+    },
+    {
+      "id": 165,
+      "word": "floe",
+      "meaning": "浮冰",
+      "fullMeaning": "浮冰；大浮冰",
+      "image": "../images/floe.png"
+    },
+    {
+      "id": 166,
+      "word": "affair",
+      "meaning": "公共事务，政治事务",
+      "fullMeaning": "公共事务，政治事务；事情，事件；个人的事，私事；私人业务；（尤指已婚男女的）私通，风流韵事；社交活动，喜庆事；<旧> 物件，东西；商务和金融交易;",
+      "image": "../images/affair.png"
+    },
+    {
+      "id": 167,
+      "word": "pinniped",
+      "meaning": "鳍脚亚目动物的",
+      "fullMeaning": "鳍脚亚目动物的;",
+      "image": "../images/pinniped.png"
+    },
+    {
+      "id": 168,
+      "word": "jargon",
+      "meaning": "行话，黑话",
+      "fullMeaning": "行话，黑话；烟色红皓石，黄皓石;",
+      "image": "../images/jargon.png"
+    },
+    {
+      "id": 169,
+      "word": "seafarer",
+      "meaning": "船员",
+      "fullMeaning": "船员；航海家;",
+      "image": "../images/seafarer.png"
+    },
+    {
+      "id": 170,
+      "word": "grasp",
+      "meaning": "抓牢，握紧",
+      "fullMeaning": "抓牢，握紧；理解，领会；抓住（机会）",
+      "image": "../images/grasp.png"
+    },
+    {
+      "id": 171,
+      "word": "allowance",
+      "meaning": "津贴，补助",
+      "fullMeaning": "津贴，补助；限额，定量；折价，折扣；免税额；<美>零花钱；考虑到的事情；体谅，原谅；允许，认可；（赛马）减载量",
+      "image": "../images/allowance.png"
+    },
+    {
+      "id": 172,
+      "word": "saucer",
+      "meaning": "茶碟，茶托，碟状物",
+      "fullMeaning": "茶碟，茶托，碟状物",
+      "image": "../images/saucer.png"
+    },
+    {
+      "id": 173,
+      "word": "dime",
+      "meaning": "（美国、加拿大的）十分硬币",
+      "fullMeaning": "（美国、加拿大的）十分硬币；<非正式>小钱，少量的钱；<非正式>（就尺寸、面积或程度而言的）小东西",
+      "image": "../images/dime.png"
+    },
+    {
+      "id": 174,
+      "word": "sprung",
+      "meaning": "装有弹簧的",
+      "fullMeaning": "装有弹簧的",
+      "image": "../images/sprung.png"
+    },
+    {
+      "id": 175,
+      "word": "tornado",
+      "meaning": "龙卷风，大旋风",
+      "fullMeaning": "龙卷风，大旋风；极具破坏力的人（或物），情感火爆的人",
+      "image": "../images/tornado.png"
+    },
+    {
+      "id": 176,
+      "word": "mischievous",
+      "meaning": "淘气的，恶作剧的",
+      "fullMeaning": "淘气的，恶作剧的；（行为，事情）有害的，恶意中伤的",
+      "image": "../images/mischievous.png"
+    },
+    {
+      "id": 177,
+      "word": "fauna",
+      "meaning": "动物群",
+      "fullMeaning": "动物群；[动]动物区系;",
+      "image": "../images/fauna.png"
+    },
+    {
+      "id": 178,
+      "word": "flora",
+      "meaning": "（某地区、栖息地或地质时期的）植物群，植物区系",
+      "fullMeaning": "（某地区、栖息地或地质时期的）植物群，植物区系；植物志;",
+      "image": "../images/flora.png"
+    },
+    {
+      "id": 179,
+      "word": "freakishly",
+      "meaning": "反常地",
+      "fullMeaning": "反常地；见异思迁地",
+      "image": "../images/freakishly.png"
+    },
+    {
+      "id": 180,
+      "word": "pus",
+      "meaning": "脓",
+      "fullMeaning": "脓；脓汁;",
+      "image": "../images/pus.png"
+    },
+    {
+      "id": 181,
+      "word": "paycheck",
+      "meaning": "付薪水的支票，薪水",
+      "fullMeaning": "付薪水的支票，薪水;",
+      "image": "../images/paycheck.png"
+    },
+    {
+      "id": 182,
+      "word": "comedy",
+      "meaning": "喜剧，喜剧片",
+      "fullMeaning": "喜剧，喜剧片；滑稽的事物，搞笑的东西；滑稽，诙谐;",
+      "image": "../images/comedy.png"
+    },
+    {
+      "id": 183,
+      "word": "ascot",
+      "meaning": "领巾状领带",
+      "fullMeaning": "领巾状领带；（大写）英国阿斯科特赛马会;",
+      "image": "../images/ascot.png"
+    },
+    {
+      "id": 184,
+      "word": "trendy",
+      "meaning": "时髦的，赶时髦的",
+      "fullMeaning": "时髦的，赶时髦的；肤浅的;",
+      "image": "../images/trendy.png"
+    },
+    {
+      "id": 185,
+      "word": "snorkelling",
+      "meaning": "带呼吸管潜水",
+      "fullMeaning": "带呼吸管潜水；徒手潜水;",
+      "image": "../images/snorkelling.png"
+    },
+    {
+      "id": 186,
+      "word": "portion",
+      "meaning": "（某物的）一部分",
+      "fullMeaning": "（某物的）一部分；（尤指餐馆中食物的）一份，一客；（责任、过失、职责等的）一份，一部分；<法律>（根据法律赠与或遗留给继承人的）一份财产；<古> 命运，天数;",
+      "image": "../images/portion.png"
+    },
+    {
+      "id": 187,
+      "word": "leeward",
+      "meaning": "背风的",
+      "fullMeaning": "背风的；靠下风的；顺风的;",
+      "image": "../images/leeward.png"
+    },
+    {
+      "id": 188,
+      "word": "patriot",
+      "meaning": "爱国者",
+      "fullMeaning": "爱国者",
+      "image": "../images/patriot.png"
+    },
+    {
+      "id": 189,
+      "word": "corridor",
+      "meaning": "（建筑物或火车内的）通道，过道",
+      "fullMeaning": "（建筑物或火车内的）通道，过道；（一国领土通过他国境内的）走廊；狭长地带",
+      "image": "../images/corridor.png"
+    },
+    {
+      "id": 190,
+      "word": "hernia",
+      "meaning": "[中医] 疝气",
+      "fullMeaning": "[中医] 疝气；脱肠",
+      "image": "../images/hernia.png"
+    },
+    {
+      "id": 191,
+      "word": "residual",
+      "meaning": "残留的",
+      "fullMeaning": "残留的；（数量）剩余的；（物质状态在成因消失后）剩余的；（实验误差）舍去的；（土壤）残余的",
+      "image": "../images/residual.png"
+    },
+    {
+      "id": 192,
+      "word": "verbal",
+      "meaning": "口头的，非书面的",
+      "fullMeaning": "口头的，非书面的；用言辞的，文字的；动词的；多话的，爱说话的",
+      "image": "../images/verbal.png"
+    },
+    {
+      "id": 193,
+      "word": "hazard",
+      "meaning": "危险，危害",
+      "fullMeaning": "危险，危害；（不可避免的）风险；（高尔夫球道）障碍物（如池塘或沙地）；<文>机会，机遇；双骰子游戏；（网球）可得分区域；（台球）使球触他球后落入袋中的一击",
+      "image": "../images/hazard.png"
+    },
+    {
+      "id": 194,
+      "word": "ambiance",
+      "meaning": "氛围，周围环境，格调",
+      "fullMeaning": "氛围，周围环境，格调；背景音（同ambience）",
+      "image": "../images/ambiance.png"
+    },
+    {
+      "id": 195,
+      "word": "mock",
+      "meaning": "嘲笑，（模仿）嘲弄",
+      "fullMeaning": "嘲笑，（模仿）嘲弄；使显得徒劳，使显得可笑；（照原尺寸）模仿，仿制 （mock sth. up）",
+      "image": "../images/mock.png"
+    },
+    {
+      "id": 196,
+      "word": "arcade",
+      "meaning": "拱廊",
+      "fullMeaning": "拱廊；(上有顶盖的）拱廊式街道；室内购物商场；（有投币游戏机的）游乐中心，电子游戏厅",
+      "image": "../images/arcade.png"
+    },
+    {
+      "id": 197,
+      "word": "commodity",
+      "meaning": "商品，货物",
+      "fullMeaning": "商品，货物；有用的东西，必需品",
+      "image": "../images/commodity.png"
+    },
+    {
+      "id": 198,
+      "word": "scheme",
+      "meaning": "<英>（政府或其他组织的）计划，方案",
+      "fullMeaning": "<英>（政府或其他组织的）计划，方案；（用于组织或整理信息的）系统，体系；组合，布局；阴谋，诡计；<苏格兰，非正式>社会住宅区",
+      "image": "../images/scheme.png"
+    },
+    {
+      "id": 199,
+      "word": "plaintiff",
+      "meaning": "<法律>原告，起诉人",
+      "fullMeaning": "<法律>原告，起诉人;",
+      "image": "../images/plaintiff.png"
+    },
+    {
+      "id": 200,
+      "word": "contradiction",
+      "meaning": "矛盾，不一致",
+      "fullMeaning": "矛盾，不一致；反驳，驳斥",
+      "image": "../images/contradiction.png"
+    },
+    {
+      "id": 201,
+      "word": "conceal",
+      "meaning": "隐匿，隐藏",
+      "fullMeaning": "隐匿，隐藏；隐瞒（真实感情或真相）；遮盖，遮住",
+      "image": "../images/conceal.png"
+    },
+    {
+      "id": 202,
+      "word": "mule",
+      "meaning": "骡，骡子",
+      "fullMeaning": "骡，骡子；越境运毒者；（室内使用的）拖鞋；杂交动物，杂交植物；走锭纺纱机；（尤指电动的）小型拖拉机，小型电动机车；（正、反两面的图案不相配的）错铸硬币;",
+      "image": "../images/mule.png"
+    },
+    {
+      "id": 203,
+      "word": "liable",
+      "meaning": "（在法律上）有责任的，有义务的",
+      "fullMeaning": "（在法律上）有责任的，有义务的；负有偿付责任的；很可能会发生的；有……倾向的",
+      "image": "../images/liable.png"
+    },
+    {
+      "id": 204,
+      "word": "mangle",
+      "meaning": "乱砍",
+      "fullMeaning": "乱砍；轧布；损坏",
+      "image": "../images/mangle.png"
+    },
+    {
+      "id": 205,
+      "word": "cent",
+      "meaning": "分（美元、欧元等的货币单位）",
+      "fullMeaning": "分（美元、欧元等的货币单位）；<非正式>小钱；<非正式>分毫（用来强调没钱）；（乐）音分;",
+      "image": "../images/cent.png"
+    },
+    {
+      "id": 206,
+      "word": "overstate",
+      "meaning": "夸大，对……言过其实",
+      "fullMeaning": "夸大，对……言过其实",
+      "image": "../images/overstate.png"
+    },
+    {
+      "id": 207,
+      "word": "heuristic",
+      "meaning": "（教学或教育）启发式的",
+      "fullMeaning": "（教学或教育）启发式的；（计算机程序）探试的，探索的",
+      "image": "../images/heuristic.png"
+    },
+    {
+      "id": 208,
+      "word": "recur",
+      "meaning": "再发生，反复出现",
+      "fullMeaning": "再发生，反复出现；（思考或讲话时）重新回到，反复提及（recur to）；（小数）循环",
+      "image": "../images/recur.png"
+    },
+    {
+      "id": 209,
+      "word": "portability",
+      "meaning": "[计] 可移植性",
+      "fullMeaning": "[计] 可移植性；轻便；可携带性",
+      "image": "../images/portability.png"
+    },
+    {
+      "id": 210,
+      "word": "infer",
+      "meaning": "推断，推论",
+      "fullMeaning": "推断，推论；暗示，暗指;",
+      "image": "../images/infer.png"
+    },
+    {
+      "id": 211,
+      "word": "retrospective",
+      "meaning": "回顾的，回想的",
+      "fullMeaning": "回顾的，回想的；有追溯效力的，溯及既往的;",
+      "image": "../images/retrospective.png"
+    },
+    {
+      "id": 212,
+      "word": "refurbish",
+      "meaning": "整修，翻新重装",
+      "fullMeaning": "整修，翻新重装；修改，完善",
+      "image": "../images/refurbish.png"
+    },
+    {
+      "id": 213,
+      "word": "meld",
+      "meaning": "合并",
+      "fullMeaning": "合并；混合",
+      "image": "../images/meld.png"
+    },
+    {
+      "id": 214,
+      "word": "modernity",
+      "meaning": "现代性",
+      "fullMeaning": "现代性；现代的东西；新式;",
+      "image": "../images/modernity.png"
+    },
+    {
+      "id": 215,
+      "word": "skeleton",
+      "meaning": "骨骼，骨架",
+      "fullMeaning": "骨骼，骨架；梗概，提纲；骨瘦如柴的人（或动物）；（建筑物、桥梁等的）框架，骨架；（维持运转所需的）最少人员，基干人员；钢架雪车",
+      "image": "../images/skeleton.png"
+    },
+    {
+      "id": 216,
+      "word": "evade",
+      "meaning": "规避，逃避",
+      "fullMeaning": "规避，逃避；难倒，使困惑；未能（被某人）获得；（尤指违法犯罪后）逃脱，躲开（追捕）",
+      "image": "../images/evade.png"
+    },
+    {
+      "id": 217,
+      "word": "drifter",
+      "meaning": "流浪汉",
+      "fullMeaning": "流浪汉；漂流物；漂网渔船",
+      "image": "../images/drifter.png"
+    },
+    {
+      "id": 218,
+      "word": "hangover",
+      "meaning": "宿醉",
+      "fullMeaning": "宿醉；残留物；遗物",
+      "image": "../images/hangover.png"
+    },
+    {
+      "id": 219,
+      "word": "annulment",
+      "meaning": "取消",
+      "fullMeaning": "取消；废除",
+      "image": "../images/annulment.png"
+    },
+    {
+      "id": 220,
+      "word": "hitchhike",
+      "meaning": "要求（搭便车）",
+      "fullMeaning": "要求（搭便车）",
+      "image": "../images/hitchhike.png"
+    },
+    {
+      "id": 221,
+      "word": "rapist",
+      "meaning": "强奸犯",
+      "fullMeaning": "强奸犯",
+      "image": "../images/rapist.png"
+    },
+    {
+      "id": 222,
+      "word": "formulate",
+      "meaning": "制定，规划",
+      "fullMeaning": "制定，规划；确切表达，认真阐述；用公式表示",
+      "image": "../images/formulate.png"
+    },
+    {
+      "id": 223,
+      "word": "shock",
+      "meaning": "令人震惊的事",
+      "fullMeaning": "令人震惊的事；吃惊，震惊；休克；电击，触电；减震器；（对经济、传统、生活方式的）冲击，撞击；（爆炸、地震等引起的）剧烈震动；浓密的头发；愤怒，生气；冲击力 ；（竖放在地里促使谷物更快晒干和成熟的）禾束堆;",
+      "image": "../images/shock.png"
+    },
+    {
+      "id": 224,
+      "word": "suite",
+      "meaning": "套房，套间",
+      "fullMeaning": "套房，套间；一套家具；组曲；（程序）组，套；一套产品；（君主或高官的）（一批）随员；（地质）系列矿石（或岩石、化石）;",
+      "image": "../images/suite.png"
+    },
+    {
+      "id": 225,
+      "word": "streak",
+      "meaning": "条纹，条痕",
+      "fullMeaning": "条纹，条痕；（尤指不好的）性格特征；（成功或幸运的）一段时间，一阵子；<非正式>公共场合裸跑；（细菌在固体培养基上的）画线；一缕缕（浅色头发）；一道（亮光）;",
+      "image": "../images/streak.png"
+    },
+    {
+      "id": 226,
+      "word": "overcharge",
+      "meaning": "对……要价（或收费）过高",
+      "fullMeaning": "对……要价（或收费）过高；使（电池）充电过度，使（电路系统）超负荷;",
+      "image": "../images/overcharge.png"
+    },
+    {
+      "id": 227,
+      "word": "dealer",
+      "meaning": "商人，交易商",
+      "fullMeaning": "商人，交易商；<非正式>毒品贩子",
+      "image": "../images/dealer.png"
+    },
+    {
+      "id": 228,
+      "word": "mansion",
+      "meaning": "大厦，宅邸",
+      "fullMeaning": "大厦，宅邸；<英>公寓楼;",
+      "image": "../images/mansion.png"
+    },
+    {
+      "id": 229,
+      "word": "identical",
+      "meaning": "完全相同的",
+      "fullMeaning": "完全相同的；同一的；（双胞胎）同卵的；恒等的",
+      "image": "../images/identical.png"
+    },
+    {
+      "id": 230,
+      "word": "tedious",
+      "meaning": "冗长的，单调乏味的",
+      "fullMeaning": "冗长的，单调乏味的",
+      "image": "../images/tedious.png"
+    },
+    {
+      "id": 231,
+      "word": "guardian",
+      "meaning": "监护人",
+      "fullMeaning": "监护人；守卫者，保护者；（方济各会隐修院的）院长",
+      "image": "../images/guardian.png"
+    },
+    {
+      "id": 232,
+      "word": "pagoda",
+      "meaning": "（南亚或东亚的）佛塔",
+      "fullMeaning": "（南亚或东亚的）佛塔",
+      "image": "../images/pagoda.png"
+    }
+  ]
+}

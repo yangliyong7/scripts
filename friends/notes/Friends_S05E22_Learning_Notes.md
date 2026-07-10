@@ -41,14 +41,26 @@
   - *Example*: He is **freakishly strong**; he lifted that box with one hand.
 
 ## 5. 实用短句
-- **Let's get this over with**: 速战速决吧（做讨厌的事时）。
-  - *Example*: I hate dentists, but **let's get this over with**.
-- **Is this okay with you?**: 你没问题吧？/ 这样可以吗？
-  - *Example*: I'll pick you up at 8 PM. **Is this okay with you?**
-- **I'm out of here**: 我走了 / 我撤了。
-  - *Example*: It's getting late. **I'm out of here**.
-- **Worth a shot**: 值得一试。
-  - *Example*: I don't know if it will work, but it's **worth a shot**.
+- **Let's get this over with**: 让我们结束它→速战速决吧（做讨厌的事时）。
+  - *Example*: All right! **Let's get this over with**!
+- **Is this okay with you?**: 这跟你好吗→你没问题吧？/这样可以吗？
+  - *Example*: Road trip baby! *(To Monica)* **This okay with you?**
+- **I'm out of here**: 我不在这了→我走了/我撤了。
+  - *Example*: All right, **I'm outta here**!
+- **Worth a shot**: 值得一枪→值得一试。
+  - *Example*: Eh, **worth a shot**. *(Gets into his car.)*
+- **Keep talking!**: 继续说→再说我就把你列入黑名单（威胁）。
+  - *Example*: You wanna be on my list too? **Keep talking!**
+- **on my list**: 在我的清单→上我的黑名单。
+  - *Example*: You wanna be **on my list** too?
+- **accidentally on purpose**: 意外故意→故意装作意外。
+  - *Example*: …and **accidentally on purpose** knocks over the open cereal box.
+- **get your hopes up**: 把你的希望举起来→让你抱太大希望。
+  - *Example*: I just don't want to **get your hopes up** real high.
+- **dumping all over my big break**: 把垃圾倒在我突破上→对我的大好机会泼冷水。
+  - *Example*: I don't know why you're **dumping all over my big break**.
+- **Kill me. Kill me now.**: 杀了我现在就杀→让我死吧（极度丢人）。
+  - *Example*: **Kill me. Kill me now.**
 
 ## 6. 剧情词汇
 - **Gladiator**: 角斗士

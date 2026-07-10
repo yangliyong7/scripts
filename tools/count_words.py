@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-统计season文件夹中所有HTML文件的单词出现次数
+统计 friends/html 文件夹中所有 HTML 文件的单词出现次数
 """
 
 import os
 import re
 from collections import Counter
 from html.parser import HTMLParser
+from pathlib import Path
 
 
 class HTMLTextExtractor(HTMLParser):
@@ -123,11 +124,10 @@ def display_top_words(word_counter, top_n=50):
 
 
 def main():
-    # 设置目录路径
-    directory_path = r"/season"
+    directory_path = Path(__file__).resolve().parents[1] / "friends" / "html"
     
     # 检查目录是否存在
-    if not os.path.exists(directory_path):
+    if not directory_path.exists():
         print(f"目录不存在: {directory_path}")
         return
     
