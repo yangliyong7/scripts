@@ -3,12 +3,13 @@ const DAILY_GOAL = 20;
 
 /** @type {{ items: Array<{id:number,word:string,meaning:string,fullMeaning:string,image:string}> }} */
 let vocab = { items: [] };
+/** @type {{ passages: Array<any> }} */
+let clozeData = { passages: [] };
 
 let learnQueue = [];
 let learnIndex = 0;
-let quizItem = null;
-let quizAnswered = false;
-let quizPoints = 0;
+let clozeIndex = 0;
+let clozeShowAnswer = false;
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => [...document.querySelectorAll(sel)];
@@ -39,30 +40,46 @@ function todayKey() {
   return new Date().toISOString().slice(0, 10);
 }
 
+function dayDiff(a, b) {
+  const d1 = new Date(`${a}T00:00:00`);
+  const d2 = new Date(`${b}T00:00:00`);
+  return Math.round((d2 - d1) / 86400000);
+}
+
 function getProgress() {
   const raw = loadProgress();
   const base = defaultProgress();
   const merged = { ...base, ...raw, today: { ...base.today, ...raw.today } };
-  if (merged.today.date !== todayKey()) {
-    const yesterday = merged.today.date;
-    if (yesterday && merged.today.count > 0) {
-      const d1 = new Date(yesterday);
-      const d2 = new Date(todayKey());
-      const diff = (d2 - d1) / 86400000;
-      merged.streak = diff === 1 ? (merged.streak || 0) + 1 : merged.streak;
-    }
-    merged.today = { date: todayKey(), count: 0 };
+  const today = todayKey();
+  if (merged.today.date !== today) {
+    merged.today = { date: today, count: 0 };
+  }
+  // 超过一天没学，连击清零（展示与存储一致）
+  if (merged.lastStudyDate) {
+    const gap = dayDiff(merged.lastStudyDate, today);
+    if (gap > 1) merged.streak = 0;
+  } else {
+    merged.streak = 0;
   }
   return merged;
 }
 
 function bumpToday() {
   const p = getProgress();
+  const today = todayKey();
+  const firstToday = p.today.count === 0;
   p.today.count += 1;
-  p.lastStudyDate = todayKey();
-  if (p.today.count === 1 && p.lastStudyDate) {
-    // first card today
+  if (firstToday) {
+    const last = p.lastStudyDate;
+    if (!last || last === today) {
+      p.streak = Math.max(1, p.streak || 0);
+      if (!last) p.streak = 1;
+    } else {
+      const gap = dayDiff(last, today);
+      p.streak = gap === 1 ? (p.streak || 0) + 1 : 1;
+    }
   }
+  p.lastStudyDate = today;
   saveProgress(p);
   refreshStats();
 }
@@ -96,11 +113,20 @@ function toast(msg) {
   toast._t = setTimeout(() => el.classList.remove("show"), 2200);
 }
 
+function setWordImage(el, item) {
+  if (!el || !item) return;
+  const fallback = "placeholder.png";
+  el.src = item.image || fallback;
+  el.onerror = () => {
+    if (!el.src.endsWith(fallback)) el.src = fallback;
+  };
+}
+
 function switchView(name, evt) {
   $$(".view").forEach((v) => v.classList.toggle("active", v.dataset.view === name));
   $$(".tab").forEach((t) => t.classList.toggle("active", t.dataset.tab === name));
   if (name === "learn") startLearn();
-  if (name === "quiz") startQuiz();
+  if (name === "cloze") startCloze();
   if (name === "library") renderLibrary();
   requestAnimationFrame(() => {
     updateTabIndicator();
@@ -149,6 +175,7 @@ function refreshStats() {
   $("#todayCount").textContent = p.today.count;
   $("#todayGoal").textContent = DAILY_GOAL;
   $("#streakBadge").textContent = `✦ ${p.streak || 0}`;
+  $("#streakBadge").title = p.streak ? `已连续学习 ${p.streak} 天` : "连续学习天数：今天学过会开始累计";
 
   const pct = Math.min(1, p.today.count / DAILY_GOAL);
   const ring = $("#progressRing");
@@ -179,8 +206,8 @@ function showLearnCard() {
     switchView("home");
     return;
   }
-  $("#learnImage").src = item.image;
-  $("#learnImageBack").src = item.image;
+  setWordImage($("#learnImage"), item);
+  setWordImage($("#learnImageBack"), item);
   $("#learnWord").textContent = item.word;
   $("#learnMeaning").textContent = item.fullMeaning || item.meaning;
   $("#learnProgress").textContent = `${learnIndex + 1}/${learnQueue.length}`;
@@ -197,53 +224,6 @@ function nextLearn(step) {
     return;
   }
   showLearnCard();
-}
-
-function startQuiz() {
-  quizPoints = 0;
-  $("#quizScore").textContent = "0 分";
-  pickQuiz();
-}
-
-function pickQuiz() {
-  quizAnswered = false;
-  $("#btnNextQuiz").hidden = true;
-  quizItem = vocab.items[Math.floor(Math.random() * vocab.items.length)];
-  $("#quizImage").src = quizItem.image;
-
-  const wrong = shuffle(vocab.items.filter((i) => i.word !== quizItem.word)).slice(0, 3);
-  const options = shuffle([quizItem, ...wrong]);
-  const box = $("#quizOptions");
-  box.innerHTML = "";
-  options.forEach((opt) => {
-    const btn = document.createElement("button");
-    btn.className = "option-btn";
-    btn.type = "button";
-    btn.textContent = opt.word;
-    btn.addEventListener("click", () => answerQuiz(btn, opt.word));
-    box.appendChild(btn);
-  });
-}
-
-function answerQuiz(btn, word) {
-  if (quizAnswered) return;
-  quizAnswered = true;
-  const correct = word === quizItem.word;
-  $$(".option-btn").forEach((b) => {
-    b.disabled = true;
-    if (b.textContent === quizItem.word) b.classList.add("correct");
-  });
-  if (!correct) btn.classList.add("wrong");
-  if (correct) {
-    quizPoints += 10;
-    markWord(quizItem.word, "learned");
-    bumpToday();
-    toast("回答正确 +10");
-  } else {
-    toast(`正确答案：${quizItem.word}`);
-  }
-  $("#quizScore").textContent = `${quizPoints} 分`;
-  $("#btnNextQuiz").hidden = false;
 }
 
 function renderLibrary(filter = "") {
@@ -268,7 +248,7 @@ function renderLibrary(filter = "") {
       const tag = mastered ? '<span class="tag mastered">掌握</span>' : learned ? '<span class="tag">已学</span>' : "";
       return `
         <article class="word-item" data-word="${item.word}">
-          <img src="${item.image}" alt="${item.word}" loading="lazy" />
+          <img src="${item.image || "placeholder.png"}" alt="${item.word}" loading="lazy" onerror="this.onerror=null;this.src='placeholder.png'" />
           <div class="meta">
             <strong>${item.word}</strong>
             <span>${item.meaning}</span>
@@ -286,16 +266,179 @@ function renderLibrary(filter = "") {
 function openModal(word) {
   const item = vocab.items.find((i) => i.word === word);
   if (!item) return;
-  $("#modalImage").src = item.image;
+  setWordImage($("#modalImage"), item);
   $("#modalWord").textContent = item.word;
   $("#modalMeaning").textContent = item.fullMeaning || item.meaning;
   $("#wordModal").dataset.word = word;
   $("#wordModal").showModal();
 }
 
+function startCloze() {
+  if (!clozeData.passages?.length) {
+    toast("暂无听写题库，请先运行 build_cloze_data.py");
+    return;
+  }
+  clozeShowAnswer = false;
+  if (clozeIndex < 0 || clozeIndex >= clozeData.passages.length) clozeIndex = 0;
+  renderCloze();
+  // 进入时自动朗读
+  setTimeout(() => speakCloze(), 350);
+}
+
+function renderCloze() {
+  const p = clozeData.passages[clozeIndex];
+  if (!p) return;
+  $("#clozeProgress").textContent = `${clozeIndex + 1}/${clozeData.passages.length}`;
+  const box = $("#clozePassage");
+  const parts = [];
+  if (p.title) {
+    parts.push(`<div class="cloze-title">${escapeHtml(p.title)}</div>`);
+  }
+  p.segments.forEach((seg) => {
+    if (seg.type === "text") {
+      parts.push(`<span class="cloze-text">${escapeHtml(seg.value)}</span>`);
+      return;
+    }
+    const blank = p.blanks[seg.index];
+    const word = blank?.word || "";
+    const hint = blank?.hint || "";
+    if (clozeShowAnswer) {
+      parts.push(
+        `<span class="cloze-answer" title="${escapeHtml(hint)}">${escapeHtml(word)}</span>` +
+          `<span class="cloze-hint">（${escapeHtml(hint)}）</span>`
+      );
+    } else {
+      parts.push(
+        `<span class="cloze-blank-wrap">` +
+          `<input class="cloze-input" data-index="${seg.index}" data-answer="${escapeAttr(word)}" ` +
+          `spellcheck="false" autocomplete="off" autocapitalize="off" size="${Math.max(word.length, 6)}" />` +
+          `<span class="cloze-hint">（${escapeHtml(hint)}）</span>` +
+          `</span>`
+      );
+    }
+  });
+  box.innerHTML = parts.join("");
+  if (!clozeShowAnswer) {
+    box.querySelectorAll(".cloze-input").forEach((input) => {
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          checkClozeInput(input);
+          focusNextBlank(input);
+        }
+      });
+      input.addEventListener("blur", () => checkClozeInput(input));
+    });
+    const first = box.querySelector(".cloze-input");
+    if (first) first.focus();
+  }
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function escapeAttr(s) {
+  return escapeHtml(s).replaceAll("'", "&#39;");
+}
+
+function checkClozeInput(input) {
+  const ok = input.value.trim().toLowerCase() === (input.dataset.answer || "").toLowerCase();
+  input.classList.toggle("ok", ok && input.value.trim() !== "");
+  input.classList.toggle("bad", !ok && input.value.trim() !== "");
+}
+
+function focusNextBlank(current) {
+  const inputs = [...$$(".cloze-input")];
+  const i = inputs.indexOf(current);
+  if (i >= 0 && i < inputs.length - 1) inputs[i + 1].focus();
+}
+
+function pickVoice(langPrefix) {
+  const voices = window.speechSynthesis.getVoices();
+  return (
+    voices.find((v) => v.lang.toLowerCase().startsWith(langPrefix) && /neural|online|premium/i.test(v.name)) ||
+    voices.find((v) => v.lang.toLowerCase().startsWith(langPrefix)) ||
+    null
+  );
+}
+
+function speakCloze() {
+  const p = clozeData.passages[clozeIndex];
+  if (!p?.segments?.length) return;
+  if (!window.speechSynthesis) {
+    toast("当前浏览器不支持朗读");
+    return;
+  }
+  stopSpeak();
+
+  // 先念故事标题，再顺读中文；挖空处念对应英文单词
+  const queue = [];
+  if (p.title) queue.push({ text: p.title, lang: "zh-CN", rate: 1 });
+  p.segments.forEach((seg) => {
+    if (seg.type === "text") {
+      const text = (seg.value || "").trim();
+      if (text) queue.push({ text, lang: "zh-CN", rate: 1 });
+      return;
+    }
+    const word = p.blanks[seg.index]?.word;
+    if (word) queue.push({ text: word, lang: "en-US", rate: 0.85 });
+  });
+  if (!queue.length) return;
+
+  let i = 0;
+  const next = () => {
+    if (i >= queue.length) return;
+    const item = queue[i++];
+    const u = new SpeechSynthesisUtterance(item.text);
+    u.lang = item.lang;
+    u.rate = item.rate;
+    const voice = pickVoice(item.lang.slice(0, 2));
+    if (voice) u.voice = voice;
+    u.onend = next;
+    u.onerror = next;
+    window.speechSynthesis.speak(u);
+  };
+  next();
+}
+
+function stopSpeak() {
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
+}
+
+function clozePrev() {
+  stopSpeak();
+  clozeShowAnswer = false;
+  clozeIndex = (clozeIndex - 1 + clozeData.passages.length) % clozeData.passages.length;
+  renderCloze();
+  speakCloze();
+}
+
+function clozeNext() {
+  stopSpeak();
+  clozeShowAnswer = false;
+  clozeIndex = (clozeIndex + 1) % clozeData.passages.length;
+  bumpToday();
+  renderCloze();
+  speakCloze();
+}
+
+function clozeToggleAnswer() {
+  clozeShowAnswer = !clozeShowAnswer;
+  renderCloze();
+  if (clozeShowAnswer) {
+    const p = clozeData.passages[clozeIndex];
+    p?.blanks?.forEach((b) => markWord(b.word, "learned"));
+  }
+}
+
 async function init() {
   try {
-    const res = await fetch("data.json");
+    const res = await fetch(`data.json?v=${Date.now()}`, { cache: "no-store" });
     if (!res.ok) throw new Error("data.json missing");
     vocab = await res.json();
   } catch (e) {
@@ -307,8 +450,21 @@ async function init() {
     return;
   }
 
+  try {
+    const cres = await fetch(`cloze.json?v=${Date.now()}`, { cache: "no-store" });
+    if (cres.ok) clozeData = await cres.json();
+  } catch {
+    clozeData = { passages: [] };
+  }
+
+  // 预热 TTS 语音列表
+  if (window.speechSynthesis) {
+    window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+  }
+
   if (!vocab.items.length) {
-    toast("还没有已配图的单词");
+    toast("词库为空，请先生成 data.json");
   }
 
   refreshStats();
@@ -320,7 +476,10 @@ async function init() {
     btn.addEventListener("click", (e) => switchView(btn.dataset.tab, e));
   });
   $$("[data-back]").forEach((btn) => {
-    btn.addEventListener("click", () => switchView("home"));
+    btn.addEventListener("click", () => {
+      stopSpeak();
+      switchView("home");
+    });
   });
 
   updateTabIndicator();
@@ -341,7 +500,6 @@ async function init() {
     nextLearn("again");
   });
 
-  $("#btnNextQuiz").addEventListener("click", pickQuiz);
   $("#searchInput").addEventListener("input", (e) => renderLibrary(e.target.value));
 
   $("#modalClose").addEventListener("click", () => $("#wordModal").close());
@@ -354,6 +512,32 @@ async function init() {
     markWord($("#wordModal").dataset.word, "mastered");
     toast("已标记为掌握");
     $("#wordModal").close();
+  });
+
+  $("#btnClozePrev")?.addEventListener("click", clozePrev);
+  $("#btnClozeNext")?.addEventListener("click", clozeNext);
+  $("#btnClozeSpeak")?.addEventListener("click", speakCloze);
+  $("#btnClozeAnswer")?.addEventListener("click", clozeToggleAnswer);
+
+  window.addEventListener("keydown", (e) => {
+    if (!$("#view-cloze")?.classList.contains("active")) return;
+    if (e.target.matches("input, textarea")) {
+      if (e.ctrlKey && (e.key === "a" || e.key === "A")) {
+        e.preventDefault();
+        speakCloze();
+      }
+      return;
+    }
+    if (e.key === "ArrowLeft") clozePrev();
+    if (e.key === "ArrowRight") clozeNext();
+    if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+      e.preventDefault();
+      clozeToggleAnswer();
+    }
+    if (e.ctrlKey && (e.key === "a" || e.key === "A")) {
+      e.preventDefault();
+      speakCloze();
+    }
   });
 }
 

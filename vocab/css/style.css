@@ -440,7 +440,7 @@ button, input { font: inherit; color: inherit; border: none; }
 .flashcard {
   width: 100%;
   aspect-ratio: 4/5;
-  max-height: 400px;
+  max-height: min(52vh, 440px);
   cursor: pointer;
   outline: none;
 }
@@ -462,10 +462,13 @@ button, input { font: inherit; color: inherit; border: none; }
   border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
+  min-height: 0;
+  box-sizing: border-box;
 }
 
 .flashcard-face img {
-  flex: 1;
+  flex: 1 1 auto;
+  min-height: 0;
   width: 100%;
   object-fit: contain;
   background: rgba(255,255,255,0.35);
@@ -474,10 +477,12 @@ button, input { font: inherit; color: inherit; border: none; }
 }
 
 .flashcard-face .hint {
+  flex: 0 0 auto;
   margin: 0;
-  padding: 10px;
+  padding: 12px 12px 16px;
   text-align: center;
   font-size: 12px;
+  line-height: 1.45;
   color: var(--text-muted);
   position: relative;
   z-index: 2;
@@ -487,7 +492,8 @@ button, input { font: inherit; color: inherit; border: none; }
 .flashcard-face.back { transform: rotateY(180deg); }
 
 .word-block {
-  padding: 14px 16px 18px;
+  flex: 0 0 auto;
+  padding: 12px 16px 18px;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -878,6 +884,146 @@ button, input { font: inherit; color: inherit; border: none; }
   display: block;
   color: var(--text);
   margin-bottom: 8px;
+}
+
+/* ── 听音填空 ── */
+#view-cloze {
+  padding-bottom: 110px;
+}
+
+.cloze-card {
+  border-radius: var(--radius-lg);
+  padding: 22px 18px 28px;
+  min-height: 52vh;
+}
+
+.cloze-tip {
+  margin: 0 0 18px;
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 2;
+}
+
+.cloze-title {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(40, 50, 75, 0.92);
+  letter-spacing: 0.06em;
+}
+
+.cloze-passage {
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  line-height: 2.05;
+  color: rgba(25, 35, 55, 0.92);
+  word-break: break-word;
+}
+
+.cloze-text { white-space: pre-wrap; }
+
+.cloze-blank-wrap {
+  display: inline;
+  white-space: nowrap;
+}
+
+.cloze-input {
+  display: inline-block;
+  min-width: 4.5em;
+  max-width: 12em;
+  margin: 0 2px;
+  padding: 2px 8px;
+  border: none;
+  border-bottom: 2px solid rgba(90, 120, 200, 0.45);
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 6px 6px 0 0;
+  font: inherit;
+  font-size: 17px;
+  color: #2a4a9a;
+  text-align: center;
+  outline: none;
+}
+
+.cloze-input:focus {
+  border-bottom-color: var(--accent);
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 0 3px rgba(91, 141, 239, 0.18);
+}
+
+.cloze-input.ok {
+  color: #1f9a62;
+  border-bottom-color: #3cb88a;
+  background: rgba(60, 184, 138, 0.12);
+}
+
+.cloze-input.bad {
+  color: #c04060;
+  border-bottom-color: #e85d7a;
+  background: rgba(232, 93, 122, 0.1);
+}
+
+.cloze-hint {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.cloze-answer {
+  color: #1f9a62;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin: 0 1px;
+}
+
+.cloze-bar {
+  position: fixed;
+  left: 50%;
+  bottom: calc(78px + var(--safe-b));
+  transform: translateX(-50%);
+  width: calc(100% - 28px);
+  max-width: 452px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  padding: 8px 6px;
+  border-radius: 18px;
+  z-index: 40;
+}
+
+.cloze-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 4px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  color: var(--text);
+}
+
+.cloze-btn.primary {
+  background: linear-gradient(145deg, rgba(255,255,255,0.7), rgba(180,210,255,0.5));
+  color: #2a4a9a;
+}
+
+.cloze-btn .cloze-ico { font-size: 16px; line-height: 1; }
+.cloze-btn em { font-style: normal; font-size: 12px; font-weight: 600; }
+.cloze-btn small { font-size: 10px; color: var(--text-muted); }
+
+#view-cloze:not(.active) ~ .cloze-bar,
+body:not(:has(#view-cloze.active)) .cloze-bar {
+  /* fallback handled by parent view only showing when active */
+}
+
+#view-cloze:not(.active) .cloze-bar {
+  display: none;
 }
 
 @media (min-width: 481px) {

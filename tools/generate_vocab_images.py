@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-从 study.txt 为词汇 AI 生成配图（Pollinations 免费接口），保存到 images/。
-按「英文单词 + 中文释义」构造提示词，底部叠加小写英文与中文。
-本机执行：tools\\run_generate_vocab_images.cmd（会 cd 到 ReleasePlanCheck 再运行）
+为词汇生成配图（优先 Pollinations Flux 高清），保存到 images/。
+支持 --sample：先抽一批具体名词试做质量。
 """
 
 from __future__ import annotations
@@ -21,14 +20,52 @@ from PIL import Image, ImageDraw, ImageFont
 
 DEFAULT_ROOT = Path(__file__).resolve().parent.parent
 
-CARD_W, CARD_H = 400, 560
-IMAGE_H = 340
-TEXT_TOP = IMAGE_H + 8
-USER_AGENT = "VocabImageBot/1.0 (local study script)"
-POLLINATIONS_BASE = "https://image.pollinations.ai/prompt"
+CARD_W, CARD_H = 480, 640
+IMAGE_H = 400
+TEXT_TOP = IMAGE_H + 10
+USER_AGENT = "VocabImageBot/2.0 (local sample HQ)"
+# 新端点优先，旧端点兜底
+POLLINATIONS_URLS = (
+    "https://gen.pollinations.ai/image",
+    "https://image.pollinations.ai/prompt",
+)
 
-ENTRY_RE = re.compile(r"^\d+,\s*([a-zA-Z][a-zA-Z-]*?)\s*(?:\[.*?\])?\s+英译中")
+ENTRY_RE = re.compile(r"^\d+,\s*([a-zA-Z][a-zA-Z\-']*?)\s*(?:\[.*?\])?\s+英译中")
 POS_RE = re.compile(r"^[a-z]+\.\s*", re.I)
+
+# 试做批次：具体、好出图的名词（来自词库）
+SAMPLE_CONCRETE = [
+    "chimney",
+    "butcher",
+    "elm",
+    "unagi",
+    "puffin",
+    "mesh",
+    "infant",
+    "puddle",
+    "shutter",
+    "dime",
+    "corridor",
+    "plumage",
+    "valve",
+    "lamp",
+    "baguette",
+    "warship",
+    "bouquet",
+    "porch",
+    "nightstand",
+    "anchovy",
+    "inlet",
+    "cockpit",
+    "canopy",
+    "crumb",
+    "compartment",
+    "perspiration",
+    "saucer",
+    "gasket",
+    "ampoule",
+    "kayaker",
+]
 
 
 def parse_entries(study_file: Path) -> list[tuple[str, str]]:
@@ -51,7 +88,6 @@ def parse_entries(study_file: Path) -> list[tuple[str, str]]:
 
 
 def _primary_cn_gloss(meaning: str) -> str:
-    """取释义行第一个中文义项（去掉词性前缀与分号后内容）。"""
     if not meaning:
         return ""
     gloss = POS_RE.sub("", meaning).strip()
@@ -60,17 +96,37 @@ def _primary_cn_gloss(meaning: str) -> str:
     return parts[0].strip()
 
 
-# 中文义项关键词 -> 直白英文画面（优先于泛化模板）
 VISUAL_HINTS: list[tuple[tuple[str, ...], str]] = [
-    (("烟囱",), "a brick house with a tall chimney on the roof, gray smoke rising from the chimney"),
-    (("屠夫",), "a butcher shop: fresh red meat on a wooden block, a large metal cleaver"),
-    (("肉店",), "a butcher shop counter with hanging meat and a meat cleaver"),
-    (
-        ("亏损", "赤字", "不足额"),
-        "an empty wallet opened with no money inside, a few coins falling out, "
-        "red downward arrow showing financial loss",
-    ),
-    (("缺乏", "不足"), "an almost-empty container with only a tiny amount left at the bottom"),
+    (("烟囱",), "a red-brick house chimney with thin gray smoke rising into blue sky"),
+    (("屠夫",), "a butcher standing behind a wooden block with cuts of fresh meat and a cleaver"),
+    (("榆树",), "a tall mature elm tree with full green crown in a park"),
+    (("鳗鱼",), "a shiny fresh unagi eel on a ceramic plate"),
+    (("善知鸟", "海鹦"), "an Atlantic puffin with colorful beak on a rocky cliff"),
+    (("网", "网状"), "a fine metal mesh net held in daylight"),
+    (("婴儿",), "a sleeping infant baby in a soft blanket"),
+    (("水坑", "泥潭"), "a clear rain puddle on asphalt reflecting sky"),
+    (("百叶窗", "护窗"), "white wooden window shutters closed on a house wall"),
+    (("硬币", "十分"), "a close-up US dime coin on white surface"),
+    (("走廊", "过道"), "a bright empty hotel corridor with soft perspective"),
+    (("羽毛",), "colorful bird plumage feathers close-up"),
+    (("阀", "活门"), "an industrial metal valve on a pipe"),
+    (("灯", "光源"), "a warm glowing table lamp on a nightstand"),
+    (("面包", "法棍"), "a fresh golden baguette on a wooden board"),
+    (("军舰", "战船"), "a gray warship sailing on calm ocean"),
+    (("花束",), "a colorful fresh flower bouquet wrapped in paper"),
+    (("门廊",), "a wooden front porch with steps and railing"),
+    (("床头",), "a wooden nightstand beside a bed with a small lamp"),
+    (("凤尾鱼",), "small salted anchovy fish on a plate"),
+    (("湖湾", "河湾"), "a quiet coastal inlet with clear water and rocks"),
+    (("驾驶舱",), "airplane cockpit with instrument panels and windshield view"),
+    (("顶罩", "华盖"), "a fabric bed canopy draped over a four-poster bed"),
+    (("屑",), "bread crumbs scattered on a wooden cutting board"),
+    (("隔间", "隔层"), "train compartment seats by a window"),
+    (("汗",), "forehead skin with clear sweat droplets"),
+    (("茶托", "碟"), "a porcelain saucer under a teacup"),
+    (("垫圈",), "a rubber gasket ring on white background"),
+    (("安瓿",), "a clear glass medicine ampoule"),
+    (("皮船",), "a person paddling a kayak on blue water"),
 ]
 
 
@@ -85,41 +141,29 @@ def _lookup_visual_hint(cn: str, meaning: str) -> str:
 def build_prompt(word: str, meaning: str) -> str:
     cn = _primary_cn_gloss(meaning)
     hint = _lookup_visual_hint(cn, meaning)
-
     if hint:
-        scene = f"Show exactly: {hint}. This illustrates the word '{word}'"
-        if cn:
-            scene += f" (Chinese meaning: {cn})"
-        scene += "."
+        subject = hint
     elif cn:
-        scene = (
-            f"Show ONE clear real-world object or simple everyday scene for "
-            f"the Chinese word '{cn}' (English: {word}). "
-            f"Choose the most literal, common visual that a child instantly recognizes."
+        subject = (
+            f"one clear real-world object that literally shows '{cn}' "
+            f"(English word: {word})"
         )
     else:
-        scene = (
-            f"Show ONE clear real-world object or simple everyday scene for "
-            f"the English word '{word}'. "
-            f"Choose the most literal, common visual example."
-        )
+        subject = f"one clear real-world object for the English word '{word}'"
 
     return (
-        f"{scene} "
-        "Children's textbook illustration, flat cartoon, simple shapes, "
-        "bright friendly colors, plain white background, centered single subject, "
-        "large clear silhouette, easy for language learners to understand at a glance."
+        f"High-quality educational flashcard photo: {subject}. "
+        "Single subject centered, sharp focus, natural lighting, "
+        "clean simple background, realistic detail, no text, no watermark, "
+        "no collage, no abstract symbols, vocabulary textbook style."
     )
 
 
 def build_negative_prompt() -> str:
     return (
-        "abstract art, surreal, symbolic only, metaphorical, dreamlike, artistic, "
-        "map, globe, world map, chart, graph, diagram, infographic, "
-        "random people, crowd, group photo, portrait, face close-up, "
-        "text, letters, words, numbers, labels, caption, watermark, logo, "
-        "dark background, busy cluttered background, blurry, "
-        "photorealistic, 3d render, oil painting, watercolor, sketch, messy, horror"
+        "text, letters, words, watermark, logo, collage, abstract art, "
+        "surreal, symbolic icons, chart, diagram, blurry, low quality, "
+        "deformed, extra limbs, busy cluttered background, horror"
     )
 
 
@@ -127,26 +171,32 @@ def fetch_ai_image(word: str, meaning: str, *, verbose: bool = False) -> Image.I
     prompt = build_prompt(word, meaning)
     negative = build_negative_prompt()
     if verbose:
-        print(f"    prompt: {prompt[:120]}...")
+        print(f"    prompt: {prompt[:140]}...")
     encoded = urllib.parse.quote(prompt)
     encoded_neg = urllib.parse.quote(negative)
     seed = abs(hash(word)) % 100000
-    url = (
-        f"{POLLINATIONS_BASE}/{encoded}"
-        f"?width=400&height=340&seed={seed}&nologo=true&model=flux"
-        f"&negative={encoded_neg}"
+    params = (
+        f"width=768&height=640&seed={seed}&nologo=true&model=flux"
+        f"&enhance=true&negative_prompt={encoded_neg}"
     )
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            data = resp.read()
-        img = Image.open(io.BytesIO(data))
-        img.load()
-        if img.width < 80 or img.height < 80:
-            return None
-        return img
-    except (urllib.error.URLError, OSError, Image.UnidentifiedImageError):
-        return None
+    for base in POLLINATIONS_URLS:
+        url = f"{base}/{encoded}?{params}"
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(req, timeout=150) as resp:
+                data = resp.read()
+            if len(data) < 2000:
+                continue
+            img = Image.open(io.BytesIO(data))
+            img.load()
+            if img.width < 80 or img.height < 80:
+                continue
+            return img
+        except (urllib.error.URLError, OSError, Image.UnidentifiedImageError) as e:
+            if verbose:
+                print(f"    fail {base}: {e}")
+            continue
+    return None
 
 
 def load_font(size: int, chinese: bool = False) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
@@ -220,7 +270,7 @@ def make_card(word: str, meaning: str, photo: Image.Image | None) -> Image.Image
 
     if photo is not None:
         photo = photo.convert("RGB")
-        max_w, max_h = CARD_W - 32, IMAGE_H - 32
+        max_w, max_h = CARD_W - 24, IMAGE_H - 24
         photo.thumbnail((max_w, max_h), Image.Resampling.LANCZOS)
         x = (CARD_W - photo.width) // 2
         y = (IMAGE_H - photo.height) // 2
@@ -228,11 +278,11 @@ def make_card(word: str, meaning: str, photo: Image.Image | None) -> Image.Image
     else:
         draw_fallback_panel(draw, word, meaning)
 
-    en_font = load_font(30, chinese=False)
+    en_font = load_font(32, chinese=False)
     cn_font = load_font(22, chinese=True)
-    draw.text((CARD_W // 2, TEXT_TOP + 18), word, fill="#111111", anchor="mm", font=en_font)
+    draw.text((CARD_W // 2, TEXT_TOP + 20), word, fill="#111111", anchor="mm", font=en_font)
     if meaning:
-        y = TEXT_TOP + 52
+        y = TEXT_TOP + 56
         for line in wrap_by_pixels(draw, meaning, cn_font, CARD_W - 32, 2):
             draw.text((CARD_W // 2, y), line, fill="#555555", anchor="mm", font=cn_font)
             y += 28
@@ -250,22 +300,23 @@ def generate_one(word: str, meaning: str, root: Path, force: bool = False) -> bo
         print(f"  skip  {word} (exists)")
         return True
 
-    photo = fetch_ai_image(word, meaning, verbose=force)
+    photo = fetch_ai_image(word, meaning, verbose=True)
     card = make_card(word, meaning, photo)
     (root / "images").mkdir(parents=True, exist_ok=True)
-    card.save(dest, format="PNG")
+    card.save(dest, format="PNG", optimize=True)
     tag = "ai" if photo else "text"
     print(f"  {tag}  {word} | {meaning[:24]}")
-    return True
+    return photo is not None
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="AI 为 study.txt 词汇生成配图")
     parser.add_argument("--word", help="只生成指定单词")
+    parser.add_argument("--sample", action="store_true", help="只生成预选具体名词试做批次")
     parser.add_argument("--limit", type=int, help="最多处理 N 个词")
     parser.add_argument("--offset", type=int, default=0)
     parser.add_argument("--force", action="store_true", help="覆盖已有图片")
-    parser.add_argument("--delay", type=float, default=2.0, help="每张图间隔秒数")
+    parser.add_argument("--delay", type=float, default=2.5, help="每张图间隔秒数")
     parser.add_argument("--root", type=Path, default=DEFAULT_ROOT)
     args = parser.parse_args()
 
@@ -274,22 +325,36 @@ def main() -> None:
     if not study_file.exists():
         raise SystemExit(f"找不到 {study_file}")
 
-    entries = parse_entries(study_file)
+    all_entries = parse_entries(study_file)
+    by_word = {w: m for w, m in all_entries}
+
     if args.word:
         target = args.word.strip().lower()
-        entries = [(w, m) for w, m in entries if w == target]
-        if not entries:
+        if target not in by_word:
             raise SystemExit(f"找不到单词: {target}")
+        entries = [(target, by_word[target])]
+    elif args.sample:
+        entries = []
+        for w in SAMPLE_CONCRETE:
+            if w in by_word:
+                entries.append((w, by_word[w]))
+            else:
+                print(f"  warn 样本词不在词库: {w}")
+        if args.limit:
+            entries = entries[: args.limit]
     else:
-        entries = entries[args.offset :]
+        entries = all_entries[args.offset :]
         if args.limit:
             entries = entries[: args.limit]
 
-    print(f"共 {len(entries)} 个词，AI 生图 -> {root / 'images'}")
+    print(f"共 {len(entries)} 个词，HQ Flux 生图 -> {root / 'images'}")
+    ok = 0
     for i, (word, meaning) in enumerate(entries):
-        generate_one(word, meaning, root, force=args.force)
+        if generate_one(word, meaning, root, force=args.force):
+            ok += 1
         if i < len(entries) - 1:
             time.sleep(args.delay)
+    print(f"完成: AI成功 {ok}/{len(entries)}")
 
 
 if __name__ == "__main__":

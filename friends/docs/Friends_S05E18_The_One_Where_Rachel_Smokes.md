@@ -1,763 +1,654 @@
-<html>
+# Friends S05E18 - The One Where Rachel Smokes
 
-<head>
-<title>The One Where Rachel Smokes</title>
-<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
-<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
-<meta NAME="Template" CONTENT="C:\Program Files\Microsoft Office\Templates\friends.dot">
-</head>
+**Written by:** Michael Curtis
+**Transcribed by:** Eric Aasen
 
-<body bgcolor="#FFFFFF" link="#008000">
+---
 
-<h1 align="center">The One Where Rachel Smokes</h1>
+**Written by:** Michael Curtis Transcribed by: Eric Aasen
 
-<hr>
+## Scene 1: Central Perk, Joey, Chandler, Monica, and Phoebe are there. Joey is holding a
+deck of cards out to Chandler.
 
-<p>Written by: Michael Curtis<br>
-Transcribed by: <a href="mailto:Ericaasen1@aol.com">Eric Aasen</a></p>
+**Joey:** Okay, pick a card.
 
-<hr>
+**Chandler:** Okay. (He picks the 9 of Spades)
 
-<p>[Scene: Central Perk, Joey, Chandler, Monica, and Phoebe are there. Joey is holding a
-deck of cards out to Chandler.]</p>
+**Joey:** All right now, memorize it. (Pause) You got it?
 
-<p><b>Joey:</b> Okay, pick a card.</p>
+**Chandler:** Oh yes.
 
-<p><b>Chandler:</b> Okay. (He picks the 9 of Spades)</p>
+**Joey:** (holding up the Queen of Clubs) Is that your card? (He winks and smiles.)
 
-<p><b>Joey:</b> All right now, memorize it. (Pause) You got it?</p>
+**Chandler:** (pause) Yes.
 
-<p><b>Chandler:</b> Oh yes. </p>
+*(Joey laughs then realizes the trick didn't work when Chandler hands him his card
+back.)*
 
-<p><b>Joey:</b> (holding up the Queen of Clubs) Is that your card? (He winks and smiles.)</p>
+**Carol:** (entering with Ben and Ross) Hey guys!
 
-<p><b>Chandler:</b> (pause) Yes. </p>
+**Ross:** Hi!
 
-<p>(Joey laughs then realizes the trick didn't work when Chandler hands him his card
-back.) </p>
+**Chandler:** Hi there!
 
-<p><b>Carol:</b> (entering with Ben and Ross) Hey guys!</p>
+**Ben:** Hi!!
 
-<p><b>Ross:</b> Hi!</p>
+**Carol:** Guess what? Ben is going to be in a TV commercial!
 
-<p><b>Chandler:</b> Hi there!</p>
+**Phoebe:** What are you talking about?!
 
-<p><b>Ben:</b> Hi!!</p>
+**Ross:** (sets Ben down) Well, it's not for sure but umm, we met this guy in the park who thought Ben was really cute--y'know, which he is--so umm anyhoo, he uh, he gave us his card and told us to bring him down for this commercial he's auditioning.
 
-<p><b>Carol:</b> Guess what? Ben is going to be in a TV commercial!</p>
+**Joey:** (reading the card) Whoa! This guy is like the biggest commercial casting director in town! (Ross gasps) Ben takes one lousy walk in the park and gets an audition!! (Ross and Carol stare at him, then Joey realizes what he just said.) I mean, way to go Ben! (Gives Ben the thumbs up, which Ben returns.) Man! I've been in that park a million times and no one offered me an audition.
 
-<p><b>Phoebe:</b> What are you talking about?!</p>
+**Ross:** I know, it's crazy! We were just pushing Ben on the swings…
 
-<p><b>Ross:</b> (sets Ben down) Well, it's not for sure but umm, we met this guy in the
-park who thought Ben was really cute--y'know, which he is--so umm anyhoo, he uh, he gave
-us his card and told us to bring him down for this commercial he's auditioning.</p>
+**Joey:** I'm always on the swings! What am I doing wrong?!
 
-<p><b>Joey:</b> (reading the card) Whoa! This guy is like the biggest commercial casting
-director in town! (Ross gasps) Ben takes one lousy walk in the park and gets an audition!!
-(Ross and Carol stare at him, then Joey realizes what he just said.) I mean, way to go
-Ben! (Gives Ben the thumbs up, which Ben returns.) Man! I've been in that park a million
-times and no one offered me an audition.</p>
+**Chandler:** That.
 
-<p><b>Ross:</b> I know, it's crazy! We were just pushing Ben on the swings&#133;</p>
+---
 
-<p><b>Joey:</b> I'm <b>always</b> on the swings! What am I doing wrong?!</p>
+## Opening Credits
 
-<p><b>Chandler:</b> That.</p>
-<b>
+## Scene 2: Monica and Rachel's, everyone is eating breakfast, Ross is heading for the
+bathroom.
 
-<p ALIGN="CENTER">Opening Credits</p>
-</b>
+**Rachel:** (entering from her room) Okay, gotta go! Wish me luck!
 
-<p>[Scene: Monica and Rachel's, everyone is eating breakfast, Ross is heading for the
-bathroom.]</p>
+**Joey:** Luck!
 
-<p><b>Rachel:</b> (entering from her room) Okay, gotta go! Wish me luck!</p>
+**Chandler:** Hey Rach, now that you're working at Ralph Lauren, can you bring me back some of those polo shirts?
 
-<p><b>Joey:</b> Luck!</p>
+**Rachel:** Uh well, y'know what? I don't think if I feel comfortable stealing on my very first day…
 
-<p><b>Chandler:</b> Hey Rach, now that you're working at <i>Ralph Lauren</i>, can you
-bring me back some of those polo shirts?</p>
+**Chandler:** Unwilling to steal from work, interesting.
 
-<p><b>Rachel:</b> Uh well, y'know what? I don't think if I feel comfortable stealing on my
-very <b>first</b> day&#133;</p>
+**Monica:** Besides, if anybody's gonna get free stuff, it's gonna be me.
 
-<p><b>Chandler:</b> Unwilling to steal from work, interesting.</p>
+**Rachel:** Okay guys, way to wish me luck!
 
-<p><b>Monica:</b> Besides, if anybody's gonna get free stuff, it's gonna be me.</p>
+**All:** Good luck! Go get 'em! (Rachel exits.)
 
-<p><b>Rachel:</b> Okay guys, way to wish me luck!</p>
+**Phoebe:** Okay, let's discuss Rachel's birthday. I say we throw a surprise party this weekend.
 
-<p><b>All:</b> Good luck! Go get 'em! (Rachel exits.)</p>
+**Joey:** Whoa-whoa, but her birthday isn't like for another month.
 
-<p><b>Phoebe:</b> Okay, let's discuss Rachel's birthday. I say we throw a surprise party
-this weekend.</p>
+**Phoebe:** Yeah but if we throw her a party on her birthday, then it's not a surprise.
 
-<p><b>Joey:</b> Whoa-whoa, but her birthday isn't like for another month.</p>
+**Monica:** I think it's a great idea. Yeah, we could have a dinner party and just invite her close friends.
 
-<p><b>Phoebe:</b> Yeah but if we throw her a party on her birthday, then it's not a
-surprise.</p>
+**Joey:** Ross!! We're having a surprise party for Rachel!!
 
-<p><b>Monica:</b> I think it's a great idea. Yeah, we could have a dinner party and just
-invite her close friends.</p>
+**Ross:** (from the bathroom) Okay!!
 
-<p><b>Joey:</b> Ross!! We're having a surprise party for Rachel!!</p>
+**Joey:** Done.
 
-<p><b>Ross:</b> (from the bathroom) Okay!!</p>
+**Phoebe:** Okay, great so do you want to do it together?
 
-<p><b>Joey:</b> Done.</p>
+**Monica:** I would love to do it together!
 
-<p><b>Phoebe:</b> Okay, great so do you want to do it together?</p>
+*(Joey starts to giggle.)*
 
-<p><b>Monica:</b> I would love to do it together!</p>
+**Joey:** They're gonna do it together.
 
-<p>(Joey starts to giggle.)</p>
+**Chandler:** Dude! That's my girlfriend!
 
-<p><b>Joey:</b> They're gonna do it together.</p>
+**Joey:** What, so I gotta shut it down now?
 
-<p><b>Chandler:</b> Dude! That's my girlfriend!</p>
+**Ross:** All right, I gotta take off. I'm picking up Ben then we're off to the big audition.
 
-<p><b>Joey:</b> What, so I gotta shut it down now?</p>
+**Monica:** It's gonna be weird to watch some actor pretending to be Ben's dad.
 
-<p><b>Ross:</b> All right, I gotta take off. I'm picking up Ben then we're off to the big
-audition.</p>
+**Ross:** Yeah.
 
-<p><b>Monica:</b> It's gonna be weird to watch some actor pretending to be Ben's dad.</p>
+**Chandler:** Weirder than watching his two moms make out? (Monica nods in agreement.)
 
-<p><b>Ross:</b> Yeah.</p>
+**Joey:** Whoa-whoa dad? There's a dad in the commercial?
 
-<p><b>Chandler:</b> Weirder than watching his two moms make out? (Monica nods in
-agreement.)</p>
+**Ross:** Yeah the dad and Ben eat soup and pretend to enjoy it.
 
-<p><b>Joey:</b> Whoa-whoa dad? There's a dad in the commercial?</p>
+**Joey:** Whoa, hey, maybe I'll go down there with ya and see if I can get an audition to play the dad. I mean who better to play Ben's father than his godfather.
 
-<p><b>Ross:</b> Yeah the dad and Ben eat soup and pretend to enjoy it.</p>
+**Ross:** You're not his godfather.
 
-<p><b>Joey:</b> Whoa, hey, maybe I'll go down there with ya and see if I can get an
-audition to play the dad. I mean who better to play Ben's father than his godfather.</p>
+**Joey:** What?! Are you kidding?!
 
-<p><b>Ross:</b> You're not his godfather.</p>
+**Ross:** (Pause) Of course I am! (Joey is relieved) Okay, let's go godfather.
 
-<p><b>Joey:</b> What?! Are you kidding?!</p>
+**Joey:** All right!
 
-<p><b>Ross:</b> (Pause) Of course I am! (Joey is relieved) Okay, let's go godfather.</p>
+*(As they walk out he motions to Chandler that he is still Ben's godfather.)*
 
-<p><b>Joey:</b> All right!</p>
+## Scene 3: Ben's audition, Carol, Ross, and Ben along with about 10 more families are in a
+waiting room as Joey enters happily.
 
-<p>(As they walk out he motions to Chandler that he is still Ben's godfather.)</p>
+**Joey:** Hey! I'm in, they're gonna let me audition!
 
-<p>[Scene: Ben's audition, Carol, Ross, and Ben along with about 10 more families are in a
-waiting room as Joey enters happily.]</p>
+**Ross:** Really? That's great!
 
-<p><b>Joey:</b> Hey! I'm in, they're gonna let me audition!</p>
+**Joey:** I know! I know! It turns out that one of the casting ladies has actually seen me in a play, so I steered clear of her…
 
-<p><b>Ross:</b> Really? That's great!</p>
+**Carol:** (noticing a kid who has picked up a copy of Variety to read) Hey, that kid looks familiar.
 
-<p><b>Joey:</b> I know! I know! It turns out that one of the casting ladies has actually
-seen me in a play, so I steered clear of her&#133;</p>
+**Joey:** Oh yeah, yeah! He's done tons of commercials. I've seen him in like Sugar Smacks, Playstation, and that one for the phone company. In fact he was so good in that one, he actually convinced me to switch phone companies. Chandler was mad….
 
-<p><b>Carol:</b> (noticing a kid who has picked up a copy of <i>Variety</i> to read) Hey,
-that kid looks familiar.</p>
+**Ross:** Yeah well, he's not gonna get this one. Ben is way cuter than that kid. I mean look at him, look at you, (Starts to whine like a baby and Joey just glares at him.)
 
-<p><b>Joey:</b> Oh yeah, yeah! He's done tons of commercials. I've seen him in like Sugar
-Smacks, <i>Playstation</i>, and that one for the phone company. In fact he was so good in
-that one, he actually convinced me to switch phone companies. Chandler was mad&#133;.</p>
+**Joey:** That's great. Listen, wouldn't it be great though if I got to play Ben's dad?
 
-<p><b>Ross:</b> Yeah well, he's not gonna get this one. Ben is way cuter than that kid. I
-mean look at him, look at you, (Starts to whine like a baby and Joey just glares at him.)</p>
+**Ross:** Joey, you look nothing like Ben.
 
-<p><b>Joey:</b> That's great. Listen, wouldn't it be great though if I got to play Ben's
-dad?</p>
+**Joey:** I look more like him than you do! (He winks at Carol.)
 
-<p><b>Ross:</b> Joey, you look nothing like Ben.</p>
+**Carol:** Y'know, I don't really know you well enough for you to do that.
 
-<p><b>Joey:</b> I look more like him than you do! (He winks at Carol.)</p>
-
-<p><b>Carol:</b> Y'know, I don't really know you well enough for you to do that.</p>
-
-<p>[Scene: Rachel's new job, she's in her new boss's office (Kim's) and with the other
+## Scene 4: Rachel's new job, she's in her new boss's office (Kim's) and with the other
 assistant (Nancy). Together they're deciding what clothes to buy or something, who knows,
-let's all watch/read to find out.]</p>
+let's all watch/read to find out.
 
-<p><b>Kim:</b> So it's down to these two, Nancy I know you like this one and I think I
-agree. Rachel, what do you think?</p>
+**Kim:** So it's down to these two, Nancy I know you like this one and I think I agree. Rachel, what do you think?
 
-<p><b>Rachel:</b> Well umm, that one is pretty but uh, I just, I just love this fabric (On
-the other one.) Sorry.</p>
+**Rachel:** Well umm, that one is pretty but uh, I just, I just love this fabric (On the other one.) Sorry.
 
-<p><b>Kim:</b> Oh don't be sorry, that's part of your job here to give your opinions and
-then I take credit for them--I'm kidding.</p>
+**Kim:** Oh don't be sorry, that's part of your job here to give your opinions and then I take credit for them--I'm kidding.
 
-<p><b>Nancy:</b> She is kidding, but don't ever disagree with her again. Okay, now I'm
-kidding!</p>
+**Nancy:** She is kidding, but don't ever disagree with her again. Okay, now I'm kidding!
 
-<p><b>Rachel:</b> (laughing nervously) Oh, what a fun office.</p>
+**Rachel:** (laughing nervously) Oh, what a fun office.
 
-<p><b>Kim:</b> I don't know which one, but I do know I need a cigarette. So what do you
-say we take a break, we go outside, and we'll figure this out when we come back?</p>
+**Kim:** I don't know which one, but I do know I need a cigarette. So what do you say we take a break, we go outside, and we'll figure this out when we come back?
 
-<p>(They all get up to leave.)</p>
+*(They all get up to leave.)*
 
-<p><b>Kim:</b> (at the door) Rachel? Do you smoke?</p>
+**Kim:** (at the door) Rachel? Do you smoke?
 
-<p><b>Rachel:</b> Oh no, my dad's a doctor and he would always tell me just horror
-stories&#133;(stops and tries to change directions)&#133;about ghosts and goblins who
-totally supported the princess's right to smoke.</p>
+**Rachel:** Oh no, my dad's a doctor and he would always tell me just horror stories…(stops and tries to change directions)…about ghosts and goblins who totally supported the princess's right to smoke.
 
-<p>[Scene: Monica and Rachel's, Rachel is telling Chandler and Monica about her day.]</p>
+## Scene 5: Monica and Rachel's, Rachel is telling Chandler and Monica about her day.
 
-<p><b>Rachel:</b> &#133;and then they came back from smoking and they had made all of the
-decisions without me!</p>
+**Rachel:** …and then they came back from smoking and they had made all of the decisions without me!
 
-<p><b>Monica:</b> That doesn't seem fair.</p>
+**Monica:** That doesn't seem fair.
 
-<p><b>Rachel:</b> I know! It's like I'm being punished for not having this disgusting,
-poisoning habit!</p>
+**Rachel:** I know! It's like I'm being punished for not having this disgusting, poisoning habit!
 
-<p><b>Chandler:</b> Yeah, it is the best.</p>
+**Chandler:** Yeah, it is the best.
 
-<p><b>Rachel:</b> I mean what if this keeps happening? Y'know, they'll-they'll be outside
-smoking, making all the decisions and I'll just be up in my office breathing my stupid
-clean air, y'know? And then when the day comes when Kim wants to promote one of us, who do
-you think she's gonna pick? Me or Smokey Smokerson?</p>
+**Rachel:** I mean what if this keeps happening? Y'know, they'll-they'll be outside smoking, making all the decisions and I'll just be up in my office breathing my stupid clean air, y'know? And then when the day comes when Kim wants to promote one of us, who do you think she's gonna pick? Me or Smokey Smokerson?
 
-<p><b>Monica:</b> Rachel, you can go down there, you don't have to smoke. Just say you
-wanna get some fresh air.</p>
+**Monica:** Rachel, you can go down there, you don't have to smoke. Just say you wanna get some fresh air.
 
-<p><b>Rachel:</b> Yeah, I can do that.</p>
+**Rachel:** Yeah, I can do that.
 
-<p><b>Chandler:</b> Yeah, or you can do the easy thing and smoke.</p>
+**Chandler:** Yeah, or you can do the easy thing and smoke.
 
-<p><b>Phoebe:</b> (entering) Hey!</p>
+**Phoebe:** (entering) Hey!
 
-<p><b>Monica:</b> Hey!</p>
+**Monica:** Hey!
 
-<p><b>Phoebe:</b> Hey Rach, you wanna get some coffee?</p>
+**Phoebe:** Hey Rach, you wanna get some coffee?
 
-<p><b>Rachel:</b> I would love to!</p>
+**Rachel:** I would love to!
 
-<p><b>Phoebe:</b> Oh good!</p>
+**Phoebe:** Oh good!
 
-<p><b>Chandler:</b> Yeah, I wanna go to babe.</p>
+**Chandler:** Yeah, I wanna go to babe.
 
-<p><b>Phoebe:</b> Oh good.</p>
+**Phoebe:** Oh good.
 
-<p>(They all start out.)</p>
+*(They all start out.)*
 
-<p><b>Phoebe:</b> Oh wait, I change my mind! (She slams the door on them.) Okay, let's
-talk about the party! I have so many ideas! (Holds up a cocktail napkin.)</p>
+**Phoebe:** Oh wait, I change my mind! (She slams the door on them.) Okay, let's talk about the party! I have so many ideas! (Holds up a cocktail napkin.)
 
-<p><b>Monica:</b> Yeah, me too! (Runs and grabs her 3-ring binder of ideas.)</p>
+**Monica:** Yeah, me too! (Runs and grabs her 3-ring binder of ideas.)
 
-<p><b>Phoebe:</b> Oh, look at that.</p>
+**Phoebe:** Oh, look at that.
 
-<p><b>Monica:</b> All right, that's a little sketch of the cake, umm some sample menus,
-umm y'know what I thought we would start out with Tuscan style finger food, and for music,
-here's an alphabetized list of all my CDs! I've highlighted the ones that would go really
-good with the food.</p>
+**Monica:** All right, that's a little sketch of the cake, umm some sample menus, umm y'know what I thought we would start out with Tuscan style finger food, and for music, here's an alphabetized list of all my CDs! I've highlighted the ones that would go really good with the food.
 
-<p><b>Phoebe:</b> What happened to the intimate dinner party?</p>
+**Phoebe:** What happened to the intimate dinner party?
 
-<p><b>Monica:</b> Oh, we're not doing that. Okay&#133;</p>
+**Monica:** Oh, we're not doing that. Okay…
 
-<p><b>Phoebe:</b> So wow, it looks like you took care of everything. Thanks a lot,
-co-host.</p>
+**Phoebe:** So wow, it looks like you took care of everything. Thanks a lot, co-host.
 
-<p><b>Monica:</b> What?! I didn't take care of everything, there's-there's plenty of
-things for you to do!</p>
+**Monica:** What?! I didn't take care of everything, there's-there's plenty of things for you to do!
 
-<p><b>Phoebe:</b> Like what?</p>
+**Phoebe:** Like what?
 
-<p><b>Monica:</b> (Thinks) Cups.</p>
+**Monica:** (Thinks) Cups.
 
-<p><b>Phoebe:</b> Cups? You're giving me cups?</p>
+**Phoebe:** Cups? You're giving me cups?
 
-<p><b>Monica:</b> And ice!</p>
+**Monica:** And ice!
 
-<p><b>Phoebe:</b> Cups and ice? Ooh, I get to be in charge of cups and ice? (Thinks of
-something) All right. Fine, okay, I <b>will</b> be in charge of cups and ice!</p>
+**Phoebe:** Cups and ice? Ooh, I get to be in charge of cups and ice? (Thinks of something) All right. Fine, okay, I will be in charge of cups and ice!
 
-<p><b>Monica:</b> Wait a minute, I can get ice at the restaurant&#133;</p>
+**Monica:** Wait a minute, I can get ice at the restaurant…
 
-<p><b>Phoebe:</b> I got it! Mine!</p>
+**Phoebe:** I got it! Mine!
 
-<p><b>Ross:</b> (entering, downtrodden) Hi.</p>
+**Ross:** (entering, downtrodden) Hi.
 
-<p><b>Monica:</b> Hey! How'd the audition go?!</p>
+**Monica:** Hey! How'd the audition go?!
 
-<p><b>Ross:</b> Not so good.</p>
+**Ross:** Not so good.
 
-<p><b>Monica:</b> Wait a minute, are you doing Joey's (sadly) "Audition didn't go so
-well. (Happily) Yeah it did?"</p>
+**Monica:** Wait a minute, are you doing Joey's (sadly) "Audition didn't go so well. (Happily) Yeah it did?"
 
-<p><b>Ross:</b> (Pause) Yeah I am! Yeah, Ben got a second audition!</p>
+**Ross:** (Pause) Yeah I am! Yeah, Ben got a second audition!
 
-<p><b>Joey:</b> (also downtrodden) Yeah, I had to teach Ross my bit because I actually
-didn't get a callback.</p>
+**Joey:** (also downtrodden) Yeah, I had to teach Ross my bit because I actually didn't get a callback.
 
-<p><b>Monica:</b> You got a callback too didn't you?</p>
+**Monica:** You got a callback too didn't you?
 
-<p><b>Joey:</b> (Happily) Yeah I did!</p>
+**Joey:** (Happily) Yeah I did!
 
-<p>[Scene: The smoker's balcony, Rachel is out to join Kim and Nancy.]</p>
+## Scene 6: The smoker's balcony, Rachel is out to join Kim and Nancy.
 
-<p><b>Kim:</b> Hey Rachel, what are you doing out here?</p>
+**Kim:** Hey Rachel, what are you doing out here?
 
-<p><b>Rachel:</b> Oh well, it's kinda lonely up there, so I just thought I would come out
-here and get some fresh air.</p>
+**Rachel:** Oh well, it's kinda lonely up there, so I just thought I would come out here and get some fresh air.
 
-<p><b>Kim:</b> So anyway we really&#133; (Someone exhales and Rachel turns and coughs.)
-Honey, we're just smoking all over you.</p>
+**Kim:** Nancy and I were talking about the fall collection.
 
-<p><b>Nancy:</b> Oh, sorry!</p>
+**Rachel:** Oh great!
 
-<p><b>Rachel:</b> Oh that's okay.</p>
+**Kim:** So anyway we really… (Someone exhales and Rachel turns and coughs.) Honey, we're just smoking all over you.
 
-<p><b>Kim:</b> No-no-no, we'll move you just stay right there. (They walk away.)</p>
+**Nancy:** Oh, sorry!
 
-<p><b>Nancy:</b> So anyway I sent the designs over to Ralph and he's very excited about
-the line.</p>
+**Rachel:** Oh that's okay.
 
-<p><b>Kim:</b> Oh that's great! You are the best!</p>
+**Kim:** No-no-no, we'll move you just stay right there. (They walk away.)
 
-<p>(Rachel gets fed up and heads over to another smoker.)</p>
+**Nancy:** So anyway I sent the designs over to Ralph and he's very excited about the line.
 
-<p><b>Rachel:</b> Excuse me, can I, can I bum one of those? (He holds up his pack.) Y'know
-what, actually&#133; (She takes the one he's smoking and heads over to where Nancy and Kim
-are standing and laughing.) Okay, okay, okay, what's so funny over here?</p>
+**Kim:** Oh that's great! You are the best!
 
-<p><b>Nancy:</b> I thought you didn't smoke.</p>
+*(Rachel gets fed up and heads over to another smoker.)*
 
-<p><b>Rachel:</b> Oh, I thought you guys meant marijuana cigarettes, y'know? Y'know what I
-mean, like dubbies? And I actually, I thought to myself, "Wow, those guys are
-crazy!" But no, I actually smoke the regular ones all, all the time.</p>
+**Rachel:** Excuse me, can I, can I bum one of those? (He holds up his pack.) Y'know what, actually… (She takes the one he's smoking and heads over to where Nancy and Kim are standing and laughing.) Okay, okay, okay, what's so funny over here?
 
-<p><b>Kim:</b> We get high.</p>
+**Nancy:** I thought you didn't smoke.
 
-<p><b>Rachel:</b> Oh, me too.</p>
+**Rachel:** Oh, I thought you guys meant marijuana cigarettes, y'know? Y'know what I mean, like dubbies? And I actually, I thought to myself, "Wow, those guys are crazy!" But no, I actually smoke the regular ones all, all the time.
 
-<p><b>Kim:</b> I'm kidding.</p>
+**Kim:** We get high.
 
-<p><b>Rachel:</b> (Laughs) Oh, me too.</p>
+**Rachel:** Oh, me too.
 
-<p>[Scene: Ben and Joey's (Isn't that an ice cream??) callback.]</p>
+**Kim:** I'm kidding.
 
-<p><b>Ross:</b> Oh God, this is so nerve wracking! How-how do you do this?</p>
+**Rachel:** (Laughs) Oh, me too.
 
-<p><b>Joey:</b> Well, unfortunately, I don't get many callbacks so&#133;</p>
+## Scene 7: Ben and Joey's (Isn't that an ice cream??) callback.
 
-<p><b>Carol:</b> Is it a good sign that they asked us to hang around after the audition?</p>
+**Ross:** Oh God, this is so nerve wracking! How-how do you do this?
 
-<p><b>Joey:</b> Who knows?</p>
+**Joey:** Well, unfortunately, I don't get many callbacks so…
 
-<p><b>The Casting Director:</b> (entering) Okay uh, we have narrowed it down to Raymond,
-Ben, Kyle, and Joey. The rest of you, thank you very much.</p>
+**Carol:** Is it a good sign that they asked us to hang around after the audition?
 
-<p><b>Ross:</b> Yes!! I knew it!! (To the people who didn't make it.) Bye-bye! So long!
-Later!</p>
+**Joey:** Who knows?
 
-<p><b>Joey:</b> Oh this is great! I might actually get to play Ben's dad!</p>
+**The Casting Director:** (entering) Okay uh, we have narrowed it down to Raymond, Ben, Kyle, and Joey. The rest of you, thank you very much.
 
-<p><b>Ross:</b> Yeah!</p>
+**Ross:** Yes!! I knew it!! (To the people who didn't make it.) Bye-bye! So long! Later!
 
-<p><b>The Casting Director:</b> Actually, that can't happen. Yeah because you all have
-such different looks, we're putting you with Raymond and Kyle with Ben. So it'll be either
-you two (Points to Joey and Raymond) or you two. (Points to Kyle and Ben.) (Exits.)</p>
+**Joey:** Oh this is great! I might actually get to play Ben's dad!
 
-<p><b>Joey:</b> Man, this is gonna be kinda weird.</p>
+**Ross:** Yeah!
 
-<p><b>Ross:</b> Yeah, it is.</p>
+**The Casting Director:** Actually, that can't happen. Yeah because you all have such different looks, we're putting you with Raymond and Kyle with Ben. So it'll be either you two (Points to Joey and Raymond) or you two. (Points to Kyle and Ben.) (Exits.)
 
-<p><strong>Kyle: </strong>Yeah. It's gonna be weird.</p>
+**Joey:** Man, this is gonna be kinda weird.
 
-<p><b>Ross:</b> No, we-we're gonna be like best friends, that's why it's gonna be weird.</p>
+**Ross:** Yeah, it is.
 
-<p><strong>Kyle: </strong>Oh, oh, I thought we were just talking.</p>
+**Kyle:** Yeah. It's gonna be weird.
 
-<p align="center"><strong>Commercial Break</strong></p>
+**Ross:** No, we-we're gonna be like best friends, that's why it's gonna be weird.
 
-<p>[Scene: Chandler and Joey's, Ross and Chandler are talking.]</p>
+**Kyle:** Oh, oh, I thought we were just talking.
 
-<p><b>Phoebe:</b> (entering, carrying two garbage bags) Hey!</p>
-<b>
+---
 
-<p>Ross and <b>Chandler:</b></b> Hi!</p>
+## Commercial Break
 
-<p><b>Phoebe:</b> Is it okay if I leave this stuff here 'til Rachel's birthday party?</p>
+## Scene 8: Chandler and Joey's, Ross and Chandler are talking.
 
-<p><b>Chandler:</b> Ah sure. What's in 'em?</p>
+**Phoebe:** (entering, carrying two garbage bags) Hey!
 
-<p><b>Phoebe:</b> Umm, cups.</p>
+**Ross and Chandler:** Hi!
 
-<p><b>Chandler:</b> Oh good, because uh we got Rachel 800 gallons of water.</p>
+**Phoebe:** Is it okay if I leave this stuff here 'til Rachel's birthday party?
 
-<p><b>Ross:</b> Seriously that's a lot of cups.</p>
+**Chandler:** Ah sure. What's in 'em?
 
-<p><b>Phoebe:</b> Yeah well, that's 'cause Monica put me in charge of cups and ice, and
-Monica is gonna <b>rue the day</b> that she put me in charge of cups and ice.</p>
+**Phoebe:** Umm, cups.
 
-<p><b>Chandler:</b> Y'know I rued the day once&#133;didn't get a whole lot else done.</p>
+**Chandler:** Oh good, because uh we got Rachel 800 gallons of water.
 
-<p><b>Phoebe:</b> Okay, time to bring up the rest of the cups. (She goes and opens the
-door to Joey.) Oh, hi Joey!</p>
+**Ross:** Seriously that's a lot of cups.
 
-<p><b>Joey:</b> Hey Pheebs! (To the guys) Hey!</p>
+**Phoebe:** Yeah well, that's 'cause Monica put me in charge of cups and ice, and Monica is gonna rue the day that she put me in charge of cups and ice.
 
-<p><b>Ross:</b> Hey!</p>
+**Chandler:** Y'know I rued the day once…didn't get a whole lot else done.
 
-<p><b>Joey:</b> Ross good, I'm uh glad you're here. I wanna talk to you about something.</p>
+**Phoebe:** Okay, time to bring up the rest of the cups. (She goes and opens the door to Joey.) Oh, hi Joey!
 
-<p><b>Ross:</b> What's up?</p>
+**Joey:** Hey Pheebs! (To the guys) Hey!
 
-<p><b>Joey:</b> Well, I've been thinking about this whole commercial thing, y'know me
-going up against Ben, the two of us competing, and that can't lead to anything good. So, I
-think I'm just gonna step aside. I'm gonna tell them that I won't audition.</p>
+**Ross:** Hey!
 
-<p><b>Ross:</b> Wow, uh, Joey that's-that's great. Thanks man.</p>
+**Joey:** Ross good, I'm uh glad you're here. I wanna talk to you about something.
 
-<p><b>Joey:</b> That's it? You're-you're gonna let me do this?! This-this is my career
-we're talking about here!</p>
+**Ross:** What's up?
 
-<p><b>Ross:</b> Well, you just&#133;</p>
+**Joey:** Well, I've been thinking about this whole commercial thing, y'know me going up against Ben, the two of us competing, and that can't lead to anything good. So, I think I'm just gonna step aside. I'm gonna tell them that I won't audition.
 
-<p><b>Joey:</b> I just said that so you wouldn't let Ben do it! Look Ross, if anyone
-should step aside it should be Ben!</p>
+**Ross:** Wow, uh, Joey that's-that's great. Thanks man.
 
-<p><b>Ross:</b> What?!</p>
+**Joey:** That's it? You're-you're gonna let me do this?! This-this is my career we're talking about here!
 
-<p><b>Joey:</b> What? Chandler! Tell 'em!</p>
+**Ross:** Well, you just…
 
-<p><b>Chandler:</b> (shocked) Well I mean, let me get the door first. (Goes and opens the
-door.) Oh, hi! No one. (Exits.)</p>
+**Joey:** I just said that so you wouldn't let Ben do it! Look Ross, if anyone should step aside it should be Ben!
 
-<p><b>Ross:</b> Why should Ben step aside? It was his audition in the first place! You-you
-just tagged along! You're like the uh, tag-a-long dad.</p>
+**Ross:** What?!
 
-<p><b>Joey:</b> At least I care about his feelings!</p>
+**Joey:** What? Chandler! Tell 'em!
 
-<p><b>Ross:</b> What?!</p>
+**Chandler:** (shocked) Well I mean, let me get the door first. (Goes and opens the door.) Oh, hi! No one. (Exits.)
 
-<p><b>Joey:</b> Do you know how hard this is gonna be on him when he doesn't get it?</p>
+**Ross:** Why should Ben step aside? It was his audition in the first place! You-you just tagged along! You're like the uh, tag-a-long dad.
 
-<p><b>Ross:</b> And why wouldn't he get it?</p>
+**Joey:** At least I care about his feelings!
 
-<p><b>Joey:</b> Oh, come on! Have you <b>seen</b> what my kid can do?! Huh?! I mean he
-dials phones! He-he-he eats tortilla chips! He-he plays soccer with the cartoon tiger!</p>
+**Ross:** What?!
 
-<p><b>Ross:</b> Are you saying your kid eats soup better than my kid?</p>
+**Joey:** Do you know how hard this is gonna be on him when he doesn't get it?
 
-<p><b>Joey:</b> You just give him a spoon baby!</p>
+**Ross:** And why wouldn't he get it?
 
-<p><b>Ross:</b> Oh yeah? I guess we'll just see!</p>
+**Joey:** Oh, come on! Have you seen what my kid can do?! Huh?! I mean he dials phones! He-he-he eats tortilla chips! He-he plays soccer with the cartoon tiger!
 
-<p><b>Joey:</b> Yeah! Because this commercial belongs to me and Mitch!</p>
+**Ross:** Are you saying your kid eats soup better than my kid?
 
-<p><b>Ross:</b> You're kid's name is Raymond!</p>
+**Joey:** You just give him a spoon baby!
 
-<p><b>Joey:</b> Yeah?! So's yours!</p>
+**Ross:** Oh yeah? I guess we'll just see!
 
-<p>[Scene: Central Perk, Chandler and Monica are there as Rachel enters.]</p>
+**Joey:** Yeah! Because this commercial belongs to me and Mitch!
 
-<p><b>Monica:</b> (To Rachel) How did work go?</p>
+**Ross:** You're kid's name is Raymond!
 
-<p><b>Rachel:</b> Oh it was great! It was great! I went down there just like you said,
-y'know? And we talked business. Kim totally took my opinions.</p>
+**Joey:** Yeah?! So's yours!
 
-<p><b>Monica:</b> You stink!</p>
+## Scene 9: Central Perk, Chandler and Monica are there as Rachel enters.
 
-<p><b>Rachel:</b> Thanks!</p>
+**Monica:** (To Rachel) How did work go?
 
-<p><b>Monica:</b> No, I'm-I'm serious!</p>
+**Rachel:** Oh it was great! It was great! I went down there just like you said, y'know? And we talked business. Kim totally took my opinions.
 
-<p><b>Rachel:</b> Well-well that's 'cause I went down there and they were all smoking.
-This is actually the smell of success.</p>
+**Monica:** You stink!
 
-<p><b>Chandler:</b> Okay, there's something different though--Oh my God! You smoked!</p>
+**Rachel:** Thanks!
 
-<p><b>Rachel:</b> I did not!</p>
+**Monica:** No, I'm-I'm serious!
 
-<p><b>Chandler:</b> Yes you did! You look happy and sick; you smoked!</p>
+**Rachel:** Well-well that's 'cause I went down there and they were all smoking. This is actually the smell of success.
 
-<p><b>Rachel:</b> All right, fine! But I had too! I had to do it for my career!</p>
+**Chandler:** Okay, there's something different though--Oh my God! You smoked!
 
-<p><b>Chandler:</b> I wish I had smoked for my career&#133;</p>
+**Rachel:** I did not!
 
-<p><b>Monica:</b> That's so gross!</p>
+**Chandler:** Yes you did! You look happy and sick; you smoked!
 
-<p><b>Rachel:</b> No well, no it's not that bad, y'know? I mean yeah, my tongue feels a
-little fuzzy and these fingers sort of smell, I actually feel like I can throw up.</p>
+**Rachel:** All right, fine! But I had too! I had to do it for my career!
 
-<p><b>Chandler:</b> Okay, but you gotta push past this because it is about to get so good!</p>
+**Chandler:** I wish I had smoked for my career…
 
-<p><b>Monica:</b> Chandler! I have to tell you, you smell so smokey I have to get up. I'm
-not kidding. (She's not; she stands and walks away. Chandler moves closer.)</p>
+**Monica:** That's so gross!
 
-<p><b>Chandler:</b> I think you smell great! (He sniffs her shoulder.)</p>
+**Rachel:** No well, no it's not that bad, y'know? I mean yeah, my tongue feels a little fuzzy and these fingers sort of smell, I actually feel like I can throw up.
 
-<p>[Scene: The smoker's balcony, Rachel, Kim, and Nancy are all puffing away on their
-cancer sticks.]</p>
+**Chandler:** Okay, but you gotta push past this because it is about to get so good!
 
-<p><b>Kim:</b> So, we're decided, no on plaid, yes on pink?</p>
+**Monica:** Chandler! I have to tell you, you smell so smokey I have to get up. I'm not kidding. (She's not; she stands and walks away. Chandler moves closer.)
 
-<p><b>Nancy:</b> Absolutely!</p>
+**Chandler:** I think you smell great! (He sniffs her shoulder.)
 
-<p><b>Rachel:</b> I am so on board! (She throws away her recently lit cigarette.)</p>
+## Scene 10: The smoker's balcony, Rachel, Kim, and Nancy are all puffing away on their
+cancer sticks.
 
-<p><b>Kim:</b> Rachel didn't you just light that?</p>
+**Kim:** So, we're decided, no on plaid, yes on pink?
 
-<p><b>Rachel:</b> Yeah, I did, but y'know what? I am really, really trying to cut back,
-y'know? (Laughs) Good luck, Rach.</p>
+**Nancy:** Absolutely!
 
-<p><b>Nancy:</b> I've actually been thinking about quitting lately.</p>
+**Rachel:** I am so on board! (She throws away her recently lit cigarette.)
 
-<p><b>Kim:</b> Oh sure, every Sunday night I'm telling myself I'm quitting but every
-Monday morning it's like (Mimics chain smoking.)</p>
+**Kim:** Rachel didn't you just light that?
 
-<p><b>Nancy:</b> Tell me about it!</p>
+**Rachel:** Yeah, I did, but y'know what? I am really, really trying to cut back, y'know? (Laughs) Good luck, Rach.
 
-<p><b>Rachel:</b> Well then let's just quit! We'll just quit! Let's all quit!</p>
+**Nancy:** I've actually been thinking about quitting lately.
 
-<p><b>Kim:</b> It does sound appealing.</p>
+**Kim:** Oh sure, every Sunday night I'm telling myself I'm quitting but every Monday morning it's like (Mimics chain smoking.)
 
-<p><b>Nancy:</b> Oh, I never could do it.</p>
+**Nancy:** Tell me about it!
 
-<p><b>Rachel:</b> Oh but you could. You can. Absolutely! We can help each other out! We
-can get--what are those--those patches! We could be like the Patch Sisters!</p>
+**Rachel:** Well then let's just quit! We'll just quit! Let's all quit!
 
-<p><b>Kim:</b> Oh y'know, we really should quit. Okay, let's quit!</p>
+**Kim:** It does sound appealing.
 
-<p><b>Rachel:</b> Yes! Great! Give me those cigs! Give it! Give it! (She grabs their
-cigarettes and lighters and throws them in the trash.)</p>
+**Nancy:** Oh, I never could do it.
 
-<p><b>Kim:</b> My late husband gave me that lighter. (Rachel laughs.) I'm not kidding.</p>
+**Rachel:** Oh but you could. You can. Absolutely! We can help each other out! We can get--what are those--those patches! We could be like the Patch Sisters!
 
-<p><b>Rachel:</b> Okay then! (She starts rummaging through the trash to find Kim's
-lighter.)</p>
+**Kim:** Oh y'know, we really should quit. Okay, let's quit!
 
-<p>[Scene: Joey and Ben's audition, Joey is rehearsing his lines, uh correction, Joey is
-rehearsing his <b>line</b>.]</p>
+**Rachel:** Yes! Great! Give me those cigs! Give it! Give it! (She grabs their cigarettes and lighters and throws them in the trash.)
 
-<p><b>Joey:</b> Hmmm, soup! (Tries again.) <b>Hmm</b> soup! (Tries again, with a little
-caveman thrown in.) Hmm, soup!</p>
+**Kim:** My late husband gave me that lighter. (Rachel laughs.) I'm not kidding.
 
-<p><b>Carol:</b> Joey, Ross is gonna be here any second, would you mind watching Ben for
-me while I use the ladies' room?</p>
+**Rachel:** Okay then! (She starts rummaging through the trash to find Kim's lighter.)
 
-<p><b>Joey:</b> Oh yeah, no problem.</p>
+## Scene 11: Joey and Ben's audition, Joey is rehearsing his lines, uh correction, Joey is
+rehearsing his line.
 
-<p><b>Carol:</b> Thanks. (Exits.)</p>
+**Joey:** Hmmm, soup! (Tries again.) Hmm soup! (Tries again, with a little caveman thrown in.) Hmm, soup!
 
-<p><b>Joey:</b> (goes over to Ben) Hi Ben! So you wanna be an actor huh? I gotta tell ya,
-it's no picnic. There's tons of rejection. <b>No</b> stability. One day you're Dr. Drake
-Remoray, the next day you're eating ketchup right out of the bottle.</p>
+**Carol:** Joey, Ross is gonna be here any second, would you mind watching Ben for me while I use the ladies' room?
 
-<p><b>Ross:</b> (entering, angrily) Joey!</p>
+**Joey:** Oh yeah, no problem.
 
-<p><b>Joey:</b> (angrily) Ross!</p>
+**Carol:** Thanks. (Exits.)
 
-<p><b>Ross:</b> (angrilly) Ben! (Pause.) (Happily.) I mean, Ben! Ben!</p>
+**Joey:** (goes over to Ben) Hi Ben! So you wanna be an actor huh? I gotta tell ya, it's no picnic. There's tons of rejection. No stability. One day you're Dr. Drake Remoray, the next day you're eating ketchup right out of the bottle.
 
-<p><b>The Casting Director:</b> (entering) Okay, Raymond, Joey you're up.</p>
+**Ross:** (entering, angrily) Joey!
 
-<p>(Raymond and Joey go in the office.)</p>
+**Joey:** (angrily) Ross!
 
-<p><b>Joey:</b> Hi!</p>
+**Ross:** (angrily) Ben! (Pause.) (Happily.) I mean, Ben! Ben!
 
-<p><b>The Casting Director:</b> Okay, uh well, let's try one. Whenever you guys are ready.
-(Some dude puts down a couple bowls of soup in front of them.)</p>
+**The Casting Director:** (entering) Okay, Raymond, Joey you're up.
 
-<p><b>Joey:</b> Uh-oh.</p>
+*(Raymond and Joey go in the office.)*
 
-<p><b>The Casting Director:</b> Is there a problem?</p>
+**Joey:** Hi!
 
-<p><b>Joey:</b> Well this is noodle soup and uh, I've been working with tomato. But that's
-okay, no problem. No problem. Hmm, noodle soup.</p>
+**The Casting Director:** Okay, uh well, let's try one. Whenever you guys are ready. (Some dude puts down a couple bowls of soup in front of them.)
 
-<p><b>The Casting Director:</b> Y'know, that's-that's fine, but the line is, "Hmm,
-soup."</p>
+**Joey:** Uh-oh.
 
-<p><b>Joey:</b> Oh, what did I say?</p>
+**The Casting Director:** Is there a problem?
 
-<p><b>The Casting Director:</b> Hmm, noodle soup.</p>
+**Joey:** Well this is noodle soup and uh, I've been working with tomato. But that's okay, no problem. No problem. Hmm, noodle soup.
 
-<p><b>Joey:</b> How's that different? (She looks at him until he gets it.) Oh! Yeah!</p>
+**The Casting Director:** Y'know, that's-that's fine, but the line is, "Hmm, soup."
 
-<p><b>The Casting Director:</b> All right, let's try one.</p>
+**Joey:** Oh, what did I say?
 
-<p>(Raymond and Joey both eat a spoonful and Joey turns to Raymond and says&#133;)</p>
+**The Casting Director:** Hmm, noodle soup.
 
-<p><b>Joey:</b> Hmm, noodle soup.</p>
+**Joey:** How's that different? (She looks at him until he gets it.) Oh! Yeah!
 
-<p><b>The Casting Director:</b> Okay. Let's do it again.</p>
+**The Casting Director:** All right, let's try one.
 
-<p><b>Joey:</b> Okay.</p>
+*(Raymond and Joey both eat a spoonful and Joey turns to Raymond and says…)*
 
-<p>(They do it again.)</p>
+**Joey:** Hmm, noodle soup.
 
-<p><b>Joey:</b> Hmm, soup. (Pause.) I mean, noodle soup. I mean soup!</p>
+**The Casting Director:** Okay. Let's do it again.
 
-<p><b>Raymond:</b> COME ON!!!!</p>
+**Joey:** Okay.
 
-<p><b>The Casting Director:</b> Y'know what? We need to move on.</p>
+*(They do it again.)*
 
-<p><b>Joey:</b> No! No! I-I can do it one more time! See? Look! (Eats another spoonful)
-Hmm, noodle soup. Damnit! (Storms out.)</p>
+**Joey:** Hmm, soup. (Pause.) I mean, noodle soup. I mean soup!
 
-<p>[Scene: The smoker's balcony, Kim and Nancy are cheating and are caught by Rachel.]</p>
+**Raymond:** COME ON!!!!
 
-<p><b>Rachel:</b> Hey! Hey-hey-hey!!</p>
+**The Casting Director:** Y'know what? We need to move on.
 
-<p><b>Kim:</b> Uh-oh, busted!</p>
+**Joey:** No! No! I-I can do it one more time! See? Look! (Eats another spoonful) Hmm, noodle soup. Damnit! (Storms out.)
 
-<p><b>Rachel:</b> Come on you guys! What are doing?! I thought we were the patch sisters!</p>
+## Scene 12: The smoker's balcony, Kim and Nancy are cheating and are caught by Rachel.
 
-<p><b>Kim:</b> Yeah. That didn't work out.</p>
+**Rachel:** Hey! Hey-hey-hey!!
 
-<p><b>Nancy:</b> Rachel we tried to quit, but it was too hard!</p>
+**Kim:** Uh-oh, busted!
 
-<p><b>Rachel:</b> Well y'know if you, if you started smoking again you could've at least
-told me! Come on, give me one of those! What are we talking about?</p>
+**Rachel:** Come on you guys! What are doing?! I thought we were the patch sisters!
 
-<p><b>Kim:</b> No. No! You're doing great! Don't you give up! That's why we didn't
-tell you and we're <b>not</b> gonna drag you down with us.</p>
+**Kim:** Yeah. That didn't work out.
 
-<p><b>Rachel:</b> Oh wait, no-no-no! Drag me down. Drag-drag me down.</p>
+**Nancy:** Rachel we tried to quit, but it was too hard!
 
-<p><b>Kim:</b> Forget it Rachel! We're both so proud of how well you're doing. I'm not
-gonna let you blow it. In fact, if I catch you with a cigarette, you're fired. So go on,
-get out of here! Go on, I don't want you breathing this stuff! Go on!</p>
+**Rachel:** Well y'know if you, if you started smoking again you could've at least told me! Come on, give me one of those! What are we talking about?
 
-<p><b>Rachel:</b> Okay. (Starts to walk away.)</p>
+**Kim:** No. No! You're doing great! Don't you give up! That's why we didn't tell you and we're not gonna drag you down with us.
 
-<p><b>Kim:</b> (to Nancy) So, okay! So you'll come with me on the Paris trip.</p>
+**Rachel:** Oh wait, no-no-no! Drag me down. Drag-drag me down.
 
-<p><b>Rachel:</b> (hearing that) Oh man!</p>
+**Kim:** Forget it Rachel! We're both so proud of how well you're doing. I'm not gonna let you blow it. In fact, if I catch you with a cigarette, you're fired. So go on, get out of here! Go on, I don't want you breathing this stuff! Go on!
 
-<p>[Scene: Monica and Rachel's, Rachel's surprise party. The apartment is festooned with
-cups. There are cups everywhere! Cup centerpiece, cup garland, etc., etc]</p>
+**Rachel:** Okay. (Starts to walk away.)
 
-<p><b>Phoebe:</b> (To Chandler) Check it out! Cup hat! (Points to her hat.) Cup banner!
-Cup chandelier! And the thing that started it all, the cup! (Holds up one.)</p>
+**Kim:** (to Nancy) So, okay! So you'll come with me on the Paris trip.
 
-<p><b>Chandler:</b> Great job with the cups, Pheebs!</p>
+**Rachel:** (hearing that) Oh man!
 
-<p><b>Monica:</b> (overhearing that) Why don't you just go out with her!</p>
+## Scene 13: Monica and Rachel's, Rachel's surprise party. The apartment is festooned with
+cups. There are cups everywhere! Cup centerpiece, cup garland, etc., etc
 
-<p>(Chandler starts to follow her into the kitchen.)</p>
+**Phoebe:** (To Chandler) Check it out! Cup hat! (Points to her hat.) Cup banner! Cup chandelier! And the thing that started it all, the cup! (Holds up one.)
 
-<p><b>Phoebe:</b> (following him) And did you notice the ice? (Gestures to 3 huge buckets
-of ice on the table.) Look! We have it all! We have crushed! Cubed! And dry! Watch! (Pours
-some water onto the dry ice, causing it to evaporate/smoke.) Ahhh! Mystical!</p>
+**Chandler:** Great job with the cups, Pheebs!
 
-<p><b>Chandler:</b> Awesome!</p>
+**Monica:** (overhearing that) Why don't you just go out with her!
 
-<p><b>Monica:</b> Chandler! Everyone--no one's eating my Tuscan finger food 'cause they're
-all filling up on Phoebe's snow cones!</p>
+*(Chandler starts to follow her into the kitchen.)*
 
-<p><b>Chandler:</b> There are snow cones! (Monica glares at him.) Snow cones! Yuck!</p>
+**Phoebe:** (following him) And did you notice the ice? (Gestures to 3 huge buckets of ice on the table.) Look! We have it all! We have crushed! Cubed! And dry! Watch! (Pours some water onto the dry ice, causing it to evaporate/smoke.) Ahhh! Mystical!
 
-<p><b>Monica:</b> Y'know&#133;go! Go! Right there! (Points)</p>
+**Chandler:** Awesome!
 
-<p><b>Chandler:</b> Thank you! Thank you! (Runs to the snow cone machine.)</p>
+**Monica:** Chandler! Everyone--no one's eating my Tuscan finger food 'cause they're all filling up on Phoebe's snow cones!
 
-<p>(Rachel enters.)</p>
+**Chandler:** There are snow cones! (Monica glares at him.) Snow cones! Yuck!
 
-<p><b>Phoebe:</b> (noticing her) Oh, look! Look! Look!</p>
+**Monica:** Y'know…go! Go! Right there! (Points)
 
-<p><b>All:</b> Surprise!!</p>
+**Chandler:** Thank you! Thank you! (Runs to the snow cone machine.)
 
-<p><b>Rachel:</b> What?! What?! My birthday's not for another month!</p>
+*(Rachel enters.)*
 
-<p><b>Monica:</b> That's the surprise!</p>
+**Phoebe:** (noticing her) Oh, look! Look! Look!
 
-<p><b>Rachel:</b> Oh my God! You guys this is so great! I mean it's so unexpected! I mean
-Chandler's birthday is even before mine!</p>
+**All:** Surprise!!
 
-<p>(Everyone stops and looks at Chandler, who's nodding.)</p>
+**Rachel:** What?! What?! My birthday's not for another month!
 
-<p><b>All:</b> Surprise!</p>
+**Monica:** That's the surprise!
 
-<p><b>Rachel:</b> Wow! This is great! Look at all these cups! This is so weird.</p>
+**Rachel:** Oh my God! You guys this is so great! I mean it's so unexpected! I mean Chandler's birthday is even before mine!
 
-<p><b>Phoebe:</b> I was in charge of cups.</p>
+*(Everyone stops and looks at Chandler, who's nodding.)*
 
-<p><b>Rachel:</b> Oh, okay, not so weird.</p>
+**All:** Surprise!
 
-<p>[Cut to another part of the room, Ross is going to talk to Joey.]</p>
+**Rachel:** Wow! This is great! Look at all these cups! This is so weird.
 
-<p><b>Ross:</b> Hey!</p>
+**Phoebe:** I was in charge of cups.
 
-<p><b>Joey:</b> Hey.</p>
+**Rachel:** Oh, okay, not so weird.
 
-<p><b>Ross:</b> Listen man, uh, I'm sorry the audition didn't go so well.</p>
+*[Cut to another part of the room, Ross is going to talk to Joey.]*
 
-<p><b>Joey:</b> Yeah right! (Gets up for a refill to his snow cone.)</p>
+**Ross:** Hey!
 
-<p><b>Ross:</b> No really, I-I am! I feel bad!</p>
+**Joey:** Hey.
 
-<p><b>Joey:</b> Yeah? Well look Ross, you don't have to. Okay? It's not your fault I suck.
-I mean what kind of an actor can't even say, "Hmm, noodle soup." (Nods his head
-in disgust.)</p>
+**Ross:** Listen man, uh, I'm sorry the audition didn't go so well.
 
-<p><b>Ross:</b> Yeah y'know what? Maybe-maybe you didn't mess up your audition because you
-suck, maybe you messed up because you care <b>more</b> about uh, your godson.</p>
+**Joey:** Yeah right! (Gets up for a refill to his snow cone.)
 
-<p><b>Joey:</b> What you do mean?</p>
+**Ross:** No really, I-I am! I feel bad!
 
-<p><b>Ross:</b> I think, sub-consciously&#133;</p>
+**Joey:** Yeah? Well look Ross, you don't have to. Okay? It's not your fault I suck. I mean what kind of an actor can't even say, "Hmm, noodle soup." (Nods his head in disgust.)
 
-<p><b>Joey:</b> Wait-whoa-whoa, you lost me.</p>
+**Ross:** Yeah y'know what? Maybe-maybe you didn't mess up your audition because you suck, maybe you messed up because you care more about uh, your godson.
 
-<p><b>Ross:</b> (pause) I think on some level, you-you sabotaged your own audition so that
-Ben would get the part.</p>
+**Joey:** What you do mean?
 
-<p><b>Joey:</b> Well, you're way sounds a lot better than mine. (Thinks about it.) Yeah.
-Yeah! It's not that I'm a bad actor&#133;</p>
+**Ross:** I think, sub-consciously…
 
-<p><b>Ross:</b> No!</p>
+**Joey:** Wait-whoa-whoa, you lost me.
 
-<p><b>Joey:</b> No, it's just ah, I care so damn much about little Ben that uh, it was
-more important to see him succeed.</p>
+**Ross:** (pause) I think on some level, you-you sabotaged your own audition so that Ben would get the part.
 
-<p><b>Ross:</b> There you go. Thank you!</p>
+**Joey:** Well, you're way sounds a lot better than mine. (Thinks about it.) Yeah. Yeah! It's not that I'm a bad actor…
 
-<p><b>Joey:</b> Thank you! So, did-did he get it?</p>
+**Ross:** No!
 
-<p><b>Ross:</b> No.</p>
+**Joey:** No, it's just ah, I care so damn much about little Ben that uh, it was more important to see him succeed.
 
-<p><b>Joey:</b> Eh, what are you gonna do?</p>
+**Ross:** There you go. Thank you!
 
-<p align="center"><strong>Ending Credits</strong></p>
+**Joey:** Thank you! So, did-did he get it?
 
-<p>[Scene: The smoker's balcony, Kim and Nancy are out smoking as Chandler sticks his head
-out the door.]</p>
+**Ross:** No.
 
-<p><b>Chandler:</b> (to Kim and Nancy) Oh, hi! Excuse me, is uh Rachel Green here? I was
-supposed to meet her for lunch.</p>
+**Joey:** Eh, what are you gonna do?
 
-<p><b>Kim:</b> Oh, she doesn't come down here any more. You can find her up on ten.</p>
+---
 
-<p><b>Chandler:</b> Okay, great.</p>
+## Ending Credits
 
-<p>(Kim exhales and Chandler stares at it longingly.)</p>
+## Scene 14: The smoker's balcony, Kim and Nancy are out smoking as Chandler sticks his head
+out the door.
 
-<p><b>Kim:</b> (to Nancy) So we talked about the (Chandler sneaks closer to her cigarette)
-whole presentation yesterday at lunch (Closer) and he wondered if one person would be
-enough (Closer) to get a take on the trip (Still closer) and I said, "Yeah,
-absolutely!" (She's interrupted by Chandler who has reached his goal and takes a drag
-from her cancer stick.)</p>
+**Chandler:** (to Kim and Nancy) Oh, hi! Excuse me, is uh Rachel Green here? I was supposed to meet her for lunch.
 
-<p><b>Chandler:</b> I'll catch you guys later. (Exits.)</p>
+**Kim:** Oh, she doesn't come down here any more. You can find her up on ten.
 
-<p align="center"><strong>End</strong></p>
+**Chandler:** Okay, great.
 
-<hr>
+*(Kim exhales and Chandler stares at it longingly.)*
 
-<p align="center"><!--webbot bot="ImageMap" startspan
-rectangle="(136,0) (193, 80)  http://thecfsi.com/season5.htm"
-rectangle="(68,1) (128, 80)  http://thecfsi.com/season5.htm"
-rectangle="(0,0) (58, 80)  http://thecfsi.com/season5/517rik.htm" src="../contrl08.gif"
-width="194" height="60" alt="contrl08.gif (14783 bytes)" border="0" --><MAP NAME="FrontPageMap0"><AREA SHAPE="RECT" COORDS="136, 0, 193, 80" HREF="http://thecfsi.com/season5/519rcf.htm"><AREA SHAPE="RECT" COORDS="68, 1, 128, 80" HREF="http://thecfsi.com/season5.htm"><AREA SHAPE="RECT" COORDS="0, 0, 58, 80" HREF="http://thecfsi.com/season5/517rik.htm"></MAP><img src="contrl08.gif" width="194" height="60" alt="contrl08.gif (14783 bytes)" border="0" usemap="#FrontPageMap0"><!--webbot
-bot="ImageMap" i-checksum="56448" endspan --></p>
+**Kim:** (to Nancy) So we talked about the (Chandler sneaks closer to her cigarette) whole presentation yesterday at lunch (Closer) and he wondered if one person would be enough (Closer) to get a take on the trip (Still closer) and I said, "Yeah, absolutely!" (She's interrupted by Chandler who has reached his goal and takes a drag from her cancer stick.)
 
-</body>
-</html>
+**Chandler:** I'll catch you guys later. (Exits.)
+
+---
+
+## End
+
+---
+
+**END**

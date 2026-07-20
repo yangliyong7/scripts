@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
   <meta name="theme-color" content="#b8c8f8" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
   <title>词画记忆</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=flashFix1" />
 </head>
 <body>
   <div class="mesh-bg" aria-hidden="true">
@@ -23,10 +25,10 @@
         <span class="brand-gem" aria-hidden="true"><i>词</i></span>
         <div>
           <h1>词画记忆</h1>
-          <p class="brand-sub">Crystal · 看图识词</p>
+          <p class="brand-sub">听写 · 闪卡 · 词库</p>
         </div>
       </div>
-      <div class="streak glass-chip" id="streakBadge" title="连续学习">✦ 0</div>
+      <div class="streak glass-chip" id="streakBadge" title="连续学习天数">✦ 0</div>
     </header>
 
     <section class="view active" id="view-home" data-view="home">
@@ -50,7 +52,7 @@
             <span>/ <em id="todayGoal">20</em></span>
           </div>
         </div>
-        <p class="hero-tip" id="heroTip">从已配图词汇开始，每天学一点</p>
+        <p class="hero-tip" id="heroTip">词库已全量导入，每天学一点</p>
       </div>
 
       <div class="stat-grid">
@@ -72,19 +74,19 @@
 
       <p class="section-label">训练模块</p>
       <div class="action-list">
+        <button class="action-card glass-panel" data-go="cloze">
+          <span class="action-gem violet">听</span>
+          <div>
+            <strong>听音填空</strong>
+            <p>小故事听写 · 约 10 词填空</p>
+          </div>
+          <span class="chev">›</span>
+        </button>
         <button class="action-card glass-panel" data-go="learn">
           <span class="action-gem blue">图</span>
           <div>
             <strong>闪卡识词</strong>
             <p>看图回忆 · 轻触翻面</p>
-          </div>
-          <span class="chev">›</span>
-        </button>
-        <button class="action-card glass-panel" data-go="quiz">
-          <span class="action-gem violet">测</span>
-          <div>
-            <strong>看图选题</strong>
-            <p>四选一 · 即时反馈</p>
           </div>
           <span class="chev">›</span>
         </button>
@@ -131,19 +133,39 @@
       </div>
     </section>
 
-    <section class="view" id="view-quiz" data-view="quiz">
+    <section class="view" id="view-cloze" data-view="cloze">
       <div class="view-head">
         <button class="icon-btn glass-chip" data-back aria-label="返回">‹</button>
-        <h2>看图选题</h2>
-        <span class="badge glass-chip" id="quizScore">0 分</span>
+        <h2>听音填空</h2>
+        <span class="badge glass-chip" id="clozeProgress">1/1</span>
       </div>
-      <div class="quiz-card glass-panel">
+      <div class="cloze-card glass-panel">
         <div class="glass-shine"></div>
-        <p class="quiz-label">选出与图片对应的单词</p>
-        <img id="quizImage" class="quiz-image" alt="测验配图" />
-        <div class="options" id="quizOptions"></div>
+        <p class="cloze-tip">完整小故事听写：有人物地点时间因果；挖空处念英文（约 10 空）</p>
+        <div class="cloze-passage" id="clozePassage"></div>
       </div>
-      <button class="cta-glass outline" id="btnNextQuiz" hidden>继续下一题</button>
+      <div class="cloze-bar glass-dock">
+        <button type="button" class="cloze-btn" id="btnClozePrev" title="上一题">
+          <span class="cloze-ico">←</span>
+          <em>上一题</em>
+          <small>&lt;-</small>
+        </button>
+        <button type="button" class="cloze-btn primary" id="btnClozeSpeak" title="朗读">
+          <span class="cloze-ico">🔊</span>
+          <em>朗读</em>
+          <small>Ctrl+A</small>
+        </button>
+        <button type="button" class="cloze-btn" id="btnClozeAnswer" title="显示/隐藏答案">
+          <span class="cloze-ico">↕</span>
+          <em>答案</em>
+          <small>↓↑</small>
+        </button>
+        <button type="button" class="cloze-btn" id="btnClozeNext" title="下一题">
+          <span class="cloze-ico">→</span>
+          <em>下一题</em>
+          <small>-&gt;</small>
+        </button>
+      </div>
     </section>
 
     <section class="view" id="view-library" data-view="library">
@@ -184,9 +206,9 @@
         <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4V6zm0 5h10v2H4v-2zm0 5h16v2H4v-2z"/></svg>
         <em>学习</em>
       </button>
-      <button class="tab" data-tab="quiz">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-        <em>测验</em>
+      <button class="tab" data-tab="cloze">
+        <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4zM16 3.2v2.1a7 7 0 010 13.4v2.1A9.1 9.1 0 0016 3.2z"/></svg>
+        <em>听写</em>
       </button>
       <button class="tab" data-tab="library">
         <svg viewBox="0 0 24 24"><path d="M6 4h12a2 2 0 012 2v14l-8-3-8 3V6a2 2 0 012-2z"/></svg>
@@ -194,6 +216,6 @@
       </button>
     </nav>
   </div>
-  <script src="js/app.js" type="module"></script>
+  <script src="js/app.js?v=brandStreak2" type="module"></script>
 </body>
 </html>
