@@ -1,4 +1,4 @@
-# 《老友记》第五季最后一集完整台词 (Season 5 Finale: The One in Vegas)
+# 《老友记》第五季最后一集完整台词(Season 5 Finale: The One in Vegas)
 
 **Part I Written by:** Andrew Reich & Ted Cohen  
 **Part II Written by:** Greg Malins & Scott Silveri  
