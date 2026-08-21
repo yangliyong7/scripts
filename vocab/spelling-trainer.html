@@ -59,6 +59,13 @@
   .seg button.on{background:var(--navy); border-color:var(--navy); color:#fff; font-weight:600;
     box-shadow:0 3px 10px rgba(30,58,95,.22);}
   .seg button .n{opacity:.6; font-size:12px; margin-left:5px;}
+  .seg input.custom{
+    width:110px; padding:10px 12px; border:1.5px solid var(--line); border-radius:10px;
+    font-size:14px; color:var(--ink); font-family:inherit; background:#fff; outline:none; transition:.16s;
+  }
+  .seg input.custom::placeholder{color:var(--sub);}
+  .seg input.custom:focus{border-color:var(--accent); box-shadow:0 0 0 4px rgba(49,130,206,.14);}
+  .seg input.custom.on{border-color:var(--navy); background:var(--goldbg); color:var(--navy); font-weight:600;}
 
   select{
     width:100%; padding:11px 13px; border:1.5px solid var(--line); border-radius:10px;
@@ -188,6 +195,7 @@
       <button data-size="20" class="on">20</button>
       <button data-size="50">50</button>
       <button data-size="100">100</button>
+      <input type="number" class="custom" id="sizeCustom" min="1" max="9999" placeholder="Custom">
     </div>
 
     <div class="summary" id="roundSummary"></div>
@@ -309,7 +317,38 @@ bindSeg('rangeSeg',function(b){
   $('lenBox').classList.toggle('hidden', S.range!=='len');
   updateSummary();
 });
-bindSeg('sizeSeg',function(b){ S.size=parseInt(b.dataset.size,10); updateSummary(); });
+/* sizeSeg is not a plain bindSeg because it contains a custom input alongside buttons */
+(function bindSizeSeg(){
+  var box=$('sizeSeg');
+  var input=$('sizeCustom');
+  box.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    Array.prototype.forEach.call(box.querySelectorAll('button'),function(x){x.classList.remove('on');});
+    b.classList.add('on');
+    input.value=''; input.classList.remove('on');
+    S.size=parseInt(b.dataset.size,10);
+    updateSummary();
+  });
+  function applyCustom(){
+    var v=parseInt(input.value,10);
+    if(isNaN(v) || v<1){
+      /* fallback to whichever button is currently 'on'; if none, default 20 */
+      input.classList.remove('on');
+      var on=box.querySelector('button.on');
+      S.size = on ? parseInt(on.dataset.size,10) : 20;
+    }else{
+      Array.prototype.forEach.call(box.querySelectorAll('button'),function(x){x.classList.remove('on');});
+      input.classList.add('on');
+      S.size=v;
+    }
+    updateSummary();
+  }
+  input.addEventListener('input',applyCustom);
+  input.addEventListener('change',applyCustom);
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){ e.preventDefault(); input.blur(); }
+  });
+})();
 
 (function fillLenSelect(){
   var sel=$('lenSelect');
