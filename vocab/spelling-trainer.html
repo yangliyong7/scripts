@@ -119,6 +119,14 @@
   }
   .playbtn:hover{background:var(--navy2);}
   .playbtn:active{transform:scale(.94);}
+  .word-image-stage{
+    width:100%; aspect-ratio:16/9; max-height:300px; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    background:#fff; border:1px solid var(--line); border-radius:12px;
+    box-shadow:0 4px 16px rgba(30,58,95,.08);
+  }
+  .word-image-stage img{width:100%; height:100%; object-fit:contain; display:block;}
+  .word-image-stage.fallback{background:#fff; box-shadow:none;}
 
   .answer{
     width:100%; margin-top:20px; padding:16px 18px; font-size:22px; letter-spacing:1.5px;
@@ -171,12 +179,13 @@
   <!-- ============ HOME ============ -->
   <div class="card" id="home">
     <span class="tag"><b id="totalCount">0</b> words in your bank</span>
-    <div class="sub">Read the definition or listen to the pronunciation, then spell the word. Any word you miss is saved to your review list automatically.</div>
+    <div class="sub">Read the definition, listen to the pronunciation, or combine audio with an image, then spell the word. Any word you miss is saved to your review list automatically.</div>
 
     <div class="label">Practice Mode</div>
     <div class="seg" id="modeSeg">
       <button data-mode="cn" class="on">Read Definition &amp; Spell</button>
       <button data-mode="audio">Listen &amp; Spell</button>
+      <button data-mode="audioImage">Image + Audio &amp; Spell</button>
     </div>
 
     <div class="label">Word Range</div>
@@ -217,7 +226,10 @@
     <div class="bar"><i id="barFill"></i></div>
 
     <div class="clue" id="clueBox">
-      <button class="playbtn hidden" id="playBtn" title="Play audio">Play</button>
+      <div class="word-image-stage hidden" id="imageStage" role="img" aria-label="Vocabulary illustration">
+        <img id="wordImage" alt="" aria-hidden="true">
+      </div>
+      <button class="playbtn hidden" id="playBtn" title="Play audio" aria-label="Play word pronunciation">Play</button>
       <div class="defn" id="defn"></div>
       <div class="phon" id="phon"></div>
       <div class="letters" id="letters"></div>
@@ -275,13 +287,94 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;
 function norm(s){return String(s).toLowerCase().trim().replace(/\s+/g,' ');}
 function loose(s){return norm(s).replace(/[^a-z0-9 ]/g,'');}
 function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function speechSupported(){
+  return 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+}
+function updateSpeechButton(){
+  var btn=$('playBtn'); if(!btn) return;
+  btn.disabled=!speechSupported();
+  btn.textContent='Play';
+  btn.title=S.mode==='audioImage'?'Start continuous audio':'Play audio';
+  btn.setAttribute('aria-label',S.mode==='audioImage'?'Start continuous word pronunciation':'Play word pronunciation');
+  btn.removeAttribute('aria-pressed');
+}
+function stopSpeech(){
+  S.speechToken++;
+  S.speechLoopActive=false; S.speechSpeaking=false;
+  if(S.speechTimer){ clearTimeout(S.speechTimer); S.speechTimer=0; }
+  try{ if(speechSupported()) window.speechSynthesis.cancel(); }catch(e){}
+  updateSpeechButton();
+}
+function makeUtterance(word){
+  var u=new SpeechSynthesisUtterance(word);
+  u.lang='en-US'; u.rate=0.85;
+  return u;
+}
 function speak(word){
+  stopSpeech();
   try{
-    if(!('speechSynthesis' in window)) return;
-    window.speechSynthesis.cancel();
-    var u=new SpeechSynthesisUtterance(word); u.lang='en-US'; u.rate=0.85;
-    window.speechSynthesis.speak(u);
+    if(!speechSupported()) return;
+    window.speechSynthesis.speak(makeUtterance(word));
   }catch(e){}
+}
+function runSpeechLoop(word,token){
+  if(!S.speechLoopActive || token!==S.speechToken || S.mode!=='audioImage') return;
+  if(!S.queue.length || !DATA[S.queue[S.pos]] || DATA[S.queue[S.pos]][0]!==word) return;
+  try{
+    if(!speechSupported()) return;
+    var u=makeUtterance(word);
+    S.speechSpeaking=true;
+    u.onend=function(){
+      if(token!==S.speechToken) return;
+      S.speechSpeaking=false;
+      if(S.speechLoopActive){
+        S.speechTimer=setTimeout(function(){ S.speechTimer=0; runSpeechLoop(word,token); },400);
+      }
+    };
+    u.onerror=function(){
+      if(token!==S.speechToken) return;
+      S.speechSpeaking=false; S.speechLoopActive=false;
+      updateSpeechButton();
+    };
+    window.speechSynthesis.speak(u);
+  }catch(e){ S.speechLoopActive=false; S.speechSpeaking=false; updateSpeechButton(); }
+}
+function startSpeechLoop(word){
+  stopSpeech();
+  if(!speechSupported()) return;
+  S.speechLoopActive=true;
+  var token=S.speechToken;
+  runSpeechLoop(word,token);
+}
+function imagePath(word){
+  var safe=String(word).toLowerCase().replace(/[<>:"\/\\|?*]/g,'_');
+  return 'images/'+encodeURIComponent(safe)+'.png';
+}
+function hideWordImage(){
+  S.imageToken++;
+  var stage=$('imageStage'), pic=$('wordImage');
+  pic.onload=null; pic.onerror=null; pic.removeAttribute('src'); pic.style.visibility='hidden';
+  stage.classList.add('hidden'); stage.classList.remove('fallback');
+}
+function showWordImage(word, ready){
+  var stage=$('imageStage'), pic=$('wordImage');
+  var token=++S.imageToken, settled=false;
+  pic.onload=null; pic.onerror=null; pic.removeAttribute('src');
+  pic.style.visibility='visible';
+  stage.classList.remove('hidden','fallback');
+  function settle(failed){
+    if(settled || token!==S.imageToken) return;
+    settled=true; pic.onload=null; pic.onerror=null;
+    if(failed){
+      stage.classList.add('fallback');
+      pic.style.visibility='hidden';
+      pic.removeAttribute('src');
+    }
+    if(ready) ready();
+  }
+  pic.onload=function(){ settle(false); };
+  pic.onerror=function(){ settle(true); };
+  pic.src=imagePath(word);
 }
 
 /* ---------- build length tiers ---------- */
@@ -300,7 +393,8 @@ var tiers=(function(){
 
 /* ---------- state ---------- */
 var S={ mode:'cn', range:'all', size:20, lenTier:0,
-        queue:[], pos:0, right:0, wrong:0, answered:false, hintLevel:0, sessionMissed:[] };
+        queue:[], pos:0, right:0, wrong:0, answered:false, hintLevel:0, sessionMissed:[],
+        imageToken:0, speechToken:0, speechLoopActive:false, speechSpeaking:false, speechTimer:0 };
 
 /* ---------- home wiring ---------- */
 function bindSeg(id, cb){
@@ -414,6 +508,7 @@ $('startBtn').addEventListener('click',function(){
 
 /* ---------- render one question ---------- */
 function loadQ(){
+  stopSpeech();
   var q=DATA[S.queue[S.pos]];
   var word=q[0], phon=q[1], def=q[2];
   S.answered=false; S.hintLevel=0;
@@ -427,17 +522,29 @@ function loadQ(){
   $('checkBtn').textContent='Check';
 
   var isAudio=(S.mode==='audio');
-  $('playBtn').classList.toggle('hidden',!isAudio);
+  var isAudioImage=(S.mode==='audioImage');
+  var usesAudio=isAudio||isAudioImage;
+  $('playBtn').classList.toggle('hidden',!usesAudio);
   $('replayBtn').classList.toggle('hidden',!isAudio);
-  $('defn').classList.toggle('hidden',isAudio);
-  $('phon').textContent=(!isAudio && phon)?('/'+phon+'/'):'';
-  $('defn').textContent=isAudio?'':def;
+  $('defn').classList.toggle('hidden',usesAudio);
+  $('phon').textContent=(!usesAudio && phon)?('/'+phon+'/'):'';
+  $('defn').textContent=usesAudio?'':def;
   $('letters').textContent=word.length+' characters'+(word.indexOf(' ')>-1?' · includes a space':'');
-  if(isAudio){ speak(word); }
+  updateSpeechButton();
+  if(isAudioImage){
+    showWordImage(word);
+  }else{
+    hideWordImage();
+    if(isAudio){ speak(word); }
+  }
   setTimeout(function(){ inp.focus(); },30);
 }
 
-$('playBtn').addEventListener('click',function(){ speak(DATA[S.queue[S.pos]][0]); });
+$('playBtn').addEventListener('click',function(){
+  var word=DATA[S.queue[S.pos]][0];
+  if(S.mode==='audioImage') startSpeechLoop(word);
+  else speak(word);
+});
 $('replayBtn').addEventListener('click',function(){ speak(DATA[S.queue[S.pos]][0]); });
 
 /* ---------- answer check ---------- */
@@ -510,6 +617,8 @@ document.addEventListener('keydown',function(e){
 
 /* ---------- finish ---------- */
 function finish(){
+  stopSpeech();
+  hideWordImage();
   $('quiz').classList.add('hidden'); $('result').classList.remove('hidden');
   var total=S.queue.length;
   $('rScore').textContent=S.right; $('rTotal').textContent=total;
@@ -548,9 +657,11 @@ $('missBtn').addEventListener('click',function(){
   startRound(idx);
 });
 $('homeBtn').addEventListener('click',function(){
+  stopSpeech();
   $('result').classList.add('hidden'); $('quiz').classList.add('hidden'); $('home').classList.remove('hidden');
   refreshHome();
 });
+window.addEventListener('pagehide',stopSpeech);
 
 refreshHome();
 </script>
