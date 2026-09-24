@@ -97,10 +97,12 @@
   .summary b{color:var(--navy);}
 
   /* quiz */
-  .topbar{display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;}
+  .topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px;}
   .counter{font-size:13px; color:var(--sub); font-weight:700; text-transform:uppercase; letter-spacing:1px;}
-  .score{font-size:14px; font-weight:700;}
+  .score{font-size:14px; font-weight:700; margin-left:auto;}
   .score .g{color:var(--ok);} .score .r{color:var(--bad);}
+  .resetbtn{border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--sub); padding:7px 11px; cursor:pointer; font-size:12px; font-weight:700;}
+  .resetbtn:hover{border-color:var(--bad); color:var(--bad); background:var(--badbg);}
   .bar{height:8px; background:var(--line); border-radius:99px; overflow:hidden; margin-bottom:24px;}
   .bar i{display:block; height:100%; width:0%; background:linear-gradient(90deg,var(--navy),var(--accent)); transition:width .3s;}
 
@@ -222,6 +224,7 @@
     <div class="topbar">
       <div class="counter" id="counter">1 / 20</div>
       <div class="score"><span class="g" id="qRight">Correct 0</span> · <span class="r" id="qWrong">Missed 0</span></div>
+      <button class="resetbtn" id="resetBtn" type="button">Reset</button>
     </div>
     <div class="bar"><i id="barFill"></i></div>
 
@@ -275,11 +278,14 @@ var DATA = [["cerebral concussion","","脑震荡：一种脑部受到剧烈撞�
 var store = {
   ok:(function(){try{localStorage.setItem('__t','1');localStorage.removeItem('__t');return true;}catch(e){return false;}})(),
   get:function(k,def){ if(!this.ok) return def; try{var v=localStorage.getItem(k); return v?JSON.parse(v):def;}catch(e){return def;} },
-  set:function(k,v){ if(!this.ok) return; try{localStorage.setItem(k,JSON.stringify(v));}catch(e){} }
+  set:function(k,v){ if(!this.ok) return; try{localStorage.setItem(k,JSON.stringify(v));}catch(e){} },
+  remove:function(k){ if(!this.ok) return; try{localStorage.removeItem(k);}catch(e){} }
 };
 
-var missed = store.get('mx_missed', []);
-var totalRight = store.get('mx_right', 0);
+var storedMissed = store.get('mx_missed', []);
+var missed = Array.isArray(storedMissed) ? storedMissed.filter(function(x){return typeof x==='string';}) : [];
+var storedRight = store.get('mx_right', 0);
+var totalRight = typeof storedRight==='number' && isFinite(storedRight) && storedRight>=0 ? storedRight : 0;
 
 /* ---------- helpers ---------- */
 function $(id){return document.getElementById(id);}
@@ -394,7 +400,105 @@ var tiers=(function(){
 /* ---------- state ---------- */
 var S={ mode:'cn', range:'all', size:20, lenTier:0,
         queue:[], pos:0, right:0, wrong:0, answered:false, hintLevel:0, sessionMissed:[],
+        answerValue:'', answerStatus:'',
         imageToken:0, speechToken:0, speechLoopActive:false, speechSpeaking:false, speechTimer:0 };
+
+var SETTINGS_KEY='mx_settings';
+var ACTIVE_ROUND_KEY='mx_active_round';
+
+function validChoice(value,choices,fallback){ return choices.indexOf(value)>-1 ? value : fallback; }
+function validCount(value,fallback){
+  value=parseInt(value,10);
+  return !isNaN(value) && value>=0 ? value : fallback;
+}
+function applySettingsToUI(){
+  var modes=$('modeSeg').querySelectorAll('button');
+  for(var i=0;i<modes.length;i++) modes[i].classList.toggle('on',modes[i].dataset.mode===S.mode);
+
+  var ranges=$('rangeSeg').querySelectorAll('button');
+  for(var j=0;j<ranges.length;j++) ranges[j].classList.toggle('on',ranges[j].dataset.range===S.range);
+  $('lenBox').classList.toggle('hidden',S.range!=='len');
+  $('lenSelect').value=String(S.lenTier);
+
+  var sizes=$('sizeSeg').querySelectorAll('button');
+  var preset=false;
+  for(var k=0;k<sizes.length;k++){
+    var selected=parseInt(sizes[k].dataset.size,10)===S.size;
+    sizes[k].classList.toggle('on',selected);
+    if(selected) preset=true;
+  }
+  $('sizeCustom').value=preset?'':String(S.size);
+  $('sizeCustom').classList.toggle('on',!preset);
+}
+function saveSettings(){
+  store.set(SETTINGS_KEY,{version:1,mode:S.mode,range:S.range,size:S.size,lenTier:S.lenTier});
+}
+function restoreSettings(){
+  var saved=store.get(SETTINGS_KEY,null);
+  if(saved && typeof saved==='object'){
+    S.mode=validChoice(saved.mode,['cn','audio','audioImage'],'cn');
+    S.range=validChoice(saved.range,['all','len','missed'],'all');
+    var size=validCount(saved.size,20); S.size=size>0?size:20;
+    var tier=validCount(saved.lenTier,0); S.lenTier=tier<tiers.length?tier:0;
+  }
+  applySettingsToUI();
+}
+function saveRound(){
+  if(!S.queue.length || S.pos<0 || S.pos>=S.queue.length) return;
+  var answer=$('answer');
+  store.set(ACTIVE_ROUND_KEY,{
+    version:1, mode:S.mode, range:S.range, size:S.size, lenTier:S.lenTier,
+    queue:S.queue.slice(), pos:S.pos, right:S.right, wrong:S.wrong,
+    answered:!!S.answered, hintLevel:S.hintLevel,
+    sessionMissed:S.sessionMissed.slice(),
+    answerValue:answer?answer.value:S.answerValue,
+    answerStatus:S.answerStatus
+  });
+}
+function clearSavedRound(){ store.remove(ACTIVE_ROUND_KEY); }
+function resetPractice(){
+  stopSpeech();
+  hideWordImage();
+  clearSavedRound();
+  store.remove(SETTINGS_KEY);
+  S.mode='cn'; S.range='all'; S.size=20; S.lenTier=0;
+  S.queue=[]; S.pos=0; S.right=0; S.wrong=0;
+  S.answered=false; S.hintLevel=0; S.sessionMissed=[];
+  S.answerValue=''; S.answerStatus='';
+  applySettingsToUI();
+  $('quiz').classList.add('hidden'); $('result').classList.add('hidden'); $('home').classList.remove('hidden');
+  refreshHome();
+}
+function restoreRound(){
+  var saved=store.get(ACTIVE_ROUND_KEY,null);
+  if(!saved || saved.version!==1 || !Array.isArray(saved.queue) || !saved.queue.length){ return false; }
+  for(var i=0;i<saved.queue.length;i++){
+    if(typeof saved.queue[i]!=='number' || saved.queue[i]%1!==0 || saved.queue[i]<0 || saved.queue[i]>=DATA.length){
+      clearSavedRound(); return false;
+    }
+  }
+  var pos=validCount(saved.pos,-1);
+  if(pos<0 || pos>=saved.queue.length){ clearSavedRound(); return false; }
+
+  S.mode=validChoice(saved.mode,['cn','audio','audioImage'],S.mode);
+  S.range=validChoice(saved.range,['all','len','missed'],S.range);
+  var size=validCount(saved.size,S.size); if(size>0) S.size=size;
+  var tier=validCount(saved.lenTier,S.lenTier); if(tier<tiers.length) S.lenTier=tier;
+  S.queue=saved.queue.slice(); S.pos=pos;
+  S.right=validCount(saved.right,0); S.wrong=validCount(saved.wrong,0);
+  S.answered=!!saved.answered;
+  S.hintLevel=validCount(saved.hintLevel,0);
+  S.sessionMissed=Array.isArray(saved.sessionMissed)?saved.sessionMissed.slice():[];
+  S.answerValue=typeof saved.answerValue==='string'?saved.answerValue:'';
+  S.answerStatus=validChoice(saved.answerStatus,['correct','wrong','revealed'],'');
+  if(S.answered && !S.answerStatus){ clearSavedRound(); return false; }
+
+  applySettingsToUI();
+  saveSettings();
+  $('home').classList.add('hidden'); $('result').classList.add('hidden'); $('quiz').classList.remove('hidden');
+  loadQ(true);
+  return true;
+}
 
 /* ---------- home wiring ---------- */
 function bindSeg(id, cb){
@@ -405,10 +509,11 @@ function bindSeg(id, cb){
     b.classList.add('on'); cb(b);
   });
 }
-bindSeg('modeSeg',function(b){ S.mode=b.dataset.mode; });
+bindSeg('modeSeg',function(b){ S.mode=b.dataset.mode; saveSettings(); });
 bindSeg('rangeSeg',function(b){
   S.range=b.dataset.range;
   $('lenBox').classList.toggle('hidden', S.range!=='len');
+  saveSettings();
   updateSummary();
 });
 /* sizeSeg is not a plain bindSeg because it contains a custom input alongside buttons */
@@ -421,6 +526,7 @@ bindSeg('rangeSeg',function(b){
     b.classList.add('on');
     input.value=''; input.classList.remove('on');
     S.size=parseInt(b.dataset.size,10);
+    saveSettings();
     updateSummary();
   });
   function applyCustom(){
@@ -435,6 +541,7 @@ bindSeg('rangeSeg',function(b){
       input.classList.add('on');
       S.size=v;
     }
+    saveSettings();
     updateSummary();
   }
   input.addEventListener('input',applyCustom);
@@ -451,7 +558,7 @@ bindSeg('rangeSeg',function(b){
     o.textContent=tiers[i][0]+' letters ('+tiers[i][1].length+' words)';
     sel.appendChild(o);
   }
-  sel.addEventListener('change',function(){ S.lenTier=parseInt(sel.value,10); updateSummary(); });
+  sel.addEventListener('change',function(){ S.lenTier=parseInt(sel.value,10); saveSettings(); updateSummary(); });
 })();
 
 function refreshHome(){
@@ -495,30 +602,38 @@ function startRound(indices){
   var pool=shuffle(indices.slice());
   S.queue=pool.slice(0,Math.min(S.size,pool.length));
   S.pos=0; S.right=0; S.wrong=0; S.sessionMissed=[];
+  S.answered=false; S.hintLevel=0; S.answerValue=''; S.answerStatus='';
   if(S.queue.length===0){ alert('No words in this range.'); return; }
   $('home').classList.add('hidden'); $('result').classList.add('hidden'); $('quiz').classList.remove('hidden');
   loadQ();
 }
 $('startBtn').addEventListener('click',function(){
   syncRangeFromUI();
+  saveSettings();
   var idx=poolIndices();
   if(S.range==='missed' && idx.length===0){ alert('Your review list is empty. Try a practice round first!'); return; }
   startRound(idx);
 });
+$('resetBtn').addEventListener('click',resetPractice);
 
 /* ---------- render one question ---------- */
-function loadQ(){
+function loadQ(restoring){
   stopSpeech();
+  var restoredAnswered=!!(restoring && S.answered);
+  var restoredHint=restoring ? S.hintLevel : 0;
+  var restoredValue=restoring ? S.answerValue : '';
+  var restoredStatus=restoring ? S.answerStatus : '';
   var q=DATA[S.queue[S.pos]];
   var word=q[0], phon=q[1], def=q[2];
-  S.answered=false; S.hintLevel=0;
+  S.answered=restoredAnswered; S.hintLevel=restoredHint;
+  S.answerValue=restoredValue; S.answerStatus=restoredStatus;
   $('counter').textContent=(S.pos+1)+' / '+S.queue.length;
   $('qRight').textContent='Correct '+S.right;
   $('qWrong').textContent='Missed '+S.wrong;
   $('barFill').style.width=(S.pos/S.queue.length*100)+'%';
   $('feedback').textContent=''; $('feedback').className='feedback';
   $('reveal').classList.add('hidden');
-  var inp=$('answer'); inp.value=''; inp.className='answer'; inp.disabled=false;
+  var inp=$('answer'); inp.value=restoredValue; inp.className='answer'; inp.disabled=false;
   $('checkBtn').textContent='Check';
 
   var isAudio=(S.mode==='audio');
@@ -535,8 +650,23 @@ function loadQ(){
     showWordImage(word);
   }else{
     hideWordImage();
-    if(isAudio){ speak(word); }
+    if(isAudio && !restoring){ speak(word); }
   }
+
+  if(restoredAnswered){
+    inp.disabled=true;
+    $('checkBtn').textContent='Next';
+    if(restoredStatus==='correct'){
+      inp.classList.add('ok');
+      $('feedback').textContent='Correct!'; $('feedback').className='feedback ok';
+    }else{
+      inp.classList.add('bad');
+      $('feedback').textContent=restoredStatus==='revealed'?'Answer revealed':'Not quite.';
+      $('feedback').className='feedback bad';
+      $('reveal').textContent=word; $('reveal').classList.remove('hidden');
+    }
+  }
+  saveRound();
   setTimeout(function(){ inp.focus(); },30);
 }
 
@@ -565,7 +695,7 @@ function check(){
   var q=DATA[S.queue[S.pos]], word=q[0];
   var val=$('answer').value;
   var ok = (norm(val)===norm(word)) || (loose(val)===loose(word));
-  S.answered=true;
+  S.answered=true; S.answerValue=val; S.answerStatus=ok?'correct':'wrong';
   var inp=$('answer'), fb=$('feedback');
   if(ok){
     S.right++; inp.classList.add('ok'); fb.textContent='Correct!'; fb.className='feedback ok';
@@ -579,6 +709,7 @@ function check(){
   $('qWrong').textContent='Missed '+S.wrong;
   inp.disabled=true;
   $('checkBtn').textContent='Next';
+  saveRound();
 }
 function next(){
   S.pos++;
@@ -592,18 +723,24 @@ $('hintBtn').addEventListener('click',function(){
   var word=DATA[S.queue[S.pos]][0];
   S.hintLevel=Math.min(S.hintLevel+1, word.length);
   $('answer').value=word.slice(0,S.hintLevel);
+  S.answerValue=$('answer').value;
+  saveRound();
   $('answer').focus();
 });
 $('showBtn').addEventListener('click',function(){
   if(S.answered) return;
   var word=DATA[S.queue[S.pos]][0];
-  S.answered=true; S.wrong++;
+  S.answered=true; S.wrong++; S.answerValue=$('answer').value; S.answerStatus='revealed';
   mark(word,false);
   $('answer').classList.add('bad'); $('answer').disabled=true;
   $('feedback').textContent='Answer revealed'; $('feedback').className='feedback bad';
   $('reveal').textContent=word; $('reveal').classList.remove('hidden');
   $('qRight').textContent='Correct '+S.right; $('qWrong').textContent='Missed '+S.wrong;
   $('checkBtn').textContent='Next';
+  saveRound();
+});
+$('answer').addEventListener('input',function(){
+  if(!S.answered){ S.answerValue=this.value; saveRound(); }
 });
 
 /* ---------- keyboard ---------- */
@@ -619,6 +756,7 @@ document.addEventListener('keydown',function(e){
 function finish(){
   stopSpeech();
   hideWordImage();
+  clearSavedRound();
   $('quiz').classList.add('hidden'); $('result').classList.remove('hidden');
   var total=S.queue.length;
   $('rScore').textContent=S.right; $('rTotal').textContent=total;
@@ -653,6 +791,7 @@ $('missBtn').addEventListener('click',function(){
     if(bs[i].dataset && bs[i].dataset.range){ bs[i].classList.toggle('on', bs[i].dataset.range==='missed'); }
   }
   $('lenBox').classList.add('hidden');
+  saveSettings();
   updateSummary();
   startRound(idx);
 });
@@ -661,9 +800,11 @@ $('homeBtn').addEventListener('click',function(){
   $('result').classList.add('hidden'); $('quiz').classList.add('hidden'); $('home').classList.remove('hidden');
   refreshHome();
 });
-window.addEventListener('pagehide',stopSpeech);
+window.addEventListener('pagehide',function(){ saveRound(); stopSpeech(); });
 
+restoreSettings();
 refreshHome();
+restoreRound();
 </script>
 </body>
 </html>
