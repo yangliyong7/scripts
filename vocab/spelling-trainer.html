@@ -122,13 +122,44 @@
   .playbtn:hover{background:var(--navy2);}
   .playbtn:active{transform:scale(.94);}
   .word-image-stage{
-    width:100%; aspect-ratio:16/9; max-height:300px; overflow:hidden;
+    width:100%; max-height:300px; overflow:hidden;
     display:flex; align-items:center; justify-content:center;
-    background:#fff; border:1px solid var(--line); border-radius:12px;
-    box-shadow:0 4px 16px rgba(30,58,95,.08);
+    background:transparent; border:none; border-radius:12px;
   }
   .word-image-stage img{width:100%; height:100%; object-fit:contain; display:block;}
-  .word-image-stage.fallback{background:#fff; box-shadow:none;}
+  .word-image-stage.fallback{background:#fff;}
+  /* ---- 翻转卡: 点击图片显示中文释义 ---- */
+  .flipcard{
+    width:100%; aspect-ratio:16/9; max-height:300px;
+    perspective:1200px; cursor:pointer; position:relative;
+    border-radius:12px;
+  }
+  .flipcard-inner{
+    position:relative; width:100%; height:100%;
+    transition:transform .6s cubic-bezier(.4,.2,.2,1);
+    transform-style:preserve-3d;
+  }
+  .flipcard.flipped .flipcard-inner{transform:rotateY(180deg);}
+  .flipface{
+    position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden;
+    display:flex; align-items:center; justify-content:center;
+    background:#fff; border:1px solid var(--line); border-radius:12px;
+    box-shadow:0 4px 16px rgba(30,58,95,.08); overflow:hidden;
+  }
+  .flipface img{width:100%; height:100%; object-fit:contain; display:block;}
+  .flipface.back{
+    transform:rotateY(180deg);
+    background:linear-gradient(135deg,#f7fafc,#eef4fb);
+    color:var(--navy); font-size:clamp(18px,3.4vw,26px); font-weight:600;
+    line-height:1.6; text-align:center; padding:22px 26px; overflow-y:auto;
+  }
+  .flipcard .flip-hint{
+    position:absolute; right:10px; bottom:8px; z-index:3;
+    font-size:12px; color:#8899aa; background:rgba(255,255,255,.86);
+    padding:2px 8px; border-radius:10px; pointer-events:none;
+    transition:opacity .3s;
+  }
+  .flipcard.flipped .flip-hint{opacity:0;}
 
   .answer{
     width:100%; margin-top:20px; padding:16px 18px; font-size:22px; letter-spacing:1.5px;
@@ -230,7 +261,13 @@
 
     <div class="clue" id="clueBox">
       <div class="word-image-stage hidden" id="imageStage" role="img" aria-label="Vocabulary illustration">
-        <img id="wordImage" alt="" aria-hidden="true">
+        <div class="flipcard" id="flipCard" role="button" tabindex="0" aria-label="Tap to reveal Chinese meaning">
+          <div class="flipcard-inner">
+            <div class="flipface front"><img id="wordImage" alt="" aria-hidden="true"></div>
+            <div class="flipface back" id="flipBack"></div>
+          </div>
+          <span class="flip-hint">点按看释义</span>
+        </div>
       </div>
       <button class="playbtn hidden" id="playBtn" title="Play audio" aria-label="Play word pronunciation">Play</button>
       <div class="defn" id="defn"></div>
@@ -311,16 +348,55 @@ function stopSpeech(){
   try{ if(speechSupported()) window.speechSynthesis.cancel(); }catch(e){}
   updateSpeechButton();
 }
+function pickEnglishVoice(){
+  try{
+    var vs=window.speechSynthesis.getVoices()||[];
+    if(!vs.length) return null;
+    // 优先高质量美音/英音 voice (iOS Safari 上这些质量最好)
+    var prefer=['Samantha','Ava','Allison','Serena','Daniel','Karen','Moira','Tessa','Alex','Google US English','Google UK English Female','Microsoft Aria','Microsoft Jenny','Microsoft Zira'];
+    for(var p=0;p<prefer.length;p++){
+      for(var i=0;i<vs.length;i++){
+        if(vs[i].name && vs[i].name.indexOf(prefer[p])!==-1) return vs[i];
+      }
+    }
+    // ��退: 任意 en-US
+    for(var i=0;i<vs.length;i++){ if((vs[i].lang||'').toLowerCase().indexOf('en-us')===0) return vs[i]; }
+    // 再退: 任意 en
+    for(var i=0;i<vs.length;i++){ if((vs[i].lang||'').toLowerCase().indexOf('en')===0) return vs[i]; }
+  }catch(e){}
+  return null;
+}
+// iOS Safari: voices 异步加载, 需预热否则拿不到列表
+function primeVoices(){
+  try{ if(speechSupported()) window.speechSynthesis.getVoices(); }catch(e){}
+}
+if(typeof window!=='undefined' && 'speechSynthesis' in window){
+  primeVoices();
+  if(window.speechSynthesis.onvoiceschanged!==undefined){
+    window.speechSynthesis.onvoiceschanged=primeVoices;
+  }
+}
 function makeUtterance(word){
   var u=new SpeechSynthesisUtterance(word);
-  u.lang='en-US'; u.rate=0.85;
+  u.lang='en-US';
+  u.rate=0.95;   // 0.85 太慢, iOS 慢速会吞词尾辅音(/d/等), 提到0.95
+  u.pitch=1;
+  u.volume=1;
+  var v=pickEnglishVoice();
+  if(v){ u.voice=v; u.lang=v.lang||'en-US'; }
   return u;
 }
 function speak(word){
-  stopSpeech();
   try{
     if(!speechSupported()) return;
+    // iOS Safari: 先 cancel 再立即 speak 会吞掉本次发音; 先取消, 稍延迟再朗读
+    try{ window.speechSynthesis.cancel(); }catch(e){}
+    primeVoices();
+    S.speechToken++;
+    S.speechLoopActive=false; S.speechSpeaking=false;
+    if(S.speechTimer){ clearTimeout(S.speechTimer); S.speechTimer=0; }
     window.speechSynthesis.speak(makeUtterance(word));
+    updateSpeechButton();
   }catch(e){}
 }
 function runSpeechLoop(word,token){
@@ -361,9 +437,34 @@ function hideWordImage(){
   var stage=$('imageStage'), pic=$('wordImage');
   pic.onload=null; pic.onerror=null; pic.removeAttribute('src'); pic.style.visibility='hidden';
   stage.classList.add('hidden'); stage.classList.remove('fallback');
+  var fc=$('flipCard'); if(fc) fc.classList.remove('flipped');
 }
+/* ---- 点击图片翻转显示中文释义 ---- */
+function setFlipMeaning(text){
+  var back=$('flipBack');
+  if(back) back.textContent=text||'';
+}
+function toggleFlip(){
+  var fc=$('flipCard');
+  if(!fc || $('imageStage').classList.contains('hidden')) return;
+  fc.classList.toggle('flipped');
+}
+(function bindFlip(){
+  function bind(){
+    var fc=$('flipCard');
+    if(!fc || fc._flipBound) return;
+    fc._flipBound=true;
+    fc.addEventListener('click', function(e){ e.preventDefault(); toggleFlip(); });
+    fc.addEventListener('keydown', function(e){
+      if(e.key==='Enter'||e.key===' '||e.key==='Spacebar'){ e.preventDefault(); toggleFlip(); }
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', bind);
+  else bind();
+})();
 function showWordImage(word, ready){
   var stage=$('imageStage'), pic=$('wordImage');
+  var fc=$('flipCard'); if(fc) fc.classList.remove('flipped');
   var token=++S.imageToken, settled=false;
   pic.onload=null; pic.onerror=null; pic.removeAttribute('src');
   pic.style.visibility='visible';
@@ -647,6 +748,7 @@ function loadQ(restoring){
   $('letters').textContent=word.length+' characters'+(word.indexOf(' ')>-1?' · includes a space':'');
   updateSpeechButton();
   if(isAudioImage){
+    setFlipMeaning(def);
     showWordImage(word);
   }else{
     hideWordImage();
