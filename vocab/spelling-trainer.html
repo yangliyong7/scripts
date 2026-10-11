@@ -153,13 +153,7 @@
     color:var(--navy); font-size:clamp(18px,3.4vw,26px); font-weight:600;
     line-height:1.6; text-align:center; padding:22px 26px; overflow-y:auto;
   }
-  .flipcard .flip-hint{
-    position:absolute; right:10px; bottom:8px; z-index:3;
-    font-size:12px; color:#8899aa; background:rgba(255,255,255,.86);
-    padding:2px 8px; border-radius:10px; pointer-events:none;
-    transition:opacity .3s;
-  }
-  .flipcard.flipped .flip-hint{opacity:0;}
+  .flipcard.flipped .flipface.front{pointer-events:none;}
 
   .answer{
     width:100%; margin-top:20px; padding:16px 18px; font-size:22px; letter-spacing:1.5px;
@@ -266,7 +260,6 @@
             <div class="flipface front"><img id="wordImage" alt="" aria-hidden="true"></div>
             <div class="flipface back" id="flipBack"></div>
           </div>
-          <span class="flip-hint">点按看释义</span>
         </div>
       </div>
       <button class="playbtn hidden" id="playBtn" title="Play audio" aria-label="Play word pronunciation">Play</button>
@@ -430,7 +423,7 @@ function startSpeechLoop(word){
 }
 function imagePath(word){
   var safe=String(word).toLowerCase().replace(/[<>:"\/\\|?*]/g,'_');
-  return 'images/'+encodeURIComponent(safe)+'.png';
+  return 'images/'+encodeURIComponent(safe)+'.webp';
 }
 function hideWordImage(){
   S.imageToken++;
