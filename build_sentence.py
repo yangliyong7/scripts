@@ -33,6 +33,26 @@ def strip_html(h):
     h = re.sub(r"\s+", " ", h)
     return h
 
+def remove_directions(text):
+    """Remove stage directions [..] and parentheticals (..) from the whole text
+    before sentence splitting, so bracket contents never span sentence breaks."""
+    text = re.sub(r"\[[^\]]*\]", " ", text)
+    text = re.sub(r"\([^)]*\)", " ", text)
+    return text
+
+def clean_sentence(s):
+    """Remove any leftover speaker labels / stray brackets so only the spoken sentence remains."""
+    s = s.strip()
+    # leading speaker labels like "Ross:", "MR, GELLER:", "All:"
+    s = re.sub(r"^\s*[A-Za-z][A-Za-z0-9 ,.'\-]{0,30}:\s*", "", s)
+    # stray unbalanced brackets left from nested/odd parentheticals
+    s = re.sub(r"^[^()\[\]]*[)\]]\s*", "", s)
+    s = s.replace("(", "").replace(")", "").replace("[", "").replace("]", "")
+    # stray inline speaker label like "Phoebe: "
+    s = re.sub(r"\s+[A-Z][A-Za-z]{1,12}\s*:\s*", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
 def split_sentences(text):
     parts = re.split(r"(?<=[.!?])\s+", text)
     return [p.strip() for p in parts if p.strip()]
@@ -60,16 +80,20 @@ def main():
             # allow optional common suffix (plural/tense) after the phrase
             phrases[w] = re.compile(r"(?<![A-Za-z])" + base + r"(?:s|es|ed|d|ing)?(?![A-Za-z])", re.IGNORECASE)
 
-    found = {}
+    found = {}   # original word -> cleaned sentence
+    found_raw = {}  # original word -> raw sentence (for matching only)
     files = sorted(glob.glob(os.path.join(HTML_DIR, "*.html")))
     total_sents = 0
     for f in files:
         if len(found) == len(words):
             break
         raw = open(f, encoding="utf-8", errors="ignore").read()
-        text = strip_html(raw)
-        for s in split_sentences(text):
-            if len(s) < 4 or len(s) > 400:
+        text = remove_directions(strip_html(raw))
+        for s_raw in split_sentences(text):
+            if len(s_raw) < 4 or len(s_raw) > 400:
+                continue
+            s = clean_sentence(s_raw)
+            if not s or len(s) < 3:
                 continue
             total_sents += 1
             toks = set(t.lower() for t in TOKEN_RE.findall(s))
