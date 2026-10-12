@@ -170,11 +170,6 @@
     transition:.2s; cursor:pointer;
   }
   .carousel-dots i.on{background:var(--navy); transform:scale(1.15);}
-  .carousel-hint{
-    position:absolute; right:10px; bottom:8px; z-index:3;
-    font-size:10px; letter-spacing:.5px; color:var(--sub); opacity:.7;
-    text-transform:uppercase; pointer-events:none;
-  }
 
   .answer{
     width:100%; margin-top:20px; padding:16px 18px; font-size:22px; letter-spacing:1.5px;
@@ -283,7 +278,6 @@
             <div class="carousel-slide slide-sentence" id="slideSentence"><div class="sent-text" id="sentText"></div></div>
           </div>
           <div class="carousel-dots" id="carouselDots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i></div>
-          <div class="carousel-hint">点击切换</div>
         </div>
       </div>
       <button class="playbtn hidden" id="playBtn" title="Play audio" aria-label="Play word pronunciation">Play</button>
@@ -451,6 +445,7 @@ function imagePath(word){
 }
 function hideWordImage(){
   S.imageToken++;
+  carouselStopAuto();
   var stage=$('imageStage'), pic=$('wordImage');
   pic.onload=null; pic.onerror=null; pic.removeAttribute('src'); pic.style.visibility='hidden';
   stage.classList.add('hidden'); stage.classList.remove('fallback');
@@ -470,6 +465,18 @@ function carouselSetSlide(i, instant){
 }
 function carouselNext(){ carouselSetSlide((S.slide||0)+1); }
 function carouselGoTo(i){ carouselSetSlide(i); }
+/* ---- 自动轮播: 每 3 秒切换一屏, 循环 ---- */
+var CAROUSEL_INTERVAL=3000;
+function carouselStartAuto(){
+  carouselStopAuto();
+  S.carouselTimer=setInterval(function(){
+    if($('imageStage').classList.contains('hidden')){ carouselStopAuto(); return; }
+    carouselNext();
+  }, CAROUSEL_INTERVAL);
+}
+function carouselStopAuto(){
+  if(S.carouselTimer){ clearInterval(S.carouselTimer); S.carouselTimer=0; }
+}
 function setSlideMeaning(text){
   var el=$('slideCn'); if(el) el.textContent=text||'';
 }
@@ -489,19 +496,12 @@ function setSlideSentence(word, sentence){
 }
 (function bindCarousel(){
   function bind(){
-    var c=$('carousel');
-    if(!c || c._carBound) return;
-    c._carBound=true;
-    c.addEventListener('click', function(e){ e.preventDefault(); carouselNext(); });
-    c.addEventListener('keydown', function(e){
-      if(e.key==='Enter'||e.key===' '||e.key==='Spacebar'){ e.preventDefault(); carouselNext(); }
-    });
     var dots=$('carouselDots');
     if(dots){
       dots.addEventListener('click', function(e){
         var t=e.target;
         if(t && t.tagName==='I' && t.dataset && t.dataset.i!==undefined){
-          e.stopPropagation(); carouselGoTo(parseInt(t.dataset.i,10));
+          e.stopPropagation(); carouselGoTo(parseInt(t.dataset.i,10)); carouselStartAuto();
         }
       });
     }
@@ -529,6 +529,7 @@ function showWordImage(word, ready){
   pic.onload=function(){ settle(false); };
   pic.onerror=function(){ settle(true); };
   pic.src=imagePath(word);
+  carouselStartAuto();
 }
 
 /* ---------- build length tiers ---------- */
@@ -549,7 +550,7 @@ var tiers=(function(){
 var S={ mode:'cn', range:'all', size:20, lenTier:0,
         queue:[], pos:0, right:0, wrong:0, answered:false, hintLevel:0, sessionMissed:[],
         answerValue:'', answerStatus:'',
-        imageToken:0, slide:0, sentences:{}, speechToken:0, speechLoopActive:false, speechSpeaking:false, speechTimer:0 };
+        imageToken:0, slide:0, carouselTimer:0, sentences:{}, speechToken:0, speechLoopActive:false, speechSpeaking:false, speechTimer:0 };
 
 var SETTINGS_KEY='mx_settings';
 var ACTIVE_ROUND_KEY='mx_active_round';
@@ -947,10 +948,11 @@ $('missBtn').addEventListener('click',function(){
 });
 $('homeBtn').addEventListener('click',function(){
   stopSpeech();
+  carouselStopAuto();
   $('result').classList.add('hidden'); $('quiz').classList.add('hidden'); $('home').classList.remove('hidden');
   refreshHome();
 });
-window.addEventListener('pagehide',function(){ saveRound(); stopSpeech(); });
+window.addEventListener('pagehide',function(){ saveRound(); stopSpeech(); carouselStopAuto(); });
 
 restoreSettings();
 refreshHome();
