@@ -128,32 +128,53 @@
   }
   .word-image-stage img{width:100%; height:100%; object-fit:contain; display:block;}
   .word-image-stage.fallback{background:#fff;}
-  /* ---- 翻转卡: 点击图片显示中文释义 ---- */
-  .flipcard{
+  /* ---- 轮播卡: 图 → 中文释义 → 英文例句 ---- */
+  .carousel{
     width:100%; aspect-ratio:16/9; max-height:300px;
-    perspective:1200px; cursor:pointer; position:relative;
-    border-radius:12px;
+    position:relative; border-radius:12px; overflow:hidden;
   }
-  .flipcard-inner{
-    position:relative; width:100%; height:100%;
-    transition:transform .6s cubic-bezier(.4,.2,.2,1);
-    transform-style:preserve-3d;
+  .carousel-track{
+    display:flex; height:100%; width:300%;
+    transition:transform .45s cubic-bezier(.4,.2,.2,1);
   }
-  .flipcard.flipped .flipcard-inner{transform:rotateY(180deg);}
-  .flipface{
-    position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden;
+  .carousel-slide{
+    flex:0 0 33.3333%; height:100%;
     display:flex; align-items:center; justify-content:center;
     background:#fff; border:1px solid var(--line); border-radius:12px;
     box-shadow:0 4px 16px rgba(30,58,95,.08); overflow:hidden;
+    padding:10px; box-sizing:border-box;
   }
-  .flipface img{width:100%; height:100%; object-fit:contain; display:block;}
-  .flipface.back{
-    transform:rotateY(180deg);
+  .carousel-slide img{width:100%; height:100%; object-fit:contain; display:block;}
+  .carousel-slide.slide-cn{
     background:linear-gradient(135deg,#f7fafc,#eef4fb);
     color:var(--navy); font-size:clamp(18px,3.4vw,26px); font-weight:600;
     line-height:1.6; text-align:center; padding:22px 26px; overflow-y:auto;
   }
-  .flipcard.flipped .flipface.front{pointer-events:none;}
+  .carousel-slide.slide-sentence{
+    background:linear-gradient(135deg,#fdfbf5,#f7f2e6);
+    color:var(--ink); font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(15px,2.6vw,20px); line-height:1.75; text-align:left;
+    padding:24px 28px; overflow-y:auto; align-items:flex-start;
+  }
+  .carousel-slide.slide-sentence .sent-text{width:100%;}
+  .carousel-slide.slide-sentence .sent-word{
+    display:block; font-family:inherit; font-size:.72em; letter-spacing:1px;
+    text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:8px;
+  }
+  .carousel-dots{
+    position:absolute; left:0; right:0; bottom:8px;
+    display:flex; justify-content:center; gap:6px; z-index:3;
+  }
+  .carousel-dots i{
+    width:7px; height:7px; border-radius:50%; background:rgba(30,58,95,.25);
+    transition:.2s; cursor:pointer;
+  }
+  .carousel-dots i.on{background:var(--navy); transform:scale(1.15);}
+  .carousel-hint{
+    position:absolute; right:10px; bottom:8px; z-index:3;
+    font-size:10px; letter-spacing:.5px; color:var(--sub); opacity:.7;
+    text-transform:uppercase; pointer-events:none;
+  }
 
   .answer{
     width:100%; margin-top:20px; padding:16px 18px; font-size:22px; letter-spacing:1.5px;
@@ -255,11 +276,14 @@
 
     <div class="clue" id="clueBox">
       <div class="word-image-stage hidden" id="imageStage" role="img" aria-label="Vocabulary illustration">
-        <div class="flipcard" id="flipCard" role="button" tabindex="0" aria-label="Tap to reveal Chinese meaning">
-          <div class="flipcard-inner">
-            <div class="flipface front"><img id="wordImage" alt="" aria-hidden="true"></div>
-            <div class="flipface back" id="flipBack"></div>
+        <div class="carousel" id="carousel" role="button" tabindex="0" aria-label="Tap to cycle: image, meaning, example sentence">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide slide-img"><img id="wordImage" alt="" aria-hidden="true"></div>
+            <div class="carousel-slide slide-cn" id="slideCn"></div>
+            <div class="carousel-slide slide-sentence" id="slideSentence"><div class="sent-text" id="sentText"></div></div>
           </div>
+          <div class="carousel-dots" id="carouselDots"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i></div>
+          <div class="carousel-hint">点击切换</div>
         </div>
       </div>
       <button class="playbtn hidden" id="playBtn" title="Play audio" aria-label="Play word pronunciation">Play</button>
@@ -430,34 +454,64 @@ function hideWordImage(){
   var stage=$('imageStage'), pic=$('wordImage');
   pic.onload=null; pic.onerror=null; pic.removeAttribute('src'); pic.style.visibility='hidden';
   stage.classList.add('hidden'); stage.classList.remove('fallback');
-  var fc=$('flipCard'); if(fc) fc.classList.remove('flipped');
+  carouselSetSlide(0, true);
 }
-/* ---- 点击图片翻转显示中文释义 ---- */
-function setFlipMeaning(text){
-  var back=$('flipBack');
-  if(back) back.textContent=text||'';
+/* ---- 轮播卡: 图 → 中文释义 → 英文例句 ---- */
+function carouselSetSlide(i, instant){
+  var track=$('carouselTrack'); if(!track) return;
+  S.slide = i % 3;
+  track.style.transition = instant ? 'none' : '';
+  track.style.transform = 'translateX(' + (-S.slide * 33.3333) + '%)';
+  if(instant){ void track.offsetWidth; track.style.transition=''; }
+  var dots=$('carouselDots'); if(dots){
+    var ds=dots.querySelectorAll('i');
+    for(var k=0;k<ds.length;k++) ds[k].classList.toggle('on', k===S.slide);
+  }
 }
-function toggleFlip(){
-  var fc=$('flipCard');
-  if(!fc || $('imageStage').classList.contains('hidden')) return;
-  fc.classList.toggle('flipped');
+function carouselNext(){ carouselSetSlide((S.slide||0)+1); }
+function carouselGoTo(i){ carouselSetSlide(i); }
+function setSlideMeaning(text){
+  var el=$('slideCn'); if(el) el.textContent=text||'';
 }
-(function bindFlip(){
+function setSlideSentence(word, sentence){
+  var box=$('sentText'); if(!box) return;
+  if(sentence && sentence.trim()){
+    box.innerHTML='';
+    var label=document.createElement('span'); label.className='sent-word'; label.textContent=word;
+    box.appendChild(label);
+    box.appendChild(document.createTextNode(sentence));
+  } else {
+    box.innerHTML='';
+    var label2=document.createElement('span'); label2.className='sent-word'; label2.textContent=word;
+    box.appendChild(label2);
+    box.appendChild(document.createTextNode('No example sentence found.'));
+  }
+}
+(function bindCarousel(){
   function bind(){
-    var fc=$('flipCard');
-    if(!fc || fc._flipBound) return;
-    fc._flipBound=true;
-    fc.addEventListener('click', function(e){ e.preventDefault(); toggleFlip(); });
-    fc.addEventListener('keydown', function(e){
-      if(e.key==='Enter'||e.key===' '||e.key==='Spacebar'){ e.preventDefault(); toggleFlip(); }
+    var c=$('carousel');
+    if(!c || c._carBound) return;
+    c._carBound=true;
+    c.addEventListener('click', function(e){ e.preventDefault(); carouselNext(); });
+    c.addEventListener('keydown', function(e){
+      if(e.key==='Enter'||e.key===' '||e.key==='Spacebar'){ e.preventDefault(); carouselNext(); }
     });
+    var dots=$('carouselDots');
+    if(dots){
+      dots.addEventListener('click', function(e){
+        var t=e.target;
+        if(t && t.tagName==='I' && t.dataset && t.dataset.i!==undefined){
+          e.stopPropagation(); carouselGoTo(parseInt(t.dataset.i,10));
+        }
+      });
+    }
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', bind);
   else bind();
 })();
 function showWordImage(word, ready){
   var stage=$('imageStage'), pic=$('wordImage');
-  var fc=$('flipCard'); if(fc) fc.classList.remove('flipped');
+  carouselSetSlide(0, true);
   var token=++S.imageToken, settled=false;
   pic.onload=null; pic.onerror=null; pic.removeAttribute('src');
   pic.style.visibility='visible';
@@ -495,7 +549,7 @@ var tiers=(function(){
 var S={ mode:'cn', range:'all', size:20, lenTier:0,
         queue:[], pos:0, right:0, wrong:0, answered:false, hintLevel:0, sessionMissed:[],
         answerValue:'', answerStatus:'',
-        imageToken:0, speechToken:0, speechLoopActive:false, speechSpeaking:false, speechTimer:0 };
+        imageToken:0, slide:0, sentences:{}, speechToken:0, speechLoopActive:false, speechSpeaking:false, speechTimer:0 };
 
 var SETTINGS_KEY='mx_settings';
 var ACTIVE_ROUND_KEY='mx_active_round';
@@ -741,7 +795,8 @@ function loadQ(restoring){
   $('letters').textContent=word.length+' characters'+(word.indexOf(' ')>-1?' · includes a space':'');
   updateSpeechButton();
   if(isAudioImage){
-    setFlipMeaning(def);
+    setSlideMeaning(def);
+    setSlideSentence(word, S.sentences[word.toLowerCase()] || '');
     showWordImage(word);
   }else{
     hideWordImage();
@@ -900,6 +955,31 @@ window.addEventListener('pagehide',function(){ saveRound(); stopSpeech(); });
 restoreSettings();
 refreshHome();
 restoreRound();
+
+/* ---- load example sentences ---- */
+(function loadSentences(){
+  try{
+    fetch('sentence.txt', {cache:'no-cache'})
+      .then(function(r){ return r.ok ? r.text() : ''; })
+      .then(function(txt){
+        if(!txt) return;
+        var lines=txt.split('\n');
+        for(var i=0;i<lines.length;i++){
+          var idx=lines[i].indexOf(':');
+          if(idx<0) continue;
+          var w=lines[i].slice(0, idx).trim().toLowerCase();
+          var s=lines[i].slice(idx+1).trim();
+          if(w) S.sentences[w]=s;
+        }
+        /* refresh current card's sentence if visible */
+        if(S.mode==='audioImage' && S.queue && S.queue.length){
+          var word=DATA[S.queue[S.pos]][0];
+          setSlideSentence(word, S.sentences[word.toLowerCase()] || '');
+        }
+      })
+      .catch(function(){});
+  }catch(e){}
+})();
 </script>
 </body>
 </html>
