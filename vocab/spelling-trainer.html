@@ -388,8 +388,8 @@ function updateSpeechButton(){
   var btn=$('playBtn'); if(!btn) return;
   btn.disabled=!speechSupported();
   btn.textContent='Play';
-  btn.title=S.mode==='audioImage'?'Start continuous audio':'Play audio';
-  btn.setAttribute('aria-label',S.mode==='audioImage'?'Start continuous word pronunciation':'Play word pronunciation');
+  btn.title=S.mode==='audioImage'?'Play word + example sentence (looping)':'Play audio';
+  btn.setAttribute('aria-label',S.mode==='audioImage'?'Play word and example sentence on repeat':'Play word pronunciation');
   btn.removeAttribute('aria-pressed');
 }
 function stopSpeech(){
@@ -450,34 +450,62 @@ function speak(word){
     updateSpeechButton();
   }catch(e){}
 }
-function runSpeechLoop(word,token){
+function makeSentenceUtterance(text){
+  var u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US';
+  u.rate=0.95;
+  u.pitch=1;
+  u.volume=1;
+  var v=pickEnglishVoice();
+  if(v){ u.voice=v; u.lang=v.lang||'en-US'; }
+  return u;
+}
+/* imageAudio 模式：先读单词，再读例句，循环 */
+function runSentenceLoop(word, token){
   if(!S.speechLoopActive || token!==S.speechToken || S.mode!=='audioImage') return;
   if(!S.queue.length || !BANK[S.queue[S.pos]] || BANK[S.queue[S.pos]][0]!==word) return;
-  try{
-    if(!speechSupported()) return;
-    var u=makeUtterance(word);
+  if(!speechSupported()) return;
+
+  var sentence=(S.sentences[word.toLowerCase()]||'').trim();
+  var chain=[];
+  chain.push(makeUtterance(word));
+  if(sentence) chain.push(makeSentenceUtterance(sentence));
+
+  function step(i){
+    if(!S.speechLoopActive || token!==S.speechToken) return;
+    if(i>=chain.length){
+      /* 一轮读完，稍作停顿后循环 */
+      S.speechSpeaking=false;
+      S.speechTimer=setTimeout(function(){
+        S.speechTimer=0;
+        runSentenceLoop(word,token);
+      },600);
+      return;
+    }
+    var u=chain[i];
     S.speechSpeaking=true;
     u.onend=function(){
       if(token!==S.speechToken) return;
-      S.speechSpeaking=false;
-      if(S.speechLoopActive){
-        S.speechTimer=setTimeout(function(){ S.speechTimer=0; runSpeechLoop(word,token); },400);
-      }
+      /* 单词与例句之间留一点间隔，听得更清 */
+      var gap=(i===0 && chain.length>1)?550:0;
+      if(gap) S.speechTimer=setTimeout(function(){ S.speechTimer=0; step(i+1); }, gap);
+      else step(i+1);
     };
     u.onerror=function(){
       if(token!==S.speechToken) return;
       S.speechSpeaking=false; S.speechLoopActive=false;
       updateSpeechButton();
     };
-    window.speechSynthesis.speak(u);
-  }catch(e){ S.speechLoopActive=false; S.speechSpeaking=false; updateSpeechButton(); }
+    try{ window.speechSynthesis.speak(u); }catch(e){ S.speechLoopActive=false; S.speechSpeaking=false; updateSpeechButton(); }
+  }
+  step(0);
 }
 function startSpeechLoop(word){
   stopSpeech();
   if(!speechSupported()) return;
   S.speechLoopActive=true;
   var token=S.speechToken;
-  runSpeechLoop(word,token);
+  runSentenceLoop(word,token);
 }
 function imagePath(word){
   var safe=String(word).toLowerCase().replace(/[<>:"\/\\|?*]/g,'_');
