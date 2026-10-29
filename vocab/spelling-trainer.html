@@ -242,7 +242,6 @@
       <button data-range="all" class="on">All Words</button>
       <button data-range="len">By Length</button>
       <button data-range="review">Review List</button>
-      <button data-range="missed">My Mistakes</button>
     </div>
     <div id="lenBox" class="hidden" style="margin-top:12px;">
       <select id="lenSelect"></select>
@@ -701,7 +700,7 @@ function restoreSettings(){
   var saved=store.get(SETTINGS_KEY,null);
   if(saved && typeof saved==='object'){
     S.mode=validChoice(saved.mode,['cn','audio','audioImage'],'cn');
-    S.range=validChoice(saved.range,['all','len','review','missed'],'all');
+    S.range=validChoice(saved.range,['all','len','review'],'all');
     var rl=validCount(saved.reviewLetter,0); reviewLetter=(rl>=65&&rl<=90)?rl:0;
     var size=validCount(saved.size,20); S.size=size>0?size:20;
     var tier=validCount(saved.lenTier,0); S.lenTier=tier<tiers.length?tier:0;
@@ -870,9 +869,12 @@ function refreshHome(){
 /* The visible controls are the single source of truth when a round starts. */
 function syncRangeFromUI(){
   var bs=$('rangeSeg').children;
+  var found=false;
   for(var i=0;i<bs.length;i++){
-    if(bs[i].classList && bs[i].classList.contains('on')){ S.range=bs[i].dataset.range; break; }
+    if(bs[i].classList && bs[i].classList.contains('on')){ S.range=bs[i].dataset.range; found=true; break; }
   }
+  /* 无任何按钮高亮时（如从错题轮返回首页）回退到 All Words，避免残留 missed */
+  if(!found && S.range==='missed'){ S.range='all'; }
   var v=parseInt($('lenSelect').value,10);
   if(!isNaN(v) && v>=0 && v<tiers.length){ S.lenTier=v; }
 }
@@ -883,7 +885,7 @@ function updateSummary(){
   var n=Math.min(S.size,pool.length);
   var label = S.range==='len' ? (tiers[S.lenTier][0]+' letters')
             : S.range==='review' ? (reviewLetter ? ('Review List \u00b7 '+String.fromCharCode(reviewLetter)) : 'Review List')
-            : (S.range==='missed' ? 'My Mistakes' : 'All Words');
+            : 'All Words';
   el.innerHTML='This round: <b>'+n+'</b> question'+(n===1?'':'s')+' from <b>'+esc(label)+'</b> &middot; '+pool.length+' available';
 }
 
@@ -918,7 +920,6 @@ $('startBtn').addEventListener('click',function(){
   syncRangeFromUI();
   saveSettings();
   var idx=poolIndices();
-  if(S.range==='missed' && idx.length===0){ alert('Your review list is empty. Try a practice round first!'); return; }
   startRound(idx);
 });
 $('resetBtn').addEventListener('click',resetPractice);
@@ -1097,12 +1098,13 @@ $('missBtn').addEventListener('click',function(){
   var idx=[]; for(var j=0;j<DATA.length;j++){ if(set[DATA[j][0]]) idx.push(j); }
   if(idx.length===0){ alert('Your review list is empty.'); return; }
   S.range='missed';
-  /* keep the home screen buttons honest so they match the internal state */
+  /* 首页已无 My Mistakes 入口，需确保不会留下高亮的残留按钮 */
   var bs=$('rangeSeg').children;
   for(var i=0;i<bs.length;i++){
-    if(bs[i].dataset && bs[i].dataset.range){ bs[i].classList.toggle('on', bs[i].dataset.range==='missed'); }
+    if(bs[i].classList) bs[i].classList.remove('on');
   }
   $('lenBox').classList.add('hidden');
+  $('letterBox').classList.add('hidden');
   saveSettings();
   updateSummary();
   startRound(idx);
