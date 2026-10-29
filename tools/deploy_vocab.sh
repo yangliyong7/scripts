@@ -14,17 +14,20 @@ ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || ROOT=$(pwd)
 cd "$ROOT"
 
 DEST=/var/www/vocab
-FILES=${*:-spelling-trainer.html}
+FILES=${*:-spelling-trainer.html sentence.txt}
 
 # 1) 先同步词表
 echo "[deploy] 同步 review.xlsx 词表..."
 sh tools/hooks/sync_review_words.sh
 
-# 2) 只部署指定文件
+# 2) 只部署指定文件（先在 vocab/ 下找，再到仓库根找，如 sentence.txt）
 for f in $FILES; do
   src="vocab/$f"
+  if [ ! -f "$src" ] && [ -f "$f" ]; then
+    src="$f"
+  fi
   if [ ! -f "$src" ]; then
-    echo "[deploy] 跳过（不存在）: $src" >&2
+    echo "[deploy] 跳过（不存在）: $f" >&2
     continue
   fi
 
