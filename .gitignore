@@ -1,2 +1,8 @@
 images/generate.log
 images/_test*.png
+gen/
+
+# 🔒 py 脚本永不提交（用户硬要求 2026-10-30）
+*.py
+!**/
+__pycache__/
