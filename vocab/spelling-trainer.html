@@ -864,6 +864,18 @@ bindSeg('rangeSeg',function(b){
     b.title=ch+' \u00b7 '+letters[ch]+' words';
     box.appendChild(b);
   }
+  /* 按 A-Z 顺序补全未收录的首字母，禁用态占位，保证 A..Z 一眼看全 */
+  var have={}; for(var m=0;m<keys.length;m++) have[keys[m]]=1;
+  var anchor=box.lastElementChild;
+  for(var code=65; code<=90; code++){
+    var L=String.fromCharCode(code);
+    if(have[L]) continue;
+    var g=document.createElement('button');
+    g.type='button'; g.dataset.letter=String(code); g.textContent=L;
+    g.title=L+' \u00b7 0 words'; g.disabled=true;
+    box.insertBefore(g, anchor?anchor.nextSibling:null);
+    anchor=g;
+  }
   box.addEventListener('click',function(e){
     var b=e.target.closest('button'); if(!b) return;
     var kids=box.querySelectorAll('button');
