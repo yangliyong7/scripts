@@ -7,6 +7,7 @@
 <meta name="description" content="趣味英语词汇百科全书 — 3916 个词汇，配插画与《Friends》例句，按 12 个主题分类。">
 <title>趣味英语词汇百科全书</title>
 <link rel="preconnect" href="/">
+
 <style>
 :root{
   --bg:#fbfbfd; --surface:#ffffff; --ink:#1c1c1e; --ink-2:#48484a;
@@ -152,154 +153,27 @@ body{
   .entry-list{grid-template-columns:1fr}
   .quicknav-inner{border-radius:var(--radius)}
 }
+
+/* ---------- 返回顶部 ---------- */
+.totop{
+  position:fixed;right:24px;bottom:24px;z-index:60;
+  width:44px;height:44px;padding:0;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--surface);color:var(--ink-2);
+  border:1px solid var(--line);border-radius:50%;
+  cursor:pointer;box-shadow:var(--shadow);
+  opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .22s,visibility .22s,transform .22s,border-color .18s,color .18s;
+  -webkit-tap-highlight-color:transparent;
+}
+.totop.show{opacity:1;visibility:visible;transform:translateY(0)}
+.totop:hover{border-color:var(--ink-3);color:var(--ink)}
+.totop svg{width:18px;height:18px;display:block}
+@media (max-width:640px){.totop{right:16px;bottom:16px;width:40px;height:40px}}
+@media print{.totop{display:none!important}}
 </style>
 </head>
-<style>
-:root{
-  --bg:#fbfbfd; --surface:#ffffff; --ink:#1c1c1e; --ink-2:#48484a;
-  --ink-3:#8e8e93; --line:#e5e5ea; --radius:14px;
-  --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.04);
-  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,"Helvetica Neue",sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#0d0d0f;--surface:#1a1a1d;--ink:#f5f5f7;--ink-2:#c7c7cc;
-  --ink-3:#8e8e93;--line:#2c2c2e;--shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);}
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
-body{
-  font-family:var(--font);background:var(--bg);color:var(--ink);
-  line-height:1.6;-webkit-font-smoothing:antialiased;
-  font-size:16px;
-}
-/* ---------- 顶部导航 ---------- */
-.topbar{
-  position:sticky;top:0;z-index:50;
-  background:color-mix(in srgb,var(--bg) 82%,transparent);
-  backdrop-filter:saturate(180%) blur(20px);
-  -webkit-backdrop-filter:saturate(180%) blur(20px);
-  border-bottom:1px solid var(--line);
-}
-.topbar-inner{
-  max-width:1080px;margin:0 auto;padding:12px 24px;
-  display:flex;align-items:center;gap:16px;
-}
-.brand{font-size:15px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
-.brand span{color:var(--ink-3);font-weight:400;margin-left:8px;font-size:13px}
-.search{flex:1;min-width:120px;max-width:320px;margin-left:auto;position:relative}
-.search input{
-  width:100%;padding:8px 14px;font:inherit;font-size:14px;
-  background:var(--surface);color:var(--ink);
-  border:1px solid var(--line);border-radius:999px;outline:none;
-  transition:border-color .18s,box-shadow .18s;
-}
-.search input:focus{border-color:var(--ink-3);box-shadow:0 0 0 3px color-mix(in srgb,var(--ink) 6%,transparent)}
-.search input::placeholder{color:var(--ink-3)}
-/* ---------- 封面 ---------- */
-.hero{max-width:1080px;margin:0 auto;padding:56px 24px 40px;text-align:center}
-.hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:700;letter-spacing:-.025em;line-height:1.15}
-.hero p{margin-top:14px;color:var(--ink-2);font-size:15px;max-width:560px;margin-inline:auto}
-.hero-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:32px}
-.stat b{display:block;font-size:24px;font-weight:650;letter-spacing:-.02em}
-.stat span{font-size:12.5px;color:var(--ink-3);letter-spacing:.02em}
-/* ---------- 目录 ---------- */
-.toc{max-width:1080px;margin:0 auto;padding:0 24px 48px}
-.toc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:12px}
-.toc-item{
-  display:flex;align-items:center;gap:10px;
-  padding:14px 16px;background:var(--surface);
-  border:1px solid var(--line);border-radius:var(--radius);
-  text-decoration:none;color:var(--ink);font-size:14px;font-weight:500;
-  transition:border-color .18s,transform .18s,box-shadow .18s;
-}
-.toc-item:hover{border-color:var(--c);transform:translateY(-2px);box-shadow:var(--shadow)}
-.toc-icon{font-size:18px;line-height:1}
-.toc-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.toc-num{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;background:var(--bg);padding:2px 7px;border-radius:6px}
-/* ---------- 快速跳转 ---------- */
-.quicknav{max-width:1080px;margin:0 auto;padding:0 24px 40px}
-.quicknav-inner{
-  display:flex;gap:8px;flex-wrap:wrap;padding:10px;
-  background:var(--surface);border:1px solid var(--line);border-radius:999px;
-}
-.quicknav a{
-  padding:7px 14px;font-size:13px;color:var(--ink-2);text-decoration:none;
-  border-radius:999px;transition:background .15s,color .15s;white-space:nowrap;
-}
-.quicknav a:hover{background:var(--bg);color:var(--c)}
-/* ---------- 分类 ---------- */
-.content{max-width:1080px;margin:0 auto;padding:0 24px 80px}
-.category{margin-bottom:64px}
-.category-head{
-  display:flex;align-items:baseline;gap:12px;
-  padding-bottom:14px;margin-bottom:20px;
-  border-bottom:2px solid var(--c);
-}
-.category-icon{font-size:22px;line-height:1}
-.category-title{font-size:22px;font-weight:650;letter-spacing:-.02em}
-.category-count{margin-left:auto;font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums}
-/* ---------- 词条 ---------- */
-.entry-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
-.entry{
-  display:flex;align-items:flex-start;gap:16px;
-  padding:16px;background:var(--surface);
-  border:1px solid var(--line);border-radius:var(--radius);
-  transition:border-color .18s,box-shadow .18s,transform .18s;
-  contain:content;
-}
-.entry:hover{border-color:color-mix(in srgb,var(--c) 45%,var(--line));box-shadow:var(--shadow);transform:translateY(-1px)}
-.entry-main{flex:1;min-width:0}
-.entry-word{
-  font-size:17px;font-weight:600;letter-spacing:-.01em;
-  color:var(--c);line-height:1.3;word-break:break-word;
-}
-.entry-sentence{
-  margin-top:7px;font-size:13.5px;line-height:1.65;
-  color:var(--ink-2);
-}
-.entry-image{
-  flex-shrink:0;width:112px;height:112px;object-fit:cover;
-  border-radius:10px;background:var(--bg);border:1px solid var(--line);
-}
-/* ---------- 页脚 ---------- */
-.footer{
-  max-width:1080px;margin:0 auto;padding:40px 24px 64px;
-  text-align:center;color:var(--ink-3);font-size:13px;
-  border-top:1px solid var(--line);
-}
-/* ---------- 打印 ---------- */
-@media print{
-  @page{size:A4;margin:14mm}
-  body{background:#fff;color:#000;font-size:10.5pt}
-  .topbar,.toc,.quicknav,.search{display:none!important}
-  .hero{padding:0 0 16pt;text-align:left}
-  .hero h1{font-size:20pt}
-  .hero-stats{justify-content:flex-start;gap:24pt;margin-top:10pt}
-  .content{padding:0;max-width:none}
-  .category{margin-bottom:16pt;break-inside:auto}
-  .category-head{break-after:avoid;border-bottom:1pt solid #000}
-  .entry-list{display:block}
-  .entry{
-    break-inside:avoid;border:none;border-bottom:.5pt solid #ddd;
-    padding:5pt 0;border-radius:0;box-shadow:none;transform:none;
-  }
-  .entry:hover{box-shadow:none;transform:none}
-  .entry-image{width:56pt;height:56pt;border:none;border-radius:0}
-  .entry-word{color:#000;font-size:11pt}
-  .entry-sentence{color:#333;font-size:9pt}
-  .footer{break-before:avoid;padding-top:12pt}
-}
-/* ---------- 响应式 ---------- */
-@media (max-width:640px){
-  .topbar-inner{padding:10px 16px;gap:10px}
-  .brand span{display:none}
-  .hero{padding:40px 16px 32px}
-  .hero-stats{gap:28px}
-  .toc,.quicknav,.content{padding-inline:16px}
-  .entry-list{grid-template-columns:1fr}
-  .quicknav-inner{border-radius:var(--radius)}
-}
-</style>
+
 </head>
 <body>
 
@@ -343,6 +217,9 @@ body{
   <p>趣味英语词汇百科全书 · 共 3916 词 · 例句源自《Friends》</p>
 </footer>
 
+<button class="totop" id="totop" aria-label="返回顶部" title="返回顶部">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
 <script>
 (function(){
   var input=document.getElementById('q');
@@ -382,6 +259,25 @@ body{
     if(ev.key==='Escape'){input.value='';reset();input.blur();}
   });
 })();
+
+(function(){
+  var btn=document.getElementById('totop');
+  if(!btn)return;
+  var ticking=false;
+  function update(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    btn.classList.toggle('show', y>600);
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){ticking=true;requestAnimationFrame(update);}
+  },{passive:true});
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  update();
+})();
 </script>
+
 </body>
 </html>
