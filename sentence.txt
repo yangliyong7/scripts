@@ -1878,11 +1878,11 @@ junk: I filter my inbox so that junk mail goes straight to the spam folder.
 jurassic: Y'know what, 100 million people went to see a movie about what I do, I wonder how many people would go see a movie called, Jurassic Parka.
 justice: And believe me, this suit does not do justice to what’s underneath it.
 karate: That's how she paid for all my dance—karate lessons.
-karma: And I got them a book on Karma Sutra for the elderly.
-kayaker: Phoebe said she once dated a kayaker who sang better than she did, which she doubted.
+karma: In some cultures, generous behaviour is believed to generate good karma.
+kayaker:He is a keen kayaker and goes out on the river every weekend.
 keen: Monica was keen to host the party and immediately started planning the menu.
 kelp: Ross explained that kelp is a kind of large seaweed, and Joey wondered if you could eat it.
-kennel: Phoebe brought home a stray dog and pretended it was from the kennel, which it wasn't.
+kennel: Whenever my family travels, we send our dog to boarding kennels.
 kernel: Joey ate a whole bag of popcorn and found one unpopped kernel he couldn't crunch.
 ketchup: Just-just think of me as a ketchup bottle, y’know you sometimes you have to bang on the end of it just to get something to come out.
 keynote: I've been following your career for years, I-I can't wait for your keynote speech.
@@ -1893,42 +1893,42 @@ kilogram (kg.): Ross insisted on weighing everything in kilograms, and Joey aske
 kit: I got my passport, fresh socks, and a snake bite kit!
 kite: well Phoebe, I think you'll feel better when you know a little bit about Vicrum, His a Kite designer and he used to date Oprah.
 kiwi: Uh, I don't know, butter, eggs, flour, lime, kiwi-- Kiwi?
-knapsack: This parachute is a knapsack!
+knapsack:  Unlike heavy rucksacks, a knapsack is perfect for short walks in the countryside.
 knee: And I got down on one knee and written across the dome in the stars were the words "Will you marry me?" And the ring, was the size of my fist !
 kneel: Ross decided to kneel dramatically when proposing, practicing in front of the mirror first.
-knit: Knit, good woman, knit, knit!
+knit: My grandma likes to knit and she often knits warm scarves for me.
 knob: Hey, Monica, the knob was broken so I just turned it off from underneath, I hope that's alright.
-knot: maybe she has trouble loosening your knots because you're such a high maintenance tight ass!
+knot: They’re going to tie the knot in a small seaside ceremony.
 knothole: Ross stared through a knothole in the fence and started explaining the wood grain.
-knotty: Monica said the tangled string was too knotty to untie, then untied it in ten seconds.
-knuckle: Yeah, but did you see the dents in his knuckles?
-knucklehead: Rachel affectionately called Joey a knucklehead after he mixed up everyone's coffee orders.
+knotty: Traffic congestion is a knotty problem in most major cities.
+knuckle: I know I need to knuckle down to revision for my upcoming exam.
+knucklehead: Don’t be such a knucklehead!
 koala: I went to the zoo yesterday and now I'm a koala bear.
 krill: Ross explained that a whale eats krill, and Joey said that sounded like a sad diet.
-kudo: Kudos on that hat joke.
-laboratory: So without out re-testing the results in the laboratory the team would never have identified the initial errors in their carbon dating analysis .
+kudo: Kudos to her for finishing such a tough project.
+laboratory: We did an interesting experiment in the chemistry laboratory this morning.
 lace: So, I'll get candles and my mom's lace tablecloth, and since it's Rachel's birthday, I mean, we want it to be special, I thought I'd poach a salmon.
 lactate: Ross explained that mammals lactate to feed their young, and Joey asked too many questions.
 ladder: I’d like to go up the ladder of chance to the golden mud hut please.
 lagoon: Phoebe dreamed of swimming in a warm blue lagoon and wrote a song about it.
-lair: Joey said the creepy basement was the perfect lair for a movie villain.
-lam: Chandler told Joey to lam it to Central Perk before Monica noticed he was gone.
-lame: whether, you know, it is in a basketball game, or in sky writing, or you know, like some lame guy in a cheesy movie who hides it in the cake.
-lament: Phoebe would lament the loss of every stray cat she met, then sing about it.
+lair: It is rude to call someone a liar without solid evidence.
+lam: The thief was on the lam for two weeks before he was arrested.
+lame: He came up with a lame excuse for failing to finish the group task.
+lament: Local artists lament the loss of traditional handicrafts.
 laminate: Yeah, well missy, you better be glad that list is laminated.
 lamp: And finally, some more dancing in the fountain, them all flexing, and the turning out the lamp and shutting off all the lights bit from the first season.
 landform: Ross got excited about every landform on the map and wouldn't stop explaining them.
 landlubber: Chandler called himself a total landlubber who preferred the couch to any boat.
-landscape: Well, let’s just say if I left 15 years ago, the landscape of Mexican cinema would be very different today!
+landscape: Globalisation reshapes the cultural landscape of many countries.
 lane: He has trouble staying in his lane.
 lap: Look, I figured I would try to convince him not to tell the story anymore, and I figure the best way to do that is face to face—And by face I don’t mean his lap.
 lapsed: I don’t remember being in a move called benefits lapsed.
-latrine: Joey joked that the tiny bathroom looked like a latrine, which made Monica furious.
+latrine: Many remote villages still rely on pit latrines without proper waste treatment.
 launder: Monica offered to launder everyone's clothes, then rewashed them because they weren't clean enough.
-laundry: Ok, I know this is gonna sound really stupid, but I feel that if I can do this, you know, if I can actually do my own laundry, there isn't anything I can't do.
+laundry: Banks are required to follow strict rules to prevent money laundering.
 lava: Oh yeah, lava spewing, hot ash, of course some are dormant.
-lavender: Hello, welcome to Lavender Day Spa SPA.
-lawn: Ok, you know how most kids get their allowance from mowing the lawn or taking out the garbage, well I earned mine by plucking the eyebrows of my father and his business partners.
+lavender: I keep a bottle of lavender oil on my desk because its aroma calms my nerves.
+lawn: He hired someone to mow the lawn because he had no spare time.
 lawsuit: {By the way, litigious means to want to litigate and litigate is to make a lawsuit against.
 lay: Baby and bird still up lays are locked in a death grip, swirling around the whirl pool, that fills the apartment.
 leaf: But you know what, hey, new day, new leaf, I am just really really happy ...
@@ -1938,25 +1938,25 @@ lean: All right, we were shaking hands and he kinda leaned toward me… Y'know m
 leap: I mean I’ve always had this picture of me and my next wife in bed on Sunday and, my kid comes running in and leaps up onto the bed.
 lease: No, no, but they are going to lease us a Ford Focus.
 leather: Oh see, I-I needed a new thing for today and there's this leather store that always smells so good and I thought to myself, "Wow, I never really owned a good smelling pair of pants before." Oh come on!!
-ledge: Joey crawled out onto the ledge of the apartment to get some air and immediately regretted it.
+ledge: A few seabirds built their nests on a remote rock ledge above the sea.
 ledger: Monica kept a neat ledger of everything everyone owed her for groceries.
-leeward: Ross explained the leeward side of a ship, and everyone changed the subject quickly.
+leeward: We set up our tent on the leeward side of the hill to avoid the strong wind.
 legacy: That was the one legacy my grandmother left me, and I know you wanted it as an engagement present.
 legal: Actually, in Oklahoma smoking is legal in all commune areas and offices with fewer than fifteen people.
-legion: Chandler said a whole legion of pigeons had gathered outside the Central Perk window.
+legion: A legion of fans waited outside the stadium for their idol.
 legislation: Ross jokingly proposed legislation making dinosaur talk mandatory at every dinner.
 lemonade: When someone asks you in for lemonade, and to you that means they wanna have sex?
 lemur: Ross said a lemur has big eyes and a long tail, and Phoebe immediately wanted one.
-lenient: Monica was not lenient about her cleaning rules, not even a tiny bit.
-leopard: Rachel wore a leopard print coat and called it the boldest choice of her life.
+lenient: The court gave him lenient punishment as he cooperated fully with the investigation.
+leopard: The snow leopard lives in the remote high mountains of Central Asia.
 leprosy: Chandler made a terrible joke about leprosy and got a pillow thrown at him.
 lesbian: All right, all right, there's a few too many people in this room, and there's about to be one more, so anybody who's not an ex-husband or a lesbian life partner, out you go!
-letch: What could that smarmy letch possibly want?
+letch: The old man was always leching after the shop assistants.
 lettuce: Alright, well I'm tearing the lettuce.
 leverage: Rachel used her charm to leverage a better position at Ralph Lauren.
-levity: Chandler tried to bring some levity to the tense dinner with a very dumb joke.
+levity: The tense meeting had a moment of levity when the chairman made a self‑deprecating joke.
 liability: Joey proved to be a liability in the kitchen when he knocked over two pans.
-liable: Monica warned that anyone near her stove was liable to get scolded.
+liable: The company is liable for any injury caused by its products.
 liar: Oh, well, it's a shame that you-that you miss the movie 'cause we were gonna see, you know, either "Liar, Liar" or "Betrayal", or...
 liberty: Y’know, you called me that before so I-I took the liberty of fashioning a star out of aluminum foil.
 lick: Good doggie get the sandwich, get the...ok, Joey, the dog will lick himself but he will not touch your sandwich, what does that say?
@@ -1965,64 +1965,64 @@ lieutenant: I still can't believe they promoted her to lieutenant.
 life jacket: Excuse me, I wanted you to help, but you couldn’t move your arms because you were wearing three life jackets.
 lifeguard: Anyway, I should go, one of the lifeguards was just about to dismantle a nuclear device.
 lifelong: Phoebe said her lifelong dream was to play guitar in a giant field full of cats.
-ligament: Joey stretched a ligament doing a pointless stunt and limped for a whole week.
-lilt: Phoebe's voice had a gentle lilt whenever she sang one of her made-up songs.
+ligament: He tore a ligament in his ankle during the match.
+lilt: There was a soft lilt in her voice as she told the folk tale.
 lily: Your mother is up in heaven going, 'Where the hell is my lily, you wuss?' OK, Phoebe, that is not a tattoo, this is a tattoo.
 limb: Oh, it even has a tree with a broken limb out front and the uh, the window in the attic is…Oh my God!!
-limmer: Chandler invented a word, calling Joey a limmer, and refused to explain what it meant.
-linen: Grasp one of the linen strips by its ‘easy grab tab’ and pull it off in one quick pain free motion.
-lineup: During that second time you couldn't have picked her out of a lineup!
+limmer: Runners should limber up before setting off to avoid muscle strains.
+linen: All rooms are serviced daily, with fresh bed linen changed every three days.
+lineup: The manager refused to announce the starting lineup before the cup match.
 linger: Yes, and we call Ross Lingers In The Bathroom.
-lingerie: Okay, check it out, Thursday night, five tickets, Calvin Klein lingerie show, and you guys are coming with me.
-lining: But, the silver lining, if you wanna see it, is that he made the decision all by himself!
+lingerie: The fashion brand launched a new sustainable lingerie collection made from organic cotton.
+lining: The lining of the jacket is non‑breathable, so I feel hot quickly.
 lip: Well, when we’re at the door, I lightly press my lips against his, and then move into his body just for a second, and then I make this sound, "Hmmm." Okay, I know it doesn’t sound like anything, but I swear it works.
-liquor: But I, I, I told myself it was the liquor and e-everyone experiments in college.
-lisp: Joey developed a temporary lisp before an audition and couldn't stop laughing at himself.
+liquor: The restaurant is licensed for wine and beer, but not hard liquor.
+lisp: Many toddlers have a slight lisp, which often disappears as their oral muscles develop.
 lit: Okay, he’s slow, he burns things, last night he lit my pastry chef on fire!
 literally: And all of the sudden she turns to me, alright, and she says, 'Eddie.' I say, 'yeah,' she says, 'Eddie, I don't want to see you anymore.' And it was literally like she had reached into my chest, ripped out my heart, and smeared it all over my life, ya know.
-litigate: {By the way, litigious means to want to litigate and litigate is to make a lawsuit against.
+litigate: It is expensive to litigate a dispute, so many businesses prefer negotiation.
 litre: Monica measured out exactly one litre of milk and labeled the jug with a tiny tag.
 litter: Well, I thought if I littered, that crying Indian might come by and save us.
 liver: Oh Rach, you're still here, at our wedding, they were packing up the chopped liver about now.
 lizard: talk about your- -big lizards...
-llama: Phoebe said she once carried a llama up a hill and everyone believed her instantly.
+llama: Llama wool is strong and warm, yet it is not as soft as alpaca fibre.
 loaf: Well, y’know what I will not watch your TV, I will not listen to your stereo, and there’s a cinnamon raisin loaf in the new bread maker that I’m not gonna eat!
 loan: Because, uh, I haven’t really paid the bill If you need money, will you please-please just let me loan you some money?
 loath: Chandler was loath to admit he actually loved Monica's homemade cookies.
-loaves: Monica baked six loaves of bread and organized them by size on the counter.
+loaves: The bakery sells fresh loaves of bread every morning.
 lobby: No, those first two windows, that's the lobby.
 lobster: See um, lobsters, uhh, in the tank when, when they're old, uhh, they get with, uhh, they walk around holding the claws.
-loch: Your face could be covered with lochs, I wouldn't care.
+loch: A small mountain loch lies hidden between the rocky slopes.
 lockdown: There was a lockdown at the museum, so Ross had to entertain everyone with dinosaur facts.
-lodge: He’s got something plastic lodged in his throat, we’ve got to go to the hospital.
+lodge: I will lodge a complaint with the National Financial Regulatory Administration unless the bank stops misleading elderly savers into buying insurance products.
 lollipop: Hey, don’t mix those up, you could really ruin that lollipop.
 lollygagging: Monica told Joey to stop lollygagging and actually help with the dishes.
-loner: Mhm, helpful brother - creepy loner at teen movie.
-loofah: Chandler bought a fancy loofah and Joey used it to clean the bathroom instead.
+loner: He has always been a loner and rarely joins group activities.
+loofah: A natural loofah is biodegradable, unlike plastic bath sponges.
 lookout: Joey kept a lookout for Monica while Chandler snuck an extra cookie from the jar.
 loosen: maybe she has trouble loosening your knots because you're such a high maintenance tight ass!
-looter: Eligible looters?
-lop: Ross tried to lop off the top of a clay dinosaur and sliced it completely in half.
-lord: Ya know, I mean, one day your eatin' turkey, the next thing ya know, your lords are a-leapin' and you geese are a-layin'.
-lotion: Ok listen, you go down to the pool and reserve the chairs, and I'll get the magazines and the lotion.
+looter: Security forces were deployed to block armed looters from entering the town centre.
+lop: Gardeners lop off overhanging branches every winter.
+lord: In medieval times, the feudal lord owned most of the land in the region.
+lotion: This body lotion absorbs quickly and does not leave a greasy layer on the skin.
 lottery: Seriously you guys, I can't believe you're going to spend 250 dollars on the lottery, I mean that's such a bunch of boohaki.
-lotus: Phoebe sat cross-legged like a lotus and hummed, claiming it cleared her mind.
+lotus: A head louse feeds on human blood and lives in hair.
 lounge: Are you telling me that you bought the chair that is making all other lounge systems obsolete?
 louse: Chandler called the guy who cut in line a louse, then let him go ahead anyway.
-lousy: Okay, just think about every lousy date that you ever had, okay, every guy who kept on the TV while you’re making out...
+lousy: We had to cancel the hike because of the lousy weather.
 lovebirds: What do you say we all clear out of here and let these two lovebirds get back down to business?
-loyalty: Monica valued loyalty above everything, unless someone touched her good plates.
-lug: Joey had to lug three grocery bags up the stairs and complained the whole time.
-luminous: And uh, while Daryl Hannah is beautiful in a conventional way, you are luminous with a kind of a delicate grace.
+loyalty: Discounts and gifts can help businesses build customer loyalty.
+lug: It is inconvenient to lug heavy camera equipment around when sightseeing.
+luminous: The watch has a luminous dial, so you can read the time in darkness.
 lump: And then makes him do all these crazy things like bring him milkshakes that can’t have lumps in them.
 lumpy: Chandler complained that the Central Perk couch was lumpy, but he lay down anyway.
 lunar: But we're celebrating Thanksgiving in December 'cause he is lunar.
-lunatic: Monica called the driver a lunatic after he cut her off on the way to work.
-lung: After my Dad left me, and then, and then getting arrested for stealing those birds, and then, and then the whole punctured lung thing!
+lunatic: Only the lunatic fringe supports this extreme policy.
+lung: Regular aerobic exercise can improve your lung capacity.
 lure: Which is why I believe I can lure her away with these chocolates.
-lurker: Okay when you're playing a machine and it hasn't paid out, a lurker waits for you to give up and then… Kills you?
-lush: Phoebe said the garden was lush and green, then got distracted by a passing bird.
-lute: ...lutely.
+lurker: Many users of this forum are online lurkers who read discussions but never post comments.
+lush: The region receives heavy rainfall and supports lush vegetation.
+lute: The painter depicted a nobleman playing the lute.
 luxury: Rachel said having a whole drawer for her scarves was the height of luxury.
 lyrical: Phoebe got all lyrical describing a rainy morning, then turned it into a song.
 macaw: The macaws wear hats.
