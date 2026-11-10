@@ -125,6 +125,17 @@ body{
   flex-shrink:0;width:112px;height:112px;object-fit:cover;
   border-radius:10px;background:var(--bg);border:1px solid var(--line);
 }
+/* ---------- 词条点击播放美音 ---------- */
+.entry{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.entry-word{transition:color .15s}
+.entry.speaking{
+  border-color:color-mix(in srgb,var(--c) 60%,var(--line))!important;
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 18%,transparent)!important;
+}
+.entry.speaking .entry-word::after{
+  content:"🔊";font-size:12px;margin-left:6px;vertical-align:middle;opacity:.85;
+}
+@media print{.entry{cursor:auto}.entry.speaking .entry-word::after{content:""}}
 /* ---------- 页脚 ---------- */
 .footer{
   max-width:1080px;margin:0 auto;padding:40px 24px 64px;
@@ -312,6 +323,73 @@ body{
 
   input.addEventListener('keydown',function(ev){
     if(ev.key==='Escape'){window.__resetEncyclopediaFilter();input.blur();}
+  });
+})();
+
+/* ---------- 点击词条方块，播放该单词的美式发音 ---------- */
+(function(){
+  if(!('speechSynthesis' in window))return;
+  var synth=window.speechSynthesis;
+  var voices=[];
+  var current=null;
+
+  function loadVoices(){ try{ voices=synth.getVoices()||[]; }catch(e){ voices=[]; } }
+  loadVoices();
+  try{ if(synth.onvoiceschanged!==undefined) synth.onvoiceschanged=loadVoices; }catch(e){}
+
+  function pickUSVoice(){
+    if(!voices.length) loadVoices();
+    var us=[];
+    var en=[];
+    for(var k=0;k<voices.length;k++){
+      var lg=voices[k].lang||'';
+      if(/^en[-_]US$/i.test(lg)) us.push(voices[k]);
+      else if(/^en[-_]/i.test(lg)) en.push(voices[k]);
+    }
+    /* 没有标注为 en-US 的语音时，退而用任意英语语音，并靠 utterance.lang 兜底 */
+    if(!us.length) return en.length? en[0] : null;
+    var prefer=['Samantha','Ava','Allison','Susan','Alex','Google US English','Aria','Guy','Zira','David'];
+    for(var i=0;i<prefer.length;i++){
+      for(var j=0;j<us.length;j++){
+        if((us[j].name||'').toLowerCase().indexOf(prefer[i].toLowerCase())>-1) return us[j];
+      }
+    }
+    return us[0];
+  }
+
+  function stopCurrent(){
+    if(current){ current.classList.remove('speaking'); current=null; }
+    try{ synth.cancel(); }catch(e){}
+  }
+
+  function play(entry, word){
+    stopCurrent();
+    var u=new SpeechSynthesisUtterance(word);
+    u.lang='en-US';
+    var v=pickUSVoice();
+    if(v) u.voice=v;
+    u.rate=0.92;
+    u.pitch=1;
+    entry.classList.add('speaking');
+    current=entry;
+    u.onend=function(){ if(current===entry){ entry.classList.remove('speaking'); current=null; } };
+    u.onerror=function(){ if(current===entry){ entry.classList.remove('speaking'); current=null; } };
+    try{ synth.speak(u); }catch(e){ entry.classList.remove('speaking'); current=null; }
+  }
+
+  document.addEventListener('click',function(ev){
+    var t=ev.target;
+    var entry=(t&&t.closest)?t.closest('.entry'):null;
+    if(!entry)return;
+    var sel=window.getSelection && window.getSelection();
+    if(sel && String(sel).trim().length>0) return;
+    var w=entry.querySelector('.entry-word');
+    if(!w)return;
+    play(entry, w.textContent.trim());
+  });
+
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden) stopCurrent();
   });
 })();
 
