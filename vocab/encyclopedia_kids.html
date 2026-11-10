@@ -49,6 +49,16 @@ body{
 }
 .search input:focus{border-color:var(--ink-3);box-shadow:0 0 0 3px color-mix(in srgb,var(--ink) 6%,transparent)}
 .search input::placeholder{color:var(--ink-3)}
+.qclear{
+  position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  width:26px;height:26px;padding:0;border:none;border-radius:50%;
+  background:var(--bg);color:var(--ink-3);font-size:13px;line-height:1;
+  cursor:pointer;display:none;align-items:center;justify-content:center;
+  -webkit-tap-highlight-color:transparent;
+}
+.qclear:hover{color:var(--ink);background:var(--line)}
+.qclear.show{display:flex}
+@media print{.qclear{display:none!important}}
 /* ---------- 封面 ---------- */
 .hero{max-width:1080px;margin:0 auto;padding:56px 24px 40px;text-align:center}
 .hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:700;letter-spacing:-.025em;line-height:1.15}
@@ -182,6 +192,7 @@ body{
     <div class="brand">词汇百科<span>3916 词 · 25 分类</span></div>
     <div class="search">
       <input id="q" type="search" placeholder="搜索单词或例句…" autocomplete="off" spellcheck="false">
+      <button type="button" id="qclear" class="qclear" aria-label="清除搜索" title="清除搜索">✕</button>
     </div>
   </div>
 </header>
@@ -233,30 +244,74 @@ body{
     cats.forEach(function(c){c.style.display='';});
   }
 
+  function applyFilter(){
+    var q=input.value.trim().toLowerCase();
+    if(!q){reset();return;}
+    entries.forEach(function(e){
+      var w=e.querySelector('.entry-word');
+      var s=e.querySelector('.entry-sentence');
+      var hit=(w&&w.textContent.toLowerCase().indexOf(q)>-1)||
+              (s&&s.textContent.toLowerCase().indexOf(q)>-1);
+      e.style.display=hit?'':'none';
+    });
+    cats.forEach(function(c){
+      var shown=0;
+      c.querySelectorAll('.entry').forEach(function(e){if(e.style.display!=='none')shown++;});
+      c.style.display=shown?'':'none';
+    });
+  }
+
   input.addEventListener('input',function(){
     clearTimeout(timer);
-    timer=setTimeout(function(){
-      var q=input.value.trim().toLowerCase();
-      if(!q){reset();return;}
-      entries.forEach(function(e){
-        var w=e.querySelector('.entry-word');
-        var s=e.querySelector('.entry-sentence');
-        var hit=(w&&w.textContent.toLowerCase().indexOf(q)>-1)||
-                (s&&s.textContent.toLowerCase().indexOf(q)>-1);
-        e.style.display=hit?'':'none';
-      });
-      cats.forEach(function(c){
-        var vis=c.querySelectorAll('.entry:not([style*="display: none"])').length;
-        // 更可靠：直接数可见
-        var shown=0;
-        c.querySelectorAll('.entry').forEach(function(e){if(e.style.display!=='none')shown++;});
-        c.style.display=shown?'':'none';
-      });
-    },120);
+    timer=setTimeout(applyFilter,120);
   });
 
+  /* 点 ✕ / 清空按钮时 type=search 不一定触发 input 事件，显式监听 */
+  input.addEventListener('search',function(){
+    clearTimeout(timer);
+    applyFilter();
+  });
+
+  /* 任何外部重置（浏览器后退恢复、点 TOC/快速跳转、返回顶部等）都能恢复列表 */
+  window.__resetEncyclopediaFilter=function(){
+    clearTimeout(timer);
+    input.value='';
+    reset();
+  };
+
+  /* 从 bfcache 返回（浏览器后退）时清掉搜索状态 */
+  window.addEventListener('pageshow',function(ev){
+    if(ev.persisted){ window.__resetEncyclopediaFilter(); }
+  });
+
+  /* 点击目录/快速跳转锚点时，若搜索为空但仍有残留隐藏状态，则恢复 */
+  document.addEventListener('click',function(ev){
+    var t=ev.target;
+    var a=(t&&t.closest)?t.closest('a[href^="#"]'):null;
+    if(!a)return;
+    var blank=!input.value.trim();
+    /* 点目录/快速跳转等于离开搜索，直接清空并恢复全部词条 */
+    if(clearBtn){ window.__resetEncyclopediaFilter(); syncClear(); }
+    else if(blank){ reset(); }
+  },true);
+
+  var clearBtn=document.getElementById('qclear');
+  function syncClear(){
+    if(clearBtn)clearBtn.classList.toggle('show', !!input.value.trim());
+  }
+  if(clearBtn){
+    clearBtn.addEventListener('click',function(){
+      window.__resetEncyclopediaFilter();
+      syncClear();
+      input.focus();
+    });
+  }
+  input.addEventListener('input',syncClear);
+  input.addEventListener('search',syncClear);
+  syncClear();
+
   input.addEventListener('keydown',function(ev){
-    if(ev.key==='Escape'){input.value='';reset();input.blur();}
+    if(ev.key==='Escape'){window.__resetEncyclopediaFilter();input.blur();}
   });
 })();
 
