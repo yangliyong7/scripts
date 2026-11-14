@@ -4,8 +4,10 @@
 # 用法:  sh tools/deploy_vocab.sh [文件名...]
 #        不带参数 = 部署 spelling-trainer.html
 #
-# 部署前自动执行 review.xlsx -> REVIEW_WORDS 同步，
-# 保证线上永远是「最新 Excel 词表 + 现有代码逻辑」。
+# 部署前自动执行两个同步：
+#   1) review.xlsx -> REVIEW_WORDS (spelling-trainer.html)
+#   2) sentence.txt -> encyclopedia.html 例句
+# 保证线上永远是「最新 Excel 词表 + 最新例句 + 现有代码逻辑」。
 # 部署后做 JS 语法检查，失败则不覆盖线上文件。
 
 set -e
@@ -16,9 +18,12 @@ cd "$ROOT"
 DEST=/var/www/vocab
 FILES=${*:-spelling-trainer.html sentence.txt}
 
-# 1) 先同步词表
+# 1) 先同步词表与例句
 echo "[deploy] 同步 review.xlsx 词表..."
 sh tools/hooks/sync_review_words.sh
+
+echo "[deploy] 同步 sentence.txt 例句..."
+sh tools/hooks/sync_sentences.sh
 
 # 2) 只部署指定文件（先在 vocab/ 下找，再到仓库根找，如 sentence.txt）
 for f in $FILES; do
