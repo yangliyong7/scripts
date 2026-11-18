@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# 后台与接口不抓取
+Disallow: /admin
+Disallow: /admin/
+
+# 搜索爬虫友好：词库、百科、拼写练习均可索引
+Sitemap: http://www.easybuyvip.com/sitemap.xml
