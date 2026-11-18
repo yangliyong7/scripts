@@ -2,7 +2,9 @@
 # 部署 vocab 站点到 /var/www/vocab/
 #
 # 用法:  sh tools/deploy_vocab.sh [文件名...]
-#        不带参数 = 部署 spelling-trainer.html
+#        不带参数 = 部署 spelling-trainer.html + encyclopedia.html
+#                   + encyclopedia_kids.html + sentence.txt
+#                   + 首页 index.html（仓库根 -> /var/www/index.html）
 #
 # 部署前自动执行两个同步：
 #   1) review.xlsx -> REVIEW_WORDS (spelling-trainer.html)
@@ -16,7 +18,11 @@ ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || ROOT=$(pwd)
 cd "$ROOT"
 
 DEST=/var/www/vocab
-FILES=${*:-spelling-trainer.html sentence.txt}
+FILES=${*:-spelling-trainer.html encyclopedia.html encyclopedia_kids.html sentence.txt index.html}
+
+# 仓库根目录的 index.html 是站点首页，对外挂在 /var/www/index.html（nginx location = / 直接读）
+# 其余文件都部署到 /var/www/vocab/
+root_index() { [ "$1" = "index.html" ] && [ -f "$PWD/index.html" ] && [ ! -f "vocab/index.html" ]; }
 
 # 1) 先同步词表与例句
 echo "[deploy] 同步 review.xlsx 词表..."
@@ -27,8 +33,12 @@ sh tools/hooks/sync_sentences.sh
 
 # 2) 只部署指定文件（先在 vocab/ 下找，再到仓库根找，如 sentence.txt）
 for f in $FILES; do
+  dest="$DEST/$f"
   src="vocab/$f"
-  if [ ! -f "$src" ] && [ -f "$f" ]; then
+  if root_index "$f"; then
+    src="index.html"
+    dest=/var/www/index.html
+  elif [ ! -f "$src" ] && [ -f "$f" ]; then
     src="$f"
   fi
   if [ ! -f "$src" ]; then
@@ -57,12 +67,14 @@ PY
       ;;
   esac
 
-  install -o www-data -g www-data -m 644 "$src" "$DEST/$f"
-  echo "[deploy] 已部署 $src -> $DEST/$f"
+  install -o www-data -g www-data -m 644 "$src" "$dest"
+  echo "[deploy] 已部署 $src -> $dest"
 done
 
 # 4) 校验公开访问
 if command -v curl >/dev/null 2>&1; then
-  code=$(curl -s -o /dev/null -w '%{http_code}' http://www.easybuyvip.com/vocab/spelling-trainer.html || echo 000)
-  echo "[deploy] 线上 HTTP $code"
+  for u in / /vocab/spelling-trainer.html; do
+    code=$(curl -s -o /dev/null -w '%{http_code}' "http://www.easybuyvip.com$u" || echo 000)
+    echo "[deploy] 线上 $u HTTP $code"
+  done
 fi
