@@ -4,7 +4,7 @@
 # 用法:  sh tools/deploy_vocab.sh [文件名...]
 #        不带参数 = 部署 spelling-trainer.html + encyclopedia.html
 #                   + encyclopedia_kids.html + sentence.txt
-#                   + 首页 index.html（仓库根 -> /var/www/vocab/index.html）
+#                   + 首页 index.html（仓库根 -> /var/www/index.html）
 #
 # 部署前自动执行两个同步：
 #   1) review.xlsx -> REVIEW_WORDS (spelling-trainer.html)
@@ -20,7 +20,8 @@ cd "$ROOT"
 DEST=/var/www/vocab
 FILES=${*:-spelling-trainer.html encyclopedia.html encyclopedia_kids.html sentence.txt index.html}
 
-# index.html 在仓库根，但对外属于 vocab 目录（nginx: location = / -> /var/www/vocab/index.html，内部 rewrite 不跳转）
+# index.html 是站点首页，对外是 http://www.easybuyvip.com/index.html
+# nginx: location = / -> 301 /index.html；location = /index.html -> root /var/www
 default_src() { [ "$1" = "index.html" ] && [ -f "$PWD/index.html" ] && [ ! -f "vocab/index.html" ]; }
 
 # 1) 先同步词表与例句
@@ -36,6 +37,7 @@ for f in $FILES; do
   src="vocab/$f"
   if default_src "$f"; then
     src="index.html"
+    dest=/var/www/index.html
   elif [ ! -f "$src" ] && [ -f "$f" ]; then
     src="$f"
   fi
