@@ -1,6 +1,7 @@
 images/generate.log
 images/_test*.png
 gen/
+pre-words.txt
 
 # 🔒 py 脚本永不提交（用户硬要求 2026-10-30）
 *.py
