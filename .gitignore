@@ -1,8 +1,12 @@
 images/generate.log
 images/_test*.png
 gen/
+pre-words.txt
 
 # 🔒 py 脚本永不提交（用户硬要求 2026-10-30）
 *.py
 !**/
 __pycache__/
+
+# 上游图片增量拉取暂存区（后台任务用，不入库）
+.png_incoming/
