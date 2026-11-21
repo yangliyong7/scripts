@@ -133,6 +133,16 @@ main{padding:14px 14px 40px}
   font-family:"SF Mono",ui-monospace,Menlo,monospace;
   margin-top:1px;letter-spacing:-.1px;
 }
+.sound{
+  flex:none;width:26px;height:26px;border-radius:8px;margin:-1px 0 0 -2px;
+  background:rgba(91,140,255,.13);border:1px solid rgba(91,140,255,.28);
+  display:grid;place-items:center;cursor:pointer;transition:.15s;
+}
+.sound:active{transform:scale(.88);background:rgba(91,140,255,.3)}
+.sound svg{width:13px;height:13px;stroke:var(--ac2);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sound.playing{background:rgba(62,207,142,.22);border-color:rgba(62,207,142,.45)}
+.sound.playing svg{stroke:var(--ok)}
+.w-ph-row{display:flex;align-items:center;gap:5px;margin-top:2px}
 .w-tr{
   font-size:12.5px;color:var(--tx2);margin-top:4px;line-height:1.5;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
@@ -364,7 +374,12 @@ main{padding:14px 14px 40px}
             +   '<div class="chk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>'
             +   '<div class="w-body">'
             +     '<div class="w-en">' + esc(d.w) + '</div>'
-            +     (d.ph ? '<div class="w-ph">/' + esc(d.ph) + '/</div>' : '')
+            +     '<div class="w-ph-row">'
+            +       (d.ph ? '<div class="w-ph">/' + esc(d.ph) + '/</div>' : '<div class="w-ph" style="opacity:.5">无音标</div>')
+            +       '<div class="sound" data-say="' + esc(d.w) + '" title="点击发音">'
+            +         '<svg viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 010 7"/><path d="M18.5 5.5a9 9 0 010 13"/></svg>'
+            +       '</div>'
+            +     '</div>'
             +     '<div class="w-tr">' + esc(d.tr || '—') + '</div>'
             +   '</div>'
             +   (d.g==='AWL' && d.sl ? '<div class="w-lv">AWL ' + d.sl + '</div>' : '')
@@ -375,7 +390,100 @@ main{padding:14px 14px 40px}
   }
 
   // 点击词条切换
+  // ===== 发音 =====
+  var voiceReady = false, enVoice = null;
+  function pickVoice(){
+    if(!window.speechSynthesis) return;
+    var vs = speechSynthesis.getVoices() || [];
+    enVoice = vs.filter(function(v){return /en[-_]?(US|GB|UK)/i.test(v.lang);})[0]
+           || vs.filter(function(v){return /^en/i.test(v.lang);})[0] || null;
+    voiceReady = true;
+  }
+  if(window.speechSynthesis){
+    pickVoice();
+    speechSynthesis.onvoiceschanged = pickVoice;
+  }
+
+  var audioEl = new Audio();
+  audioEl.preload = 'none';
+
+  function fallbackAudio(word, btn, onFail){
+    // 备用：有道词典音频（英音）
+    var urls = [
+      'https://dict.youdao.com/dictvoice?audio=' + encodeURIComponent(word) + '&type=1',
+      'https://dict.youdao.com/dictvoice?audio=' + encodeURIComponent(word) + '&type=2'
+    ];
+    var i = 0;
+    function tryNext(){
+      if(i >= urls.length){ onFail && onFail(); return; }
+      audioEl.src = urls[i++];
+      var pr = audioEl.play();
+      if(pr && pr.catch){
+        pr.catch(function(){ tryNext(); });
+      }
+      audioEl.onerror = function(){ tryNext(); };
+    }
+    tryNext();
+  }
+
+  function speak(word, btn){
+    if(btn){
+      btn.classList.add('playing');
+      setTimeout(function(){
+        if(!audioEl.paused || !window.speechSynthesis) return;
+      }, 100);
+    }
+    var clearBtn = function(){ if(btn) btn.classList.remove('playing'); };
+
+    // 1. 优先原生 TTS
+    if(window.speechSynthesis && typeof SpeechSynthesisUtterance !== 'undefined'){
+      try{
+        speechSynthesis.cancel();
+        var u = new SpeechSynthesisUtterance(word);
+        u.lang = 'en-US';
+        u.rate = 0.85;
+        if(!voiceReady) pickVoice();
+        if(enVoice) u.voice = enVoice;
+        u.onend = clearBtn;
+        // 原生失败(无声/无语音)时降级到在线音频
+        u.onerror = function(){
+          clearBtn();
+          fallbackAudio(word, btn, function(){ toast('发音加载失败，请检查网络'); });
+        };
+        speechSynthesis.speak(u);
+        // 3 秒内没触发 onend 也不管，用户可重复点
+        setTimeout(function(){
+          if(speechSynthesis.speaking) return;
+          clearBtn();
+        }, 4000);
+        return;
+      }catch(e){ /* 降级 */ }
+    }
+
+    // 2. 降级：在线音频
+    audioEl.onended = clearBtn;
+    fallbackAudio(word, btn, function(){
+      clearBtn();
+      toast('此浏览器不支持发音，请用系统浏览器打开');
+    });
+  }
+
   listEl.addEventListener('click', function(e){
+    // 点喇叭 -> 只发音，不切换收录
+    var sp = e.target.closest('.sound');
+    if(sp){
+      e.stopPropagation();
+      speak(sp.dataset.say, sp);
+      return;
+    }
+    // 点单词本身 -> 发音
+    var we = e.target.closest('.w-en');
+    if(we){
+      var sb = we.closest('.w-body').querySelector('.sound');
+      speak(we.textContent.trim(), sb);
+      return;
+    }
+    // 其他区域 -> 切换收录
     var card = e.target.closest('.word');
     if(!card) return;
     var w = card.dataset.w;
