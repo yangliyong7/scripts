@@ -1,2 +1,0 @@
-vocab/images/*.webp filter=lfs diff=lfs merge=lfs -text
-vocab/images/*.png filter=lfs diff=lfs merge=lfs -text
