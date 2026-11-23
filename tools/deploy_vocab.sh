@@ -3,7 +3,7 @@
 #
 # 用法:  sh tools/deploy_vocab.sh [文件名...]
 #        不带参数 = 部署 spelling-trainer.html + encyclopedia.html
-#                   + encyclopedia_kids.html + sentence.txt
+#                   + sentence.txt
 #                   + 首页 index.html（仓库根 -> /var/www/index.html）
 #
 # 部署前自动执行两个同步：
@@ -18,7 +18,7 @@ ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || ROOT=$(pwd)
 cd "$ROOT"
 
 DEST=/var/www/vocab
-FILES=${*:-spelling-trainer.html encyclopedia.html encyclopedia_kids.html sentence.txt index.html}
+FILES=${*:-spelling-trainer.html encyclopedia.html sentence.txt index.html}
 
 # index.html 是站点首页，对外是 http://www.easybuyvip.com/index.html
 # nginx: location = / -> 301 /index.html；location = /index.html -> root /var/www
