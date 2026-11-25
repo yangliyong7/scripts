@@ -11,3 +11,4 @@ __pycache__/
 
 # 上游图片增量拉取暂存区（后台任务用，不入库）
 .png_incoming/
+/tools/png2webp_batch.ps1
