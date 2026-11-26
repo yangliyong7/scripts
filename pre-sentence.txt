@@ -151,7 +151,7 @@ aloft: The hang-glider stayed aloft for nearly two hours despite the unpredictab
 alphabet: Children learn the alphabet through songs long before they can read whole words.
 alpine: Alpine flowers bloom briefly in summer before the snow returns.
 altercation: A minor altercation in the queue escalated into a serious fight.
-altitudes: At high altitudes, the air is thin and oxygen levels drop sharply.
+altitude: At high altitudes, the air is thin and oxygen levels drop sharply.
 altruism: Donating blood with no expectation of reward is a simple form of altruism.
 altruistic: Volunteering at shelters is an altruistic act that benefits the whole community.
 aluminum: Aluminum cans are widely recycled because the metal can be remelted cheaply.
