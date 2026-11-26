@@ -618,7 +618,7 @@ chestnut: Roast chestnuts fill the winter streets with a warm, sweet smell.
 chide: The coach chided the defender for losing focus in the final minutes.
 chime: The church bells chime every hour across the valley.
 chimpanzee: The chimpanzee is humans' closest living relative in the animal kingdom.
-chip in: Everyone chipped in a few dollars to buy our colleague a farewell gift.
+chip-in: Everyone chipped in a few dollars to buy our colleague a farewell gift.
 chisel: The sculptor shaped the marble with a hammer and chisel.
 chivalry: Medieval chivalry expected knights to protect the weak and honour their opponents.
 chives: Sprinkle chopped chives over the baked potato before serving.
@@ -1747,7 +1747,7 @@ halve: New insulation halved the household heating bill.
 hamlet: The tiny hamlet has one shop and a chapel.
 handicraft: Government grants help handicraft cooperatives sell their weaving worldwide online.
 handout: The lecturer distributed a handout summarising the key points.
-Hanukkah: The family lights one more candle each night of Hanukkah.
+hanukkah: The family lights one more candle each night of Hanukkah.
 harbor: Fishing boats crowd the harbor before dawn.
 hare: A hare bolted across the path and vanished into the stubble.
 harp: She plays the harp in the hotel lobby each evening.
@@ -2114,7 +2114,7 @@ jumble: The attic was a jumble of boxes and old toys.
 junction: Take the second junction toward the airport.
 juncture: At this juncture, cancelling the launch would cost more than continuing.
 junior: Junior staff shadow senior colleagues during their first month.
-Jupiter: Jupiter is the largest planet in our solar system.
+jupiter: Jupiter is the largest planet in our solar system.
 jurisdiction: The case falls under federal jurisdiction, not state courts.
 jurisprudential: The court's jurisprudential reasoning filled a hundred pages.
 jury: The jury deliberated for four days before the verdict.
@@ -2218,7 +2218,7 @@ lipper: The lipper on the driveway makes the kerb wheelchair-friendly.
 liquorice: Black liquorice sweets divide opinions like no other flavour.
 literacy: Digital literacy is now as vital as reading itself.
 literature: World literature opens windows into other societies.
-live life to the full: Retirement finally gave him time to live life to the full.
+live-life-to-the-full: Retirement finally gave him time to live life to the full.
 livelihood: Dam construction threatens the livelihoods of thousands of river fishermen.
 livestock: Rising feed costs squeezed livestock farmers hard this year.
 livid: She was livid when the refund promised weeks earlier never arrived.
@@ -3958,7 +3958,7 @@ vex: Mixed signals vex even loyal customers.
 viable: Carpooling is viable only where schedules align.
 vibrant: The vibrant night market runs till midnight.
 vicar: The vicar runs the food bank from the parish hall.
-vice versa: Staff follow customers online, and vice versa.
+vice-versa: Staff follow customers online, and vice versa.
 vicinity: Hotels cluster in the vicinity of the station.
 vicissitude: The family firm survived the vicissitudes of three recessions.
 vigilance: Constant vigilance keeps the workshop safe.
